@@ -2,6 +2,34 @@ The AZ-100 and AZ-101 certifications are being replaced by a new AZ-103 Microsof
  
 To support the new exam, we introduce a new AZ-103 GitHub repository, which will become fully available starting on May 3 2019. At that time, all the AZ-100 and AZ-101 labs in their respective repositories will be moved to this repository. Those labs are being reused in AZ-103 and we would like to maintain only one repository. The AZ-100 and AZ-101 lab numbering system will be retained, so if you are still teaching the AZ-100 or AZ-101 courses you will be able to easily identify the labs. You will also be able to get the latest version of the labs, and submit any issues you find.
 
+This repository will include the following labs:
+
+-  Azure Event Grid and Azure Logic Apps (az-101-02b)
+-  Azure AD Identity Protection (az-101-04b)
+-  Azure Network Watcher (az-101-03b)
+-  Configure Azure DNS (az-100-04b)
+-  Deploy and Manage Virtual Machines (az-100-03)
+-  Governance and Compliance (az-100-01b)
+-  Implement and Manage Azure Web Apps (az-101-02)
+-  Implement ASR Between Regions (az-101-01)
+-  Implement Directory Synchronization (az-100-05)
+-  Implementing File Sync (az-100-02b)
+-  Implement and Manage Storage (az-100-02)
+-  Load Balancer and Traffic Manager (az-101-03)
+-  Migrate On-premises Hyper-V VMs to Azure (az-101-01b)
+-  Privileged Identity Management (az-101-04)
+-  Role-Based Access Control (az-100-01)
+-  Self-Service Password Reset (az-100-05b)
+-  Virtual Machines and Scale Sets (az-100-03b)
+-  VNet Peering and Service Chaining (az-100-04)
+
+Note that the following labs will not be part of the AZ-103 course:
+
+-  Azure Event Grid and Azure Logic Apps (az-101-02b)
+-  Implement and Manage Azure Web Apps (az-101-02)
+-  Migrate On-premises Hyper-V VMs to Azure (az-101-01b)
+-  Privileged Identity Management (az-101-04)
+
 **What are we doing?**
 
 *	We are publishing the lab instructions and lab files on GitHub to allow for interaction between the course authors and MCTs. We hope this will help  keep the content current as the Azure platform changes.
