@@ -1,6 +1,6 @@
 The AZ-100 and AZ-101 certifications are being replaced by a new AZ-103 Microsoft Azure Administrator exam! You can read more about this announcement on Liberty Munson’s blog at https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&Id=375217 
  
-To support the new exam, we introduce a new AZ-103 GitHub repository, which will become fully available starting on May 3 2019. At that time, all the AZ-100 and AZ-101 labs in their respective repositories will be moved to this repository. Those labs are being reused in AZ-103 and we would like to maintain only one repository. The AZ-100 and AZ-101 lab numbering system will be retained, so if you are still teaching the AZ-100 or AZ-101 courses you will be able to easily identify the labs. You will also be able to get the latest version of the labs, and submit any issues you find.
+To support the new exam, we introduce a new AZ-103 GitHub repository, starting on May 3 2019. At that time, all the AZ-100 and AZ-101 labs in their respective repositories will be moved to this repository. Those labs are being reused in AZ-103 and we would like to maintain only one repository. The AZ-100 and AZ-101 lab numbering system will be retained, so if you are still teaching the AZ-100 or AZ-101 courses you will be able to easily identify the labs. You will also be able to get the latest version of the labs, and submit any issues you find.
 
 This repository will include the following labs:
 
