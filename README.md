@@ -36,19 +36,13 @@ Note that the following labs will not be part of the AZ-103 course:
 
 *	This is a GitHub repository for the AZ-103, Microsoft Azure Administrator course. 
 
-*	You can access the repositories at https://github.com/orgs/MicrosoftLearning/dashboard
-
-*	Within each repository there are lab guides in the Markdown format in the Instructions folder. The lab guides in the PDF format are available from the MCT Download Center, however they are not being regularly updated. If appropriate, there are also additional files that are needed to complete the lab within the Allfiles\Labfiles folder. Not every course has corresponding lab files. 
+*	Within each repository there are lab guides in the Markdown format in the Instructions folder. If appropriate, there are also additional files that are needed to complete the lab within the Allfiles\Labfiles folder. Not every course has corresponding lab files. 
 
 *	For each delivery, trainers should download the latest files from GitHub. Trainers should also check the Issues tab to see if other MCTs have reported any errors.  
 
 *	Lab timing estimates are provided but trainers should check to ensure this is accurate based on the audience.
 
-*	The lab content has been placed at the end of each course for consistency and convenience. However, as the instructor, you are the best judge to determine when the lab should be offered.
-
-*	To conduct you will need an internet connection and an Azure subscription. Please read the Instructor Prep Guide for more information on using the Cloud Shell. 
-
-*	It is recommended that you provide these materials directly to your students rather than point them to the GitHub repository. 
+*	To do the labs you will need an internet connection and an Azure subscription. Please read the Instructor Prep Guide for more information on using the Cloud Shell. 
 
 **How are we doing?**
 
