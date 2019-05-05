@@ -50,7 +50,7 @@ Note that the following labs will not be part of the AZ-103 course:
 
 **General comments regarding the AZ-103 course**
 
-* PowerShell scripts in all labs use the current version of Azure PowerShell Az module 
+* PowerShell scripts in all labs use the current version of Azure PowerShell Az module.
 
 * Although not required, it is a good idea to deprovision any existing resources when you have completed each lab. This will help mitigate the risk of exceeding the default vCPU quota limits and minimize usage charges.
 
