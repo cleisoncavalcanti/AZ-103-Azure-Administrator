@@ -1,6 +1,6 @@
 ﻿# Lab: Configure VNet peering and service chaining
   
-All tasks in this lab are performed from the Azure portal except for Excercise 2 Task 3, Exercise 3 Task 1, and Exercise 3 Task 2, which include steps performed from a Remote Desktop session to an Azure VM
+All tasks in this lab are performed from the Azure portal except for Exercise 2 Task 3, Exercise 3 Task 1, and Exercise 3 Task 2, which include steps performed from a Remote Desktop session to an Azure VM
 
 Lab files: 
 
@@ -12,7 +12,7 @@ Lab files:
 
 ### Scenario
   
-ADatum Corporation wants to implement service chaining between Azure virtual networks in its Azure subscription. 
+Adatum Corporation wants to implement service chaining between Azure virtual networks in its Azure subscription. 
 
 
 ### Objectives
