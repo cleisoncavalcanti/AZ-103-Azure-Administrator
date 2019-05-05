@@ -169,7 +169,7 @@ The main tasks for this exercise are as follows:
    Copy-Item -Path 'C:\WindowsAzure\*' -Destination $directory.FullName –Recurse
    ```
 
-   > **Note**: To populate the file share with sample data, we use content of the C:\WindowsAzure folder, which should contain about 100 MB worth of files
+   > **Note**: To populate the file share with sample data, we use content of the C:\\WindowsAzure folder, which should contain about 100 MB worth of files
 
 1. From the Windows PowerShell console, install the latest AzureRM module by running the following:
 
@@ -182,7 +182,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run Azure File Sync evaluation tool
 
-1. Within the RDP session to the Azure VM, from the Windows PowerShell console, install the latest version of Package Management and PowerShellGet by running the following :
+1. Within the RDP session to the Azure VM, from the Windows PowerShell console, install the latest version of Package Management and PowerShellGet by running the following:
 
    ```
    Install-Module -Name PackageManagement -Repository PSGallery -Force
@@ -298,7 +298,7 @@ The main tasks for this exercise are as follows:
 
     - Registered server: **az1000201b-vm1**
 
-    - Path: **S:\az10002bShare**
+    - Path: **S:\\az10002bShare**
 
     - Cloud Tiering: **Enabled**
 
@@ -325,7 +325,7 @@ The main tasks for this exercise are as follows:
 
 1. Execute the script and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
 
-1. Within the RDP session, start File Explorer, navigate to the Z: drive, and verify that it contains the same content as S:\az10002bShare
+1. Within the RDP session, start File Explorer, navigate to the Z: drive, and verify that it contains the same content as S:\\az10002bShare
 
 1. Display the Properties window of individual folders on the Z: drive, review the Security tab, and note that the entries represent NTFS permissions assigned to the corresponding folders on the S: drive.
 

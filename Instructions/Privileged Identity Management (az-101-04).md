@@ -433,7 +433,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **aaduser101042**
 
-    - User name: **aaduser101042@***<DNS-domain-name>* where *<DNS-domain-name>* represents the primary DNS domain name you identified in the first exercise of this lab.
+    - User name: **aaduser101042@**`<DNS-domain-name>` where `<DNS-domain-name>` represents the primary DNS domain name you identified in the first exercise of this lab.
 
     - Profile: **Not configured**
 
@@ -443,11 +443,11 @@ The main tasks for this exercise are as follows:
 
     - Directory role: **User**
 
-    - Password: accept the default vaule.
+    - Password: accept the default value.
 
 1. Verify that the user was created successfully.
 
-1. Sign out as the Azure AD user **aaduser101041** and close the Microosft Edge InPrivate mode window.
+1. Sign out as the Azure AD user **aaduser101041** and close the Microsoft Edge InPrivate mode window.
 
 > **Result**: After you completed this exercise, you have activated Azure AD Premium P2 trial, assigned Azure AD Premium P2 licenses, activated Privileged Identity Management, signed up PIM for Azure AD roles, delegated management of Azure AD roles, and validated delegation of management of Azure AD roles.
 
@@ -523,7 +523,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **My roles** blade, initiate the activation. This will display the **Activate** blade.
 
-1. From the the **Activate** blade, perform activation using the following settings:
+1. From the **Activate** blade, perform activation using the following settings:
 
     - Scope: the name of your Azure subscription
 
@@ -545,6 +545,6 @@ The main tasks for this exercise are as follows:
 
 1. On the **Access control (IAM)** blade, note that the **aaduser101041** user account is listed as a member of the **Contributor** role.
 
-1. Sign out as the Azure user **aaduser101041** and close the Microosft Edge InPrivate mode window.
+1. Sign out as the Azure user **aaduser101041** and close the Microsoft Edge InPrivate mode window.
 
 > **Result**: After you completed this exercise, you have onboarded the Azure subscription for PIM resource management, delegated management of Azure AD resources, and validate delegation of management of Azure AD resources.

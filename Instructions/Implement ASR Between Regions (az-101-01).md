@@ -116,7 +116,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Before you start this task, ensure that the template deployment you started in the first exercise has completed. 
 
-1. In the the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
+1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
 
 1. From the **vaultaz1010102** blade, configure the following replication settings:
 

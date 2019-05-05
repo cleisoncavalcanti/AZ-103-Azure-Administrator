@@ -1,6 +1,6 @@
 ﻿# Lab: Implement Advanced Virtual Networking
 
-All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 1 Task 3, which includes steps performed from a Remote Desktop session to an Azure VM
+All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Exercise 1 Task 3, which includes steps performed from a Remote Desktop session to an Azure VM
 
 Lab files: 
 
@@ -212,7 +212,7 @@ The main tasks for this exercise are as follows:
 
     - Assignment: **Dynamic**
 
-    - Subsciption: the name of the subscription you are using in this lab
+    - Subscription: the name of the subscription you are using in this lab
 
     - Resource group: **az1010301-RG**
 
@@ -222,7 +222,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1010301w-lb** blade, display the **az1010301w-lb - Backend pools** blade.
 
-1. From the **az1010301w-lb - Backend pools** blade, add a backend pool with the following setttings:
+1. From the **az1010301w-lb - Backend pools** blade, add a backend pool with the following settings:
 
     - Name: **az1010301w-bepool**
 
@@ -240,7 +240,7 @@ The main tasks for this exercise are as follows:
 
     - Network IP configuration: **az1010301w-nic1/ipconfig1 (10.101.31.5)**
 
-   > **Note**: It is possible that the IP addresses of the Azure VMs are asssigned in the reverse order. 
+   > **Note**: It is possible that the IP addresses of the Azure VMs are assigned in the reverse order. 
 
    > **Note**: Wait for the operation to complete. This should take less than a minute.
 
@@ -309,7 +309,7 @@ The main tasks for this exercise are as follows:
 
     - Assignment: **Dynamic**
 
-    - Subsciption: the name of the subscription you are using in this lab
+    - Subscription: the name of the subscription you are using in this lab
 
     - Resource group: **az1010302-RG**
 
@@ -319,7 +319,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1010302w-lb** blade, display the **az1010302w-lb - Backend pools** blade.
 
-1. From the **az1010302w-lb - Backend pools** blade, add a backend pool with the following setttings:
+1. From the **az1010302w-lb - Backend pools** blade, add a backend pool with the following settings:
 
     - Name: **az1010302w-bepool**
 
@@ -337,7 +337,7 @@ The main tasks for this exercise are as follows:
 
     - Network IP configuration: **az1010302w-nic1/ipconfig1 (10.101.32.5)**
 
-   > **Note**: It is possible that the IP addresses of the Azure VMs are asssigned in the reverse order. 
+   > **Note**: It is possible that the IP addresses of the Azure VMs are assigned in the reverse order. 
 
    > **Note**: Wait for the operation to complete. This should take less than a minute.
 
@@ -396,7 +396,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **az1010301w-vm0-RDP**
 
-    - Frontend IP address: **LoadBalancedFrontEnd**
+    - Frontend IP address: **LoadBalancerFrontEnd**
 
     - IP Version: **IPv4**
 
@@ -422,7 +422,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **az1010301w-vm1-RDP**
 
-    - Frontend IP address: **LoadBalancedFrontEnd**
+    - Frontend IP address: **LoadBalancerFrontEnd**
 
     - IP Version: **IPv4**
 

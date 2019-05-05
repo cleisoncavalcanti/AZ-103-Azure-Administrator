@@ -1,6 +1,6 @@
 ﻿# Lab: Implement Directory Synchronization
   
-All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 3 Task 1, Exercise 3 Task 2, and Exercise 3 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
+All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Exercise 3 Task 1, Exercise 3 Task 2, and Exercise 3 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.2.0](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-1.2.0)
 
@@ -35,7 +35,7 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab and is a Global Administrator of the Azure AD tenant associated with that subscription.
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell pane. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell pane.
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Deploy an Azure VM hosting an Active Directory domain controller by using an Azure Resource Manager template
 
-1. In the Azure portal, navigate to the **Create a resource** blade. 
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
@@ -76,7 +76,7 @@ The main tasks for this exercise are as follows:
 
     - Domain Name: **adatum.com**
 
-    - Dns Prefix: the `<custom-label>` you identifed in the previous task
+    - Dns Prefix: the `<custom-label>` you identified in the previous task
 
     - _artifacts Location: accept the default value
 
@@ -186,7 +186,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Configure Active Directory in preparation for directory synchronization
 
-   > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 1 has completed. 
+   > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 1 has completed.
   
 1. In the Azure portal, set the **Directory + subscription** filter back to the Azure AD tenant associated with the Azure subscription you used in the first exercise of this lab.
 
@@ -224,7 +224,7 @@ The main tasks for this exercise are as follows:
 
 1. Within the RDP session to **adVM**, from Server Manager, disable temporarily **IE Enhanced Security Configuration**.
 
-1. Within the RDP session to **adVM**, start Internet Explorer and download **Azure AD Connect** from [**https://www.microsoft.com/en-us/download/details.aspx?id=47594**](https://www.microsoft.com/en-us/download/details.aspx?id=47594) 
+1. Within the RDP session to **adVM**, start Internet Explorer and download **Azure AD Connect** from [**https://www.microsoft.com/en-us/download/details.aspx?id=47594**](https://www.microsoft.com/en-us/download/details.aspx?id=47594)
 
 1. Start **Microsoft Azure Active Directory Connect** wizard, accept the licensing terms, and, on the **Express Settings** page, select the **Customize** option.
 
@@ -236,7 +236,7 @@ The main tasks for this exercise are as follows:
 
 1. When prompted to connect your directories, add the **adatum.com** forest, choose the option to **Create new AD account**, and authenticate by using the following credentials:
 
-    - User name: **ADATUM\Student**
+    - User name: **ADATUM\\Student**
 
     - Password: **Pa55w.rd1234**
 

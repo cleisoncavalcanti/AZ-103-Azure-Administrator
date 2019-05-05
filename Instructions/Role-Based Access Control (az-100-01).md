@@ -46,7 +46,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **aaduser100011**
 
-    - User name: **aaduser100011@***<DNS-domain-name>* where *<DNS-domain-name>* represents the primary DNS domain name you identified earlier in this task.
+    - User name: **aaduser100011@**`<DNS-domain-name>` where `<DNS-domain-name>` represents the primary DNS domain name you identified earlier in this task.
 
     - Profile: **Not configured**
 
@@ -222,7 +222,7 @@ Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Mi
 
     - Location: accept the default value
     
-1. Note that the intiation of the deployment fails. Navigate to the **Errors** blade and note that the deployment of the resource is not allowed by the policy **Allowed virtual machine SKUs**.   
+1. Note that the initiation of the deployment fails. Navigate to the **Errors** blade and note that the deployment of the resource is not allowed by the policy **Allowed virtual machine SKUs**.   
 
 
 #### Task 3: Perform an automated deployment of a policy compliant Azure VM as a delegated admin
