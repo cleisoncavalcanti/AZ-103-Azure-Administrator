@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab: Deploy and Manage Virtual Machines'
-    module: 'Module: Deploy and Manage Virtual Machines'
+    title: 'Deploy and Manage Virtual Machines'
+    module: 'Deploy and Manage Virtual Machines'
 ---
 
 # Lab: Deploy and Manage Virtual Machines
