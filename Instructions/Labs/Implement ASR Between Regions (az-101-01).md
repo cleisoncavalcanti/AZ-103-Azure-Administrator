@@ -1,4 +1,10 @@
-﻿# Lab: Implement Azure Site Recovery between Azure regions
+---
+lab:
+    title: 'Implement Azure Site Recovery between Azure regions'
+    module: 'Migrate Servers'
+---
+
+# Lab: Implement Azure Site Recovery between Azure regions
 
 All tasks in this lab are performed from the Azure portal
 
