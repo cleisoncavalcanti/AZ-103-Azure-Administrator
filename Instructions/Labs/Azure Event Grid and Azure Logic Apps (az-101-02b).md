@@ -1,4 +1,10 @@
-﻿# Lab: Monitor changes to Azure resources by using Azure Event Grid and Azure Logic Apps
+---
+lab:
+    title: 'Lab: Monitor changes to Azure resources by using Azure Event Grid and Azure Logic Apps'
+    module: 'Module: Implement and Manage Application Services'
+---
+
+# Lab: Monitor changes to Azure resources by using Azure Event Grid and Azure Logic Apps
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
 
