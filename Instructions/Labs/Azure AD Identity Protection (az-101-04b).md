@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Lab: Implement and validate Azure AD Identity Protection'
+    title: 'Implement and validate Azure AD Identity Protection'
     module: 'Secure Identities'
 ---
 
