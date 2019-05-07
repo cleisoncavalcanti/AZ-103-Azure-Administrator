@@ -1,4 +1,10 @@
-﻿# Lab: Manage Azure Subscriptions and Resources - Implementing governance and compliance with Azure initiatives and resource locks
+---
+lab:
+    title: 'Lab: Implementing governance and compliance with Azure initiatives and resource locks'
+    module: 'Module: Manage Azure Subscriptions and Resources'
+---
+
+# Lab: Implementing governance and compliance with Azure initiatives and resource locks
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
 
