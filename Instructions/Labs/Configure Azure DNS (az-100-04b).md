@@ -122,7 +122,7 @@ The main tasks for this exercise are as follows:
 
 1. On the DNS zone blade, note the list of the name servers that host the zone you created. You will use the first of them named in the next step.
 
-1. From the lab virtual machine, start Command Prompt and run the following to validate the name resolution of the two newly created DNS records (where `<custom_DNS_domain>` represents the custom DNS domain you created in the first task of this exercise and `<name_server>` represents the name of the DNS name server you identified in the previous step): 
+1. From the lab virtual machine, start Command Prompt and run the following to validate the name resolution of the two newly created DNS records (where &lt;custom_DNS_domain&gt; represents the custom DNS domain you created in the first task of this exercise and &lt;name_server&gt; represents the name of the DNS name server you identified in the previous step): 
 
    ```
    nslookup mylabvmpip.<custom_DNS_domain> <name_server>

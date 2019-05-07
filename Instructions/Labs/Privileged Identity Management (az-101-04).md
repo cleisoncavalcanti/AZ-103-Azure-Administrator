@@ -433,7 +433,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **aaduser101042**
 
-    - User name: **aaduser101042@**`<DNS-domain-name>` where `<DNS-domain-name>` represents the primary DNS domain name you identified in the first exercise of this lab.
+    - User name: **aaduser101042@&lt;DNS-domain-name&gt;** where &lt;DNS-domain-name&gt; represents the primary DNS domain name you identified in the first exercise of this lab.
 
     - Profile: **Not configured**
 
