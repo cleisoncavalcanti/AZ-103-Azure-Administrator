@@ -1,4 +1,10 @@
-﻿# Lab: Deploy and Manage Virtual Machines
+---
+lab:
+    title: 'Lab: Deploy and Manage Virtual Machines'
+    module: 'Module: Deploy and Manage Virtual Machines'
+---
+
+# Lab: Deploy and Manage Virtual Machines
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 2 Task 2 and Exercise 2 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
