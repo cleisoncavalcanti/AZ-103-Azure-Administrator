@@ -1,4 +1,10 @@
-﻿# Lab: Configure Azure DNS
+---
+lab:
+    title: 'Lab: Configure Azure DNS'
+    module: 'Module 4: Virtual Networking'
+---
+
+# Lab: Configure Azure DNS
   
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) 
 
