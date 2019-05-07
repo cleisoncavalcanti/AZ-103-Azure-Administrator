@@ -46,7 +46,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **aaduser100011**
 
-    - User name: **aaduser100011@**`<DNS-domain-name>` where `<DNS-domain-name>` represents the primary DNS domain name you identified earlier in this task.
+    - User name: **aaduser100011@&lt;DNS-domain-name&gt;** where &lt;DNS-domain-name&gt; represents the primary DNS domain name you identified earlier in this task.
 
     - Profile: **Not configured**
 
@@ -159,15 +159,15 @@ The main tasks for this exercise are as follows:
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
-1. In the Cloud Shell pane, run the following command, substituting the placeholder `<custom-label>` with any string which is likely to be unique and the placeholder `<location-of-az1000101-RG>` with the name of the Azure region in which you created the **az1000101-RG** resource group.
+1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique and the placeholder &lt;location-of-az1000101-RG&gt; with the name of the Azure region in which you created the **az1000101-RG** resource group.
 
    ```
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location-of-az1000101-RG>'
    ```
 
-1. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**. 
+1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**. 
 
-1. Note the value of the `<custom-label>` that resulted in the successful outcome. You will need it in the next task
+1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task
 
 1. Run these commands:
 
@@ -216,7 +216,7 @@ Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Mi
 
     - Admin Password: **Pa55w.rd1234**
 
-    - Dns Label Prefix: the `<custom-label>` you identified in the previous task
+    - Dns Label Prefix: the &lt;custom-label&gt; you identified in the previous task
 
     - Ubuntu OS Version: accept the default value
 

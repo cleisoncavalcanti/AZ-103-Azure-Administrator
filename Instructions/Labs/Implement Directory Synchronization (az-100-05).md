@@ -39,7 +39,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
-1. In the Cloud Shell pane, run the following command, substituting the placeholder `<custom-label>` with any string which is likely to be unique and the placeholder `<location>` with the name of the Azure region into which you want to deploy the Azure VM that will host an Active Directory domain controller.
+1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique and the placeholder &lt;location&gt; with the name of the Azure region into which you want to deploy the Azure VM that will host an Active Directory domain controller.
 
    > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
@@ -47,9 +47,9 @@ The main tasks for this exercise are as follows:
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location>'
    ```
 
-1. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**. 
+1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**. 
 
-1. Note the value of the `<custom-label>` that resulted in the successful outcome. You will need it in the next task
+1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task
 
 
 #### Task 2: Deploy an Azure VM hosting an Active Directory domain controller by using an Azure Resource Manager template
@@ -76,7 +76,7 @@ The main tasks for this exercise are as follows:
 
     - Domain Name: **adatum.com**
 
-    - Dns Prefix: the `<custom-label>` you identified in the previous task
+    - Dns Prefix: the &lt;custom-label&gt; you identified in the previous task
 
     - _artifacts Location: accept the default value
 

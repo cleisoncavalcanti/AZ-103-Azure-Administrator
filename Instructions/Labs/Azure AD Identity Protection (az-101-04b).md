@@ -137,7 +137,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **aaduser1**
 
-    - User name: **aaduser1@**`<DNS-domain-name>`**.onmicrosoft.com** where `<DNS-domain-name>` represents the initial domain name you specified in the first task of this exercise. 
+    - User name: **aaduser1@&lt;DNS-domain-name&gt;.onmicrosoft.com** where &lt;DNS-domain-name&gt; represents the initial domain name you specified in the first task of this exercise. 
 
    > **Note**: Take a note of this user name. You will need it later in this lab.
 
@@ -155,7 +155,7 @@ The main tasks for this exercise are as follows:
 
     - Name: **aaduser2**
 
-    - User name: **aaduser2@**`<DNS-domain-name>`**.onmicrosoft.com** where `<DNS-domain-name>` represents the initial domain name you specified in the first task of this exercise. 
+    - User name: **aaduser2@&lt;DNS-domain-name&gt;.onmicrosoft.com** where &lt;DNS-domain-name&gt; represents the initial domain name you specified in the first task of this exercise. 
 
    > **Note**: Take a note of this user name. You will need it later in this lab.
 
