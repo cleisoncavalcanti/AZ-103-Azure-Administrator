@@ -520,7 +520,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **az1010301w-lb** blade, identify the public IP address assigned to the load balancer frontend.
 
-1. From the lab virtual machine, run the following command, after replacing the &lt;az1010301w-lb_public_IP&lt; placeholder with the IP address you identified in the previous task:
+1. From the lab virtual machine, run the following command, after replacing the `<az1010301w-lb_public_IP>` placeholder with the IP address you identified in the previous task:
 
    ```
    mstsc /v:<az1010301w-lb_public_IP>:33890
@@ -652,7 +652,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**:  If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
-1. In the Cloud Shell pane, run the following command, replacing the &lt;TM_DNS_name&lt; placeholder with the value of the DNS name assigned to the Traffic Manager profile you identified in the previous task:
+1. In the Cloud Shell pane, run the following command, replacing the `<TM_DNS_name>` placeholder with the value of the DNS name assigned to the Traffic Manager profile you identified in the previous task:
 
    ```
    nslookup <TM_DNS_name>

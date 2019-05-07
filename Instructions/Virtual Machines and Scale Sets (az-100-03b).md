@@ -354,13 +354,13 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000302bvmss1-lb - Inbound NAT rules** blade, navigate to the **natpool.0** blade and note that the port mappings start with **50000**. 
 
-1. From the lab computer, initiate the Remote Desktop Connection to the first VM instance in the VM scale set by running the following from **Start -> Run** text box (where &lt;public_IP_address&gt; represents the public IP address you identified earlier in this task):
+1. From the lab computer, initiate the Remote Desktop Connection to the first VM instance in the VM scale set by running the following from **Start -> Run** text box (where `<public_IP_address>` represents the public IP address you identified earlier in this task):
 
    ```
    mstsc /f /v:<public_IP_address>:50000
    ```
 
-   > **Note**: Make sure to replace the placeholder &lt;public_IP_address&gt; with the value of the public IP address you identified earlier in this task.
+   > **Note**: Make sure to replace the placeholder `<public_IP_address>` with the value of the public IP address you identified earlier in this task.
 
 1. When prompted to sign in via RDP to a VM instance of the VM scale set, provide the following credentials:
 

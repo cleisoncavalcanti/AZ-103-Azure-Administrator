@@ -396,15 +396,15 @@ The main tasks for this exercise are as follows:
 
 1. From the Azure Portal, start a PowerShell session in the Cloud Shell pane. 
 
-1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique and the placeholder &lt;location-of-az1000301-RG&gt; with the name of the Azure region in which you created the **az1000301-RG** resource group.
+1. In the Cloud Shell pane, run the following command, substituting the placeholder `<custom-label>` with any string which is likely to be unique and the placeholder `<location-of-az1000301-RG>` with the name of the Azure region in which you created the **az1000301-RG** resource group.
 
    ```
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location-of-az1000301-RG>'
    ```
 
-1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**. 
+1. Verify that the command returned **True**. If not, rerun the same command with a different value of the `<custom-label>` until the command returns **True**. 
 
-1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task
+1. Note the value of the `<custom-label>` that resulted in the successful outcome. You will need it in the next task
 
 
 #### Task 2: Deploy an Azure VM scale set
@@ -447,7 +447,7 @@ The main tasks for this exercise are as follows:
 
     - Public IP address name: **az1000303vmss0-ip**
 
-    - Domain name label: type in the value of the &lt;custom-label&gt; you identified in the previous task
+    - Domain name label: type in the value of the `<custom-label>` you identified in the previous task
 
     - Virtual network: the name of a new virtual network **az1000303-vnet0** with the following settings:
 
