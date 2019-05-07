@@ -1,4 +1,10 @@
-﻿# Lab: Implement Directory Synchronization
+---
+lab:
+    title: 'Implement Directory Synchronization'
+    module: 'Implement and Manage Hybrid Identities'
+---
+
+# Lab: Implement Directory Synchronization
   
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Exercise 3 Task 1, Exercise 3 Task 2, and Exercise 3 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
