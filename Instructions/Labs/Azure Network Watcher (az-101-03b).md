@@ -1,4 +1,10 @@
-﻿# Lab: Use Azure Network Watcher for monitoring and troubleshooting network connectivity
+---
+lab:
+    title: 'Lab: Use Azure Network Watcher for monitoring and troubleshooting network connectivity'
+    module: 'Module: Implement Advanced Virtual Networking'
+---
+
+# Lab: Use Azure Network Watcher for monitoring and troubleshooting network connectivity
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
 
