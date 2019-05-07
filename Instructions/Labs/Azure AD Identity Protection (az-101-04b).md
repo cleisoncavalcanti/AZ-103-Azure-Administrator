@@ -6,7 +6,7 @@ Lab files: none
 
 ### Scenario
   
-Adatum Corporation wants to take advantage of Azure AD Premium features for Identity Protection
+Adatum Corporation wants to take advantage of Azure AD Premium features for Identity Protection.
 
 
 ### Objectives
