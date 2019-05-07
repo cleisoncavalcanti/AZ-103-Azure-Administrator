@@ -58,7 +58,7 @@ The main tasks for this exercise are as follows:
    Move-Item -Path '.\InstallHyperV.*' -Destination '.\DSC'
    ```
 
-1. In the Cloud Shell pane, run the following in order to deploy a Standard_DS2_v3 Azure VM (substitute the `<location>` placeholder with the name of the Azure region where you want to perform deployment):
+1. In the Cloud Shell pane, run the following in order to deploy a Standard_DS2_v3 Azure VM (substitute the &lt;location&gt; placeholder with the name of the Azure region where you want to perform deployment):
 
    ```
    ./az-101-01b_azuredeploy.ps1 -resourceGroupName 'az1010101b-RG' -resourceGroupLocation <location>
@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-   > **Note**: If the deployment fails due to the Standard_DS2_v3 size not being available, identify another Azure VM size that supports nested virtualization and specify this size explicitly during the deployment by using the following syntax (substitute the `<vm_Size>` placeholder with the intended Azure VM size)
+   > **Note**: If the deployment fails due to the Standard_DS2_v3 size not being available, identify another Azure VM size that supports nested virtualization and specify this size explicitly during the deployment by using the following syntax (substitute the &lt;vm_Size&gt; placeholder with the intended Azure VM size)
 
    ```
    .\az-101-01b_azuredeploy.ps1 -resourceGroupName 'az1010101b-RG' -resourceGroupLocation <location> -vmSize <vm_Size>

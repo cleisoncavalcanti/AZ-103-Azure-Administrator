@@ -134,7 +134,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: This command sets the current location to the newly created clone of the local repository containing the sample web app code
 
-1. In the Cloud Shell pane, run the following command, replacing the `<git_clone_url>` placeholder with the value of the **Git Clone Url** you identified in the previous task:
+1. In the Cloud Shell pane, run the following command, replacing the &lt;git_clone_url&gt; placeholder with the value of the **Git Clone Url** you identified in the previous task:
 
    ```
    git remote add azure <git_clone_url>
