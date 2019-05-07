@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab: Implementing governance and compliance with Azure initiatives and resource locks'
-    module: 'Module: Manage Azure Subscriptions and Resources'
+    title: 'Implementing governance and compliance with Azure initiatives and resource locks'
+    module: 'Manage Azure Subscriptions and Resources'
 ---
 
 # Lab: Implementing governance and compliance with Azure initiatives and resource locks
