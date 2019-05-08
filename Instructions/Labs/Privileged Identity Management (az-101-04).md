@@ -1,4 +1,10 @@
-﻿# Lab: Secure Identities
+---
+lab:
+    title: 'Secure Identities'
+    module: 'Secure Identities'
+---
+
+# Lab: Secure Identities
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) 
 
