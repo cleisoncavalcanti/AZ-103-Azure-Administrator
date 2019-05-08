@@ -87,7 +87,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated a template deployment of an Azure VM **az1000201b-vm1** that you will use in the next exercise of this lab.
 
 
-## Exercise 1: Prepare Azure File Sync infrastructure
+### Exercise 1: Prepare Azure File Sync infrastructure
 
 The main tasks for this exercise are as follows:
 
@@ -217,7 +217,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created an Azure Storage account and a file share, prepare Windows Server 2016 for use with Azure File Sync, and run Azure File Sync evaluation tool
 
 
-## Exercise 2: Prepare Azure File Sync infrastructure
+### Exercise 2: Prepare Azure File Sync infrastructure
 
 The main tasks for this exercise are as follows:
 
