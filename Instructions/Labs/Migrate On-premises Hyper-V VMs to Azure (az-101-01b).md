@@ -1,4 +1,10 @@
-﻿# Lab: Migrate on-premises Hyper-V VMs to Azure
+---
+lab:
+    title: 'Migrate on-premises Hyper-V VMs to Azure'
+    module: 'Migrate Servers'
+---
+
+# Lab: Migrate on-premises Hyper-V VMs to Azure
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
 
