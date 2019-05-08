@@ -1,4 +1,10 @@
-﻿# Lab: Manage Azure Subscriptions and Resources 
+---
+lab:
+    title: 'Role-Based Access Control'
+    module: 'Manage Azure Subscriptions and Resource'
+---
+
+# Lab: Role-Based Access Control 
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
 
