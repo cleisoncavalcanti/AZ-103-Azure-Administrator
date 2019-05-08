@@ -1,4 +1,10 @@
-﻿# Lab: Implement Advanced Virtual Networking
+---
+lab:
+    title: 'Implement Advanced Virtual Networking'
+    module: 'Implement Advanced Virtual Networking'
+---
+
+# Lab: Implement Advanced Virtual Networking
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Exercise 1 Task 3, which includes steps performed from a Remote Desktop session to an Azure VM
 
