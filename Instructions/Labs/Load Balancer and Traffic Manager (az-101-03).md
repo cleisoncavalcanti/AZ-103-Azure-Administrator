@@ -32,7 +32,7 @@ After completing this lab, you will be able to:
 -  Implement Azure Traffic Manager load balancing
 
 
-## Exercise 0: Deploy Azure VMs by using Azure Resource Manager templates
+### Exercise 0: Deploy Azure VMs by using Azure Resource Manager templates
   
 The main tasks for this exercise are as follows:
 
@@ -181,7 +181,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have used Azure Resource Manager templates to initiate deployment of Azure VMs running Windows Server 2016 Datacenter with the Web Server (IIS) role installed into availability sets in two Azure regions.
 
 
-## Exercise 1: Implement Azure Load Balancing
+### Exercise 1: Implement Azure Load Balancing
   
 The main tasks for this exercise are as follows:
 
@@ -553,7 +553,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have implemented and verified load balancing rules and NAT rules of Azure load balancers in both regions.
 
 
-## Exercise 2: Implement Azure Traffic Manager load balancing
+### Exercise 2: Implement Azure Traffic Manager load balancing
 
 The main tasks for this exercise are as follows:
 
