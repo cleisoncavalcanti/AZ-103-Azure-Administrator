@@ -35,7 +35,7 @@ After completing this lab, you will be able to:
 -  Use Azure Network Watcher to monitor network connectivity
 
 
-## Exercise 1: Prepare infrastructure for Azure Network Watcher-based monitoring
+### Exercise 1: Prepare infrastructure for Azure Network Watcher-based monitoring
   
 The main tasks for this exercise are as follows:
 
@@ -282,7 +282,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have deployed Azure VMs, an Azure Storage account, and an Azure SQL Database instance by using Azure Resource Manager templates, enabled Azure Network Watcher service, established global peering between Azure virtual networks, and established service endpoints to an Azure Storage account and Azure SQL Database instance.
 
 
-## Exercise 2: Use Azure Network Watcher to monitor network connectivity
+### Exercise 2: Use Azure Network Watcher to monitor network connectivity
   
 The main tasks for this exercise are as follows:
 
