@@ -26,7 +26,7 @@ After completing this lab, you will be able to:
 -  Manage scalability and performance of Azure web apps
 
 
-## Exercise 1: Implement Azure web apps
+### Exercise 1: Implement Azure web apps
   
 The main tasks for this exercise are as follows:
 
@@ -193,7 +193,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created an Azure web app, configured web app deployment settings, created a staging deployment slot, deployed code to the staging deployment slot, and performed a slot swap.
 
 
-## Exercise 2: Manage scalability and performance of Azure web apps
+### Exercise 2: Manage scalability and performance of Azure web apps
 
 The main tasks for this exercise are as follows:
 
