@@ -33,7 +33,7 @@ After completing this lab, you will be able to:
 - Configure Azure DNS for private domains
 
 
-## Exercise 1: Configure Azure DNS for public domains
+### Exercise 1: Configure Azure DNS for public domains
 
 The main tasks for this exercise are as follows:
 
@@ -141,7 +141,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created a public DNS zone, created a DNS record in the public DNS zone, and validated Azure DNS-based name resolution for the public domain.
 
 
-## Exercise 2: Configure Azure DNS for private domains
+### Exercise 2: Configure Azure DNS for private domains
   
 The main tasks for this exercise are as follows:
 
