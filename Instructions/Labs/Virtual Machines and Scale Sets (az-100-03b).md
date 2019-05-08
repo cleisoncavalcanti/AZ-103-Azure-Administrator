@@ -1,4 +1,10 @@
-﻿# Lab: Configure compute and storage resources of Azure VMs and Azure VM scale sets
+---
+lab:
+    title: 'Virtual Machines and Scale Sets'
+    module: 'Deploy and Manage Virtual Machines'
+---
+
+# Lab: Virtual Machines and Scale Sets
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) 
 
