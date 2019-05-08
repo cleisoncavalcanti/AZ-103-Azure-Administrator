@@ -1,4 +1,10 @@
-﻿# Lab: Manage Azure AD Premium tenants
+---
+lab:
+    title: 'Self-Service Password Reset'
+    module: 'Implement and Manage Hybrid Identtities'
+---
+
+# Lab: Self-Service Password Reset
   
 All tasks in this lab are performed from the Azure portal 
 
