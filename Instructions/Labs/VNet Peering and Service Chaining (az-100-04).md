@@ -1,4 +1,10 @@
-﻿# Lab: Configure VNet peering and service chaining
+---
+lab:
+    title: 'VNet Peering and Service Chaining'
+    module: 'Configure and Manage Virtual Networks'
+---
+
+# Lab: VNet Peering and Service Chaining
   
 All tasks in this lab are performed from the Azure portal except for Exercise 2 Task 3, Exercise 3 Task 1, and Exercise 3 Task 2, which include steps performed from a Remote Desktop session to an Azure VM
 
