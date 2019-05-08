@@ -1,3 +1,9 @@
+---
+lab:
+    title: 'Implement and Manage Azure Web Apps'
+    module: 'Implement and Manage Application Services'
+---
+
 # Lab: Implement and Manage Azure Web Apps
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)
