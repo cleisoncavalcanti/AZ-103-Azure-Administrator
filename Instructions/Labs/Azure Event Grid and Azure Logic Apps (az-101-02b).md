@@ -26,7 +26,7 @@ After completing this lab, you will be able to:
 -  Configure Azure Logic App and Event Grid to facilitate event monitoring
 
 
-## Exercise 1: Implement prerequisites of the monitoring solution
+### Exercise 1: Implement prerequisites of the monitoring solution
   
 The main tasks for this exercise are as follows:
 
@@ -164,7 +164,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created a storage account, a logic app that you will configure in the next exercise of this lab, an Azure AD service principal that you will reference during that configuration, assigned to that service principal the Reader role within the Azure subscription, and registered the Event Grid resource provider.
 
 
-## Exercise 2: Configure Azure Logic App and Event Grid
+### Exercise 2: Configure Azure Logic App and Event Grid
 
 The main tasks for this exercise are as follows:
 
