@@ -1,4 +1,10 @@
-﻿# Lab: Implement and Manage Storage
+---
+lab:
+    title: 'Implement and Manage Storage'
+    module: 'Implement and Manage Storage'
+---
+
+# Lab: Implement and Manage Storage
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 2 Task 2, which includes steps performed from a Remote Desktop session to an Azure VM
 
