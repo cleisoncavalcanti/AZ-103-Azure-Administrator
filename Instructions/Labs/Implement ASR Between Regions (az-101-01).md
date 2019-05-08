@@ -28,7 +28,7 @@ After completing this lab, you will be able to:
 -  Configure replication of Azure VMs between Azure regions by using Azure Site Recovery
 
 
-## Exercise 1: Implement prerequisites for migration of Azure VMs by using Azure Site Recovery 
+### Exercise 1: Implement prerequisites for migration of Azure VMs by using Azure Site Recovery 
   
 The main tasks for this exercise are as follows:
 
@@ -109,7 +109,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM by using an Azure Resource Manager template and created an Azure Site Recovery vault that will be used to replicate content of the Azure VM disk files. 
 
 
-## Exercise 2: Migrate an Azure VM between Azure regions by using Azure Site Recovery 
+### Exercise 2: Migrate an Azure VM between Azure regions by using Azure Site Recovery 
 
 The main tasks for this exercise are as follows:
 
