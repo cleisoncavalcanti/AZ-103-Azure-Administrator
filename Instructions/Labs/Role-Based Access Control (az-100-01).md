@@ -25,7 +25,7 @@ After completing this lab, you will be able to:
 -  Verify delegation by provisioning Azure resources as a delegated admin and auditing provisioning events
 
 
-## Exercise 1: Configure delegation of provisioning and management of Azure resources by using built-in Role-Based Access Control (RBAC) roles and built-in Azure policies
+### Exercise 1: Configure delegation of provisioning and management of Azure resources by using built-in Role-Based Access Control (RBAC) roles and built-in Azure policies
 
 The main tasks for this exercise are as follows:
 
@@ -146,7 +146,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created an Azure AD user and an Azure AD group, created two Azure resource groups, delegated management of the first Azure resource group via the built-in Azure VM Contributor RBAC role, and assigned to the same resource group the built-in Azure policy restricting SKUs that can be used for Azure VMs.
 
 
-## Exercise 2: Verify delegation by provisioning Azure resources as a delegated admin and auditing provisioning events
+### Exercise 2: Verify delegation by provisioning Azure resources as a delegated admin and auditing provisioning events
   
 The main tasks for this exercise are as follows:
 
