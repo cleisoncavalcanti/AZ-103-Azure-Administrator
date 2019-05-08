@@ -35,7 +35,7 @@ After completing this lab, you will be able to:
 -  Configure replication of Hyper-V VMs to Azure by using Azure Site Recovery
 
 
-## Exercise 1: Implement prerequisites for migration of Hyper-V VMs to Azure by using Azure Site Recovery
+### Exercise 1: Implement prerequisites for migration of Hyper-V VMs to Azure by using Azure Site Recovery
   
 The main tasks for this exercise are as follows:
 
@@ -101,7 +101,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM with nested virtualization support by using an Azure Resource Manager template and created an Azure Recovery Services vault
 
 
-## Exercise 2: Migrate a Hyper-V VM to Azure by using Azure Site Recovery
+### Exercise 2: Migrate a Hyper-V VM to Azure by using Azure Site Recovery
 
 The main tasks for this exercise are as follows:
 
