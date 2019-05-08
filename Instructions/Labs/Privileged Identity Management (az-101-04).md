@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Secure Identities'
+    title: 'Privilaged Identity Management'
     module: 'Secure Identities'
 ---
 
