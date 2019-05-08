@@ -135,7 +135,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated a template deployment of an Azure VM **az1000301b-vm1** and an Azure VM scale set **az1000302bvmss1** that you will use in the next exercise of this lab.
 
 
-## Exercise 1: Configure compute and storage resources of Azure VMs 
+### Exercise 1: Configure compute and storage resources of Azure VMs 
   
 The main tasks for this exercise are as follows:
 
@@ -270,7 +270,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have scaled vertically compute resources of the Azure VM by using the Azure portal and by using an ARM template, attached data disks to the Azure VM, and configured data volumes within an Azure VM.
 
 
-## Exercise 2: Configure compute and storage resources of Azure VM scale sets
+### Exercise 2: Configure compute and storage resources of Azure VM scale sets
   
 The main tasks for this exercise are as follows:
 
