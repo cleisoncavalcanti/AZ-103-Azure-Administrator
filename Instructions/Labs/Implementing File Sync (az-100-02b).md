@@ -1,4 +1,10 @@
-﻿# Lab: Implement Azure File Sync
+---
+lab:
+    title: 'Implement Azure File Sync'
+    module: 'Implement and Manage Storage'
+---
+
+# Lab: Implement Azure File Sync
 
 All tasks in this lab are performed from the Azure portal, except for steps in Exercise 1 and Exercise 2 performed within a Remote Desktop session to an Azure VM.
 
