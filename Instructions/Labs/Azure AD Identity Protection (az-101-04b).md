@@ -1,4 +1,10 @@
-﻿# Lab: Implement and validate Azure AD Identity Protection
+---
+lab:
+    title: 'Implement and validate Azure AD Identity Protection'
+    module: 'Secure Identities'
+---
+
+# Lab: Implement and validate Azure AD Identity Protection
 
 All tasks in this lab are performed from the Azure portal, except for steps in Exercise 2 performed within a Remote Desktop session to an Azure VM.
 
@@ -76,7 +82,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated a template deployment of an Azure VM **az1010401b-vm1** that you will use in the next exercise of this lab.
 
 
-## Exercise 1: Implement Azure MFA
+### Exercise 1: Implement Azure MFA
 
 The main tasks for this exercise are as follows:
 
@@ -267,7 +273,7 @@ The main tasks for this exercise are as follows:
    > **Note**: To unblock a user, you need to provide **Reason for unblocking** on the **Unblock a user** blade. 
 
 
-## Exercise 2: Implement Azure AD Identity Protection:
+### Exercise 2: Implement Azure AD Identity Protection:
   
 The main tasks for this exercise are as follows:
 

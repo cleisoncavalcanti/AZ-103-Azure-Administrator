@@ -1,4 +1,10 @@
-﻿# Lab: Configure VNet peering and service chaining
+---
+lab:
+    title: 'VNet Peering and Service Chaining'
+    module: 'Configure and Manage Virtual Networks'
+---
+
+# Lab: VNet Peering and Service Chaining
   
 All tasks in this lab are performed from the Azure portal except for Exercise 2 Task 3, Exercise 3 Task 1, and Exercise 3 Task 2, which include steps performed from a Remote Desktop session to an Azure VM
 
@@ -130,7 +136,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created two Azure virtual networks and initiated deployments of three Azure VM by using Azure Resource Manager templates.
 
 
-## Exercise 1: Configure VNet peering 
+### Exercise 1: Configure VNet peering 
 
 The main tasks for this exercise are as follows:
 
@@ -191,7 +197,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have configured virtual network peering between the two virtual networks.
 
 
-## Exercise 2: Implement custom routing
+### Exercise 2: Implement custom routing
   
 The main tasks for this exercise are as follows:
 
@@ -285,7 +291,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After completing this exercise, you have implemented custom routing between peered Azure virtual networks. 
 
 
-## Exercise 3: Validating service chaining
+### Exercise 3: Validating service chaining
 
 The main tasks for this exercise are as follows:
 

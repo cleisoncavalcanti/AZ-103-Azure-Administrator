@@ -1,4 +1,10 @@
-﻿# Lab: Implement Directory Synchronization
+---
+lab:
+    title: 'Implement Directory Synchronization'
+    module: 'Implement and Manage Hybrid Identities'
+---
+
+# Lab: Implement Directory Synchronization
   
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Exercise 3 Task 1, Exercise 3 Task 2, and Exercise 3 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
@@ -22,7 +28,7 @@ Adatum Corporation wants to integrate its Active Directory with Azure Active Dir
 - Synchronize Active Directory forest with an Azure Active Directory tenant
 
 
-## Exercise 1: Deploy an Azure VM hosting an Active Directory domain controller
+### Exercise 1: Deploy an Azure VM hosting an Active Directory domain controller
 
 The main tasks for this exercise are as follows:
 
@@ -89,7 +95,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM that will host an Active Directory domain controller by using an Azure Resource Manager template
 
 
-## Exercise 2: Create and configure an Azure Active Directory tenant
+### Exercise 2: Create and configure an Azure Active Directory tenant
 
 The main tasks for this exercise are as follows:
 
@@ -173,7 +179,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created an Azure AD tenant, added a custom DNS name to the new Azure AD tenant, and created an Azure AD user with the Global Administrator role.
 
 
-## Exercise 3: Synchronize Active Directory forest with an Azure Active Directory tenant
+### Exercise 3: Synchronize Active Directory forest with an Azure Active Directory tenant
 
 The main tasks for this exercise are as follows:
 

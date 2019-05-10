@@ -1,4 +1,10 @@
-﻿# Lab: Secure Identities
+---
+lab:
+    title: 'Privilaged Identity Management'
+    module: 'Secure Identities'
+---
+
+# Lab: Secure Identities
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) 
 
@@ -35,7 +41,7 @@ After completing this lab, you will be able to:
 -  Delegate management of Azure resources by using Privileged Identity Management resource roles
 
 
-## Exercise 0: Deploy an Azure VM by using an Azure Resource Manager template
+### Exercise 0: Deploy an Azure VM by using an Azure Resource Manager template
   
 The main tasks for this exercise are as follows:
 
@@ -85,7 +91,7 @@ The main tasks for this exercise are as follows:
    > **Note**: Do not wait for the deployment to complete but proceed to the next task. You will use the Azure VM provisioned by this deployment in Exercise 2 Task 3.
 
 
-## Exercise 1: Create Azure AD users and groups
+### Exercise 1: Create Azure AD users and groups
 
 The main tasks for this exercise are as follows:
 
@@ -159,7 +165,7 @@ The main tasks for this exercise are as follows:
 1. Close the Cloud Shell pane.
 
 
-## Exercise 2: Delegate management of Azure resources by using custom Role-Based Access Control roles
+### Exercise 2: Delegate management of Azure resources by using custom Role-Based Access Control roles
   
 The main tasks for this exercise are as follows:
 
@@ -285,7 +291,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have defined, assigned, and tested a custom RBAC role
 
 
-## Exercise 3: Delegate management of Azure AD by using Privileged Identity Management directory roles
+### Exercise 3: Delegate management of Azure AD by using Privileged Identity Management directory roles
 
 The main tasks for this exercise are as follows:
 
@@ -452,7 +458,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have activated Azure AD Premium P2 trial, assigned Azure AD Premium P2 licenses, activated Privileged Identity Management, signed up PIM for Azure AD roles, delegated management of Azure AD roles, and validated delegation of management of Azure AD roles.
 
 
-## Exercise 4: Delegate management of Azure resources by using Privileged Identity Management resource roles
+### Exercise 4: Delegate management of Azure resources by using Privileged Identity Management resource roles
 
 The main tasks for this exercise are as follows:
 

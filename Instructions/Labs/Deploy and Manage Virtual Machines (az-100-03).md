@@ -1,4 +1,10 @@
-﻿# Lab: Deploy and Manage Virtual Machines
+---
+lab:
+    title: 'Deploy and Manage Virtual Machines'
+    module: 'Deploy and Manage Virtual Machines'
+---
+
+# Lab: Deploy and Manage Virtual Machines
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 2 Task 2 and Exercise 2 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
@@ -30,7 +36,7 @@ After completing this lab, you will be able to:
 -  Deploy and configure Azure VM scale sets
 
 
-## Exercise 1: Deploy Azure VMs by using the Azure portal, Azure PowerShell, and Azure Resource Manager templates
+### Exercise 1: Deploy Azure VMs by using the Azure portal, Azure PowerShell, and Azure Resource Manager templates
   
 The main tasks for this exercise are as follows:
 
@@ -267,7 +273,7 @@ The main tasks for this exercise are as follows:
    > **Note**: You could certainly use a template to deploy two Azure VMs hosting Windows Server 2016 datacenter in a single task (just as this was done with two Azure VMs hosting Linux Ubuntu server). The reason for deploying these Azure VMs in two separate tasks was to give you the opportunity to become familiar with both the Azure portal and Azure PowerShell-based deployments.
 
 
-## Exercise 2: Configure networking settings of Azure VMs running Windows and Linux operating systems
+### Exercise 2: Configure networking settings of Azure VMs running Windows and Linux operating systems
   
 The main tasks for this exercise are as follows:
 
@@ -381,7 +387,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have configured static private and public IP addresses of Azure VMs, connected to an Azure VM running Windows Server 2016 Datacenter via a public IP address, and connect to an Azure VM running Linux Ubuntu Server via a private IP address
 
 
-## Exercise 3: Deploy and configure Azure VM scale sets
+### Exercise 3: Deploy and configure Azure VM scale sets
 
 The main tasks for this exercise are as follows:
 

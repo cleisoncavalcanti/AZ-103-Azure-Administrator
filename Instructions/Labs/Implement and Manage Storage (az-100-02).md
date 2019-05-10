@@ -1,4 +1,10 @@
-﻿# Lab: Implement and Manage Storage
+---
+lab:
+    title: 'Implement and Manage Storage'
+    module: 'Implement and Manage Storage'
+---
+
+# Lab: Implement and Manage Storage
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 2 Task 2, which includes steps performed from a Remote Desktop session to an Azure VM
 
@@ -94,7 +100,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have initiated template deployment of an Azure VM **az1000201-vm1** that you will use in the second exercise of this lab.
 
 
-## Exercise 1: Implement and use Azure Blob Storage
+### Exercise 1: Implement and use Azure Blob Storage
 
 The main tasks for this exercise are as follows:
 
@@ -275,7 +281,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created two Azure Storage accounts, reviewed their configuration settings, created a blob container, uploaded blobs into the container, copied the container and blobs between the storage accounts, and used a SAS key to access one of the blobs. 
 
 
-## Exercise 2: Implement and use Azure File Storage
+### Exercise 2: Implement and use Azure File Storage
 
 The main tasks for this exercise are as follows:
 

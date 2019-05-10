@@ -1,4 +1,10 @@
-﻿# Lab: Manage Azure AD Premium tenants
+---
+lab:
+    title: 'Self-Service Password Reset'
+    module: 'Implement and Manage Hybrid Identtities'
+---
+
+# Lab: Self-Service Password Reset
   
 All tasks in this lab are performed from the Azure portal 
 
@@ -18,7 +24,7 @@ After completing this lab, you will be able to:
 - Manage Azure AD-integrated SaaS applications
 
 
-## Exercise 1: Manage Azure AD users and groups
+### Exercise 1: Manage Azure AD users and groups
 
 The main tasks for this exercise are as follows:
 
@@ -260,7 +266,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created a new Azure AD tenant, activated Azure AD Premium v2 trial, created and configured Azure AD users, assigned Azure AD Premium v2 licenses to Azure AD users, managed Azure AD group membership, as well as configured and validated self-service password reset functionality
 
 
-## Exercise 2: Manage Azure AD-integrated SaaS applications
+### Exercise 2: Manage Azure AD-integrated SaaS applications
 
 The main tasks for this exercise are as follows:
 

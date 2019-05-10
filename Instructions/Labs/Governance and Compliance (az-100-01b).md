@@ -1,4 +1,10 @@
-﻿# Lab: Manage Azure Subscriptions and Resources - Implementing governance and compliance with Azure initiatives and resource locks
+---
+lab:
+    title: 'Implementing governance and compliance with Azure initiatives and resource locks'
+    module: 'Manage Azure Subscriptions and Resources'
+---
+
+# Lab: Implementing governance and compliance with Azure initiatives and resource locks
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
 
@@ -23,7 +29,7 @@ After completing this lab, you will be able to:
 -  Implement Azure resource locks
 
 
-## Exercise 1: Implement Azure tags by using Azure policies and initiatives
+### Exercise 1: Implement Azure tags by using Azure policies and initiatives
 
 The main tasks for this exercise are as follows:
 
@@ -361,7 +367,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have implemented an initiative and policies that evaluate, enforce, and remediate resource tagging compliance. You also evaluated the effects of policy assignment. 
 
 
-## Exercise 2: Implement Azure resource locks
+### Exercise 2: Implement Azure resource locks
   
 The main tasks for this exercise are as follows:
 
