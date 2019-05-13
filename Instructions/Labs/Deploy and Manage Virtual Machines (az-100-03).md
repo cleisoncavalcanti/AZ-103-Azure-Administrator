@@ -8,7 +8,7 @@ lab:
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 2 Task 2 and Exercise 2 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
-   > **Note**: When not using Cloud Shell, the lab virtual machine must have Azure PowerShell module installed [**https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-6.12.0**](https://docs.microsoft.com/en-us/powershell/azure/install-azurerm-ps?view=azurermps-6.12.0)
+   > **Note**: When not using Cloud Shell, the lab virtual machine must have Azure PowerShell module installed [**https://docs.microsoft.com/en-us/powershell/azure/azurerm/install-azurerm-ps**](https://docs.microsoft.com/en-us/powershell/azure/azurerm/install-azurerm-ps)
 
 Lab files: 
 
@@ -200,7 +200,7 @@ The main tasks for this exercise are as follows:
    Set-AzVMOperatingSystem -VM $vmConfig -Windows -ComputerName $vmName -Credential $adminCreds 
    Set-AzVMSourceImage -VM $vmConfig -PublisherName $publisherName -Offer $offerName -Skus $skuName -Version 'latest'
    Set-AzVMOSDisk -VM $vmConfig -Name "$($vmName)_OsDisk_1_$(Get-Random)" -StorageAccountType $osDiskType -CreateOption fromImage
-   Set-AzVMBootDiagnostics -VM $vmConfig -Disable
+   Set-AzVMBootDiagnostic -VM $vmConfig -Disable
    ```
 
    > **Note**: These commands set up the properties of the Azure VM configuration object that will be used to provision the new Azure VM, including the VM size, its availability set, network interface, computer name, local Administrator credentials, the source image, the operating system disk, and boot diagnostics settings.
