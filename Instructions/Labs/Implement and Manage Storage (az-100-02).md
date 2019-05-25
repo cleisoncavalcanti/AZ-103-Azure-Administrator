@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Implement and Manage Storage'
-    module: 'Implement and Manage Storage'
+    module: 'Module 03 - Azure Storage'
 ---
 
 # Lab: Implement and Manage Storage
