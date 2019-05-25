@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'VNet Peering and Service Chaining'
-    module: 'Configure and Manage Virtual Networks'
+    module: 'Module 05 - Intersite Connectivity'
 ---
 
 # Lab: VNet Peering and Service Chaining
