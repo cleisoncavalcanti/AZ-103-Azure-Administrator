@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Virtual Machines and Scale Sets'
-    module: 'Deploy and Manage Virtual Machines'
+    module: 'Module 02 - Azure Virtual Machines'
 ---
 
 # Lab: Virtual Machines and Scale Sets
