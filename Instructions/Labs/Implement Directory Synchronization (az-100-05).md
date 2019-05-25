@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Implement Directory Synchronization'
-    module: 'Implement and Manage Hybrid Identities'
+    module: 'Module 09 - Azure Active Directory'
 ---
 
 # Lab: Implement Directory Synchronization
