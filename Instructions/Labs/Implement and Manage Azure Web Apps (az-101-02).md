@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Implement and Manage Azure Web Apps'
-    module: 'Implement and Manage Application Services'
+    module: 'Not used in AZ-103 - Optional'
 ---
 
 # Lab: Implement and Manage Azure Web Apps
