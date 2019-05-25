@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Privileged Identity Management'
-    module: 'Secure Identities'
+    module: 'Not used in AZ-103 - Optional'
 ---
 
 # Lab: Secure Identities
