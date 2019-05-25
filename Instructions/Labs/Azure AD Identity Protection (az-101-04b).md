@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Implement and validate Azure AD Identity Protection'
-    module: 'Secure Identities'
+    title: 'Azure AD Identity Protection'
+    module: 'Module 10 - Securing Identities'
 ---
 
-# Lab: Implement and validate Azure AD Identity Protection
+# Lab: Azure AD Identity Protection
 
 All tasks in this lab are performed from the Azure portal, except for steps in Exercise 2 performed within a Remote Desktop session to an Azure VM.
 
