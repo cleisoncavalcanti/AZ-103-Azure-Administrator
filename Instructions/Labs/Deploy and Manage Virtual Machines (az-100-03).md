@@ -12,13 +12,13 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Labfiles\\AZ100\\Mod03\\az-100-03_deploy_azure_vm.ps1**
+-  **Labfiles\\AZ-100.3\\az-100-03_deploy_azure_vm.ps1**
 
--  **Labfiles\\AZ100\\Mod03\\az-100-03_azuredeploy.json**
+-  **Labfiles\\AZ-100.3\\az-100-03_azuredeploy.json**
 
--  **Labfiles\\AZ100\\Mod03\\az-100-03_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-100.3\\az-100-03_azuredeploy.parameters.json**
 
--  **Labfiles\\AZ100\\Mod03\\az-100-03_install_iis_vmss.zip**
+-  **Labfiles\\AZ-100.3\\az-100-03_install_iis_vmss.zip**
 
 ### Scenario
   
@@ -226,7 +226,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\AZ100\\Mod03\\az-100-03_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\AZ-100.3\\az-100-03_azuredeploy.json**. 
 
    > **Note**: Review the content of the template and note that it defines deployment of two Azure VMs hosting Linux Ubuntu into an availability set and into the existing virtual network **az1000301-vnet0**.
 
@@ -234,7 +234,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ100\\Mod03\\az-100-03_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ-100.3\\az-100-03_azuredeploy.parameters.json**. 
 
 1. Save the parameters and return to the **Custom deployment** blade. 
 
@@ -476,7 +476,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000303vmss0 - Extension** blade, add the **PowerShell Desired State Configuration** extension with the following settings:
 
-   > **Note**: The DSC configration module is available for upload from **Labfiles\\AZ100\\Mod03\\az-100-03_install_iis_vmss.zip**. The module contains the DSC configuration script that installs the Web Server (IIS) role.
+   > **Note**: The DSC configration module is available for upload from **Labfiles\\AZ-100.3\\az-100-03_install_iis_vmss.zip**. The module contains the DSC configuration script that installs the Web Server (IIS) role.
 
     - Configuration Modules or Script: **"az-100-03_install_iis_vmss.zip"**
 
