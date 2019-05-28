@@ -10,11 +10,11 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Labfiles\\AZ-101.03\\az-101-03_01_azuredeploy.json**
+-  **Labfiles\\AZ-101.3\\az-101-03_01_azuredeploy.json**
 
--  **Labfiles\\AZ-101.03\\az-101-03_01_1_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-101.3\\az-101-03_01_1_azuredeploy.parameters.json**
 
--  **Labfiles\\AZ-101.03\\az-101-03_01_2_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-101.3\\az-101-03_01_2_azuredeploy.parameters.json**
 
 ### Scenario
   
