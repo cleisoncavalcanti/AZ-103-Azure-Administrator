@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Use Azure Network Watcher for monitoring and troubleshooting network connectivity'
-    module: 'Implement Advanced Virtual Networking'
+    title: 'Azure Network Watcher'
+    module: 'Module 06 - Monitoring'
 ---
 
 # Lab: Use Azure Network Watcher for monitoring and troubleshooting network connectivity

@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Implement and Manage Azure Web Apps'
-    module: 'Implement and Manage Application Services'
+    module: 'Not used in AZ-103 - Optional'
 ---
 
 # Lab: Implement and Manage Azure Web Apps
@@ -115,7 +115,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Deployment Center** blade, use the **Deployment Credentials** toolbar icon to display **User Credentials** pane. 
 
-1. In the **User Credentials** pane, set the password to **Pa55w.rd1234** and save the newly set credentials.
+1. In the **User Credentials** pane, set the password to any valid, complex string and save the newly set credentials.
 
 
 #### Task 4: Deploy code to the staging deployment slot and perform a slot swap
@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: This command pushes the sample web app code from the local repository to the Azure web app staging deployment slot
 
-1. When prompted, type the password **Pa55w.rd1234** you set in the previous task.
+1. When prompted, type the password you set in the previous task.
 
 1. Close the Cloud Shell pane.
 

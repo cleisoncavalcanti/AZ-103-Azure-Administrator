@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Migrate on-premises Hyper-V VMs to Azure'
-    module: 'Migrate Servers'
+    module: 'Not used in AZ-103 - Optional'
 ---
 
 # Lab: Migrate on-premises Hyper-V VMs to Azure

@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Role-Based Access Control'
-    module: 'Manage Azure Subscriptions and Resource'
+    module: 'Module 11 - Governance and Compliance'
 ---
 
 # Lab: Role-Based Access Control 

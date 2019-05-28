@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Deploy and Manage Virtual Machines'
-    module: 'Deploy and Manage Virtual Machines'
+    module: 'Module 02 - Azure Virtual Machines'
 ---
 
 # Lab: Deploy and Manage Virtual Machines

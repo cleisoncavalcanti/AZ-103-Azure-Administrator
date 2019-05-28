@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Monitor changes to Azure resources by using Azure Event Grid and Azure Logic Apps'
-    module: 'Implement and Manage Application Services'
+    module: 'Not used in AZ-103 - Optional'
 ---
 
 # Lab: Monitor changes to Azure resources by using Azure Event Grid and Azure Logic Apps

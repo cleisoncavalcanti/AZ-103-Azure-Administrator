@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Implement Azure Site Recovery between Azure regions'
-    module: 'Migrate Servers'
+    title: 'Azure Site Recovery between Azure regions'
+    module: 'Module 07 - Data Protection '
 ---
 
 # Lab: Implement Azure Site Recovery between Azure regions

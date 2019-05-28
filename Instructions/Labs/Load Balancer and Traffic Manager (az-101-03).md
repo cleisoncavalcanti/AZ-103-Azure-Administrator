@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Load Balancer and Traffic Manager'
-    module: 'Implement Advanced Virtual Networking'
+    module: 'Module 08 - Network Traffic Management'
 ---
 
 # Lab: Load Balancer and Traffic Manager

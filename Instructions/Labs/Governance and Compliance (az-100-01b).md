@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Implementing governance and compliance with Azure initiatives and resource locks'
-    module: 'Manage Azure Subscriptions and Resources'
+    title: 'Governance and Compliance'
+    module: 'Module 11 - Governance and Compliance'
 ---
 
 # Lab: Implementing governance and compliance with Azure initiatives and resource locks
@@ -107,9 +107,9 @@ The main tasks for this exercise are as follows:
 
 1. From the **Policy** blade, navigate to the **Policy - Definitions** blade.
 
-1. From the **Policy Definitions** blade, display the **Enforce tag and its value** policy definition.
+1. From the **Policy Definitions** blade, display the **Require tag and its value** policy definition.
 
-1. From the **Enforce tag and its default value** policy definition blade, use the duplicate the definition feature to create a new policy with the following settings:
+1. From the **Require tag and its default value** policy definition blade, use the duplicate the definition feature to create a new policy with the following settings:
 
     - Definition location: the name of the subscription you are using in this lab
 

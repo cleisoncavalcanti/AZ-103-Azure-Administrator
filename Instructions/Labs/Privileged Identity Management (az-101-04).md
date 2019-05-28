@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Privilaged Identity Management'
-    module: 'Secure Identities'
+    title: 'Privileged Identity Management'
+    module: 'Not used in AZ-103 - Optional'
 ---
 
 # Lab: Secure Identities
@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 1. Deploy an Azure VM running Windows Server 2016 Datacenter by using an Azure Resource Manager template
 
 
-#### Task 1: Deploy an Azure VM running Windows Server 2016 Datacenter by using an Azure Resource Manager template
+#### Task 1: Deploy an Azure VM running Ubuntu Server by using an Azure Resource Manager template
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab and is a Global Administrator of the Azure AD tenant associated with that subscription.
 
