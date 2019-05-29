@@ -284,6 +284,8 @@ The main tasks for this exercise are as follows:
 1. From the Windows PowerShell prompt, start Azure AD Connect delta synchronization by running the following:
 
    ```
+   Import-Module -Name 'C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1'
+   
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
 
