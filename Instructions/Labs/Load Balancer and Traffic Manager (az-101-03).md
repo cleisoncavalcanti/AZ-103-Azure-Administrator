@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
 
     - Image SKU: **2016-Datacenter**
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_D2s_v3**
 
     - Virtual Network Name: **az1010302-vnet**
 
