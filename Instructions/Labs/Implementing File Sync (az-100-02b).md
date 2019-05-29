@@ -177,10 +177,10 @@ The main tasks for this exercise are as follows:
 
    > **Note**: To populate the file share with sample data, we use content of the C:\\WindowsAzure folder, which should contain about 100 MB worth of files
 
-1. From the Windows PowerShell console, install the latest AzureRM module by running the following:
+1. From the Windows PowerShell console, install the latest Az PowerShell module by running the following:
 
    ```
-   Install-Module -Name AzureRM
+   Install-Module -Name Az -AllowClobber
    ```
 
    > **Note**: When prompted, confirm that you want to proceed with the installation from PSGallery repository.
