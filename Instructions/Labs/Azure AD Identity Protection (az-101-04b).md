@@ -351,6 +351,8 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 0 has completed. 
 
+1. In the Azure portal, set the **Directory + subscription** filter to the default Azure AD tenant.
+
 1. In the Azure portal, navigate to the **az1010401b-vm1** blade.
 
 1. From the **az1010401b-vm1** blade, connect to the Azure VM via Remote Desktop session and, when prompted to sign in, provide the following credentials:
