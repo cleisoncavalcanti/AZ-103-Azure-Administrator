@@ -167,7 +167,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell console, set up a file share by running the following:
 
-   ```
+   ```powershell
    $directory = New-Item -Type Directory -Path 'S:\az10002bShare'
 
    New-SmbShare -Name $directory.Name -Path $directory.FullName -FullAccess 'Administrators' -ReadAccess Everyone   
@@ -175,11 +175,11 @@ The main tasks for this exercise are as follows:
    Copy-Item -Path 'C:\WindowsAzure\*' -Destination $directory.FullName –Recurse
    ```
 
-   > **Note**: To populate the file share with sample data, we use content of the C:\\WindowsAzure folder, which should contain about 100 MB worth of files
+   > **Note**: To populate the file share with sample data, we use content of the *C:\\WindowsAzure* folder, which should contain about 100 MB worth of files
 
 1. From the Windows PowerShell console, install the latest Az PowerShell module by running the following:
 
-   ```
+   ```powershell
    Install-Module -Name Az -AllowClobber
    ```
 
@@ -190,7 +190,7 @@ The main tasks for this exercise are as follows:
 
 1. Within the RDP session to the Azure VM, from the Windows PowerShell console, install the latest version of Package Management and PowerShellGet by running the following:
 
-   ```
+   ```powershell
    Install-Module -Name PackageManagement -Repository PSGallery -Force
 
    Install-Module -Name PowerShellGet -Repository PSGallery -Force
@@ -202,13 +202,13 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
-   ```
+   ```powershell
    Install-Module -Name Az.StorageSync -AllowPrerelease -AllowClobber -Force
    ```
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
-   ```
+   ```powershell
    Invoke-AzStorageSyncCompatibilityCheck -Path 'S:\az10002bShare'
    ```
 
@@ -259,7 +259,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Install the Azure File Sync Agent.
 
-1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V5_WS2016.msi**.
+1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V6_WS2016.msi**.
 
 1. Once the download completes, run the Storage Sync Agent Setup wizard with the default settings to install Azure File Sync Agent.
 

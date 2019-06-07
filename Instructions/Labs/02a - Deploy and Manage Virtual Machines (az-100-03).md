@@ -476,7 +476,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000303vmss0 - Extension** blade, add the **PowerShell Desired State Configuration** extension with the following settings:
 
-   > **Note**: The DSC configration module is available for upload from **Labfiles\\AZ-100.3\\az-100-03_install_iis_vmss.zip**. The module contains the DSC configuration script that installs the Web Server (IIS) role.
+   > **Note**: The DSC configuration module is available for upload from **Labfiles\\AZ-100.3\\az-100-03_install_iis_vmss.zip**. The module contains the DSC configuration script that installs the Web Server (IIS) role.
 
     - Configuration Modules or Script: **"az-100-03_install_iis_vmss.zip"**
 
@@ -496,7 +496,7 @@ The main tasks for this exercise are as follows:
 
 1. Navigate to the **az1000303vmss0 - Instances** blade and initiate the upgrade of the **az1000303vmss0_0** instance.
 
-   > **Note**: The update will trigger application of the DSC configration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000303vmss0 - Instances** blade. 
+   > **Note**: The update will trigger application of the DSC configuration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000303vmss0 - Instances** blade.
 
 1. Once the upgrade completes, navigate to the **az1000303vmss0-ip** blade. 
 
