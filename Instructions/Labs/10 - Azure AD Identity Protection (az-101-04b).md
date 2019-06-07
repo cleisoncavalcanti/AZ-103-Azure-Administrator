@@ -130,9 +130,9 @@ The main tasks for this exercise are as follows:
 
 1. From the **AdatumLab101-4b - Overview** blade, navigate to the **Licenses - Overview** blade.
 
-1. From the **Licenses - Overview** blade, navigate to the **Products** blade. 
+1. From the **Licenses - Overview** blade, navigate to the **Licenses - All products** blade. 
 
-1. From the **Products** blade, navigate to the **Activate** blade and activate **Azure AD Premium P2** free trial.
+1. From the **Licenses - All products** blade, navigate to the **Activate** blade and activate **Azure AD Premium P2** free trial.
 
 
 #### Task 3: Create Azure AD users and groups.
@@ -203,7 +203,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant, use the **Multi-Factor Authentication** link to open the **multi-factor authentication** portal. 
 
-1. On the **multi-factor authentication** portal, display to the **service settings** tab, review its settings, and ensure that all **verification options**, including **Call to phone**, **Text message to phone**, **Notification through mobile app**, and **Verification code from mobile app or hardware token** are enabled.
+1. On the **multi-factor authentication** portal, display to the **service settings** tab, review its settings, and the **verification options**, including **Text message to phone**, **Notification through mobile app**, and **Verification code from mobile app or hardware token** are enabled.
 
 1. On the **multi-factor authentication** portal, switch to the **users** tab, select **aaduser1** entry, and enable its multi-factor authentication status.
 
@@ -244,15 +244,13 @@ The main tasks for this exercise are as follows:
 
 1. When prompted with the **More information required** message, continue to the **Additional security verification** page.
 
-1. On the **How should we contact you?** page, note that you need to set up at least one of the following options:
+1. On the **How should we contact you?** page, note that you need to set up one of the following options:
 
     - **Authentication phone**
 
-    - **Office phone**
-
     - **Mobile app**
 
-1. Select the **Authentication phone** or **Office phone** option and select the **Call me** method of contact.
+1. Select the **Authentication phone** option with the **Send me a code by text message** method.
 
 1. Complete the verification and note the automatically generated app password. 
 
@@ -261,16 +259,6 @@ The main tasks for this exercise are as follows:
 1. Verify that you successfully signed in to the Azure portal.
 
 1. Sign out as **aaduser1** and close the InPrivate browser window.
-
-1. Open an InPrivate Microsoft Edge window again, navigate to the Azure portal and, when prompted, sign in by using the **aaduser1** user account. This will automatically trigger the call to the phone number you provided.
-
-1. Answer the call, press **0#**, and listen to the remainder of the message. 
-
-   > **Note**: At this point, your account has been automatically blocked. 
-
-1. To unblock the **aaduser1** account, sign in to the Azure portal by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant, navigate to the **Multi-Factor Authentication - Block/unblock users** blade, and, use the **Unblock** link next to the **aaduser1** entry to unblock this user account. 
-
-   > **Note**: To unblock a user, you need to provide **Reason for unblocking** on the **Unblock a user** blade. 
 
 
 ### Exercise 2: Implement Azure AD Identity Protection:
@@ -351,6 +339,8 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 0 has completed. 
 
+1. In the Azure portal, set the **Directory + subscription** filter to the default Azure AD tenant.
+
 1. In the Azure portal, navigate to the **az1010401b-vm1** blade.
 
 1. From the **az1010401b-vm1** blade, connect to the Azure VM via Remote Desktop session and, when prompted to sign in, provide the following credentials:
@@ -384,5 +374,7 @@ The main tasks for this exercise are as follows:
 1. In the Azure portal, navigate to the **Azure AD Identity Protection - Risk events** blade and note that the entry representing **Sign-in from anonymous IP address**.
 
 1. From the **Azure AD Identity Protection - Risk events** blade, navigate to the **Azure AD Identity Protection - Users flagged for risk** blade and note the entry representing **aaduser2**.
+
+> **Note**: To remove the Azure AD tenant you created in this lab, follow https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto
 
 > **Result**: After you completed this exercise, you have enabled Azure AD Identity Protection, configured user risk policy and sign-in risk policy, as well as validated Azure AD Identity Protection configuration by simulating risk events

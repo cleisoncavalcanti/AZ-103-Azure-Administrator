@@ -10,11 +10,11 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Labfiles\\AZ101\\Mod03\\az-101-03_01_azuredeploy.json**
+-  **Labfiles\\AZ-101.3\\az-101-03_01_azuredeploy.json**
 
--  **Labfiles\\AZ101\\Mod03\\az-101-03_01_1_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-101.3\\az-101-03_01_1_azuredeploy.parameters.json**
 
--  **Labfiles\\AZ101\\Mod03\\az-101-03_01_2_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-101.3\\az-101-03_01_2_azuredeploy.parameters.json**
 
 ### Scenario
   
@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\AZ101\\Mod03\\az-101-03_01_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\AZ-101.3\\az-101-03_01_azuredeploy.json**. 
 
    > **Note**: Review the content of the template and note that it defines deployment of two Azure VMs hosting Windows Server 2016 Datacenter Core into an availability set.
 
@@ -61,7 +61,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ101\\Mod03\\az-101-03_01_1_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ-101.3\\az-101-03_01_1_azuredeploy.parameters.json**. 
 
 1. Save the parameters and return to the **Custom deployment** blade. 
 
@@ -87,7 +87,7 @@ The main tasks for this exercise are as follows:
 
     - Image SKU: **2016-Datacenter**
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_D2s_v3**
 
     - Virtual Network Name: **az1010301-vnet**
 
@@ -105,7 +105,7 @@ The main tasks for this exercise are as follows:
 
     - Modules Url: **https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip**
 
-    - Configuration Function: **ContosoWebsite.ps1\\\\ContosoWebsite**
+    - Configuration Function: **ContosoWebsite.ps1\\ContosoWebsite**
 
    > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
@@ -122,7 +122,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\AZ101\\Mod03\\az-101-03_01_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\AZ-101.3\\az-101-03_01_azuredeploy.json**. 
 
    > **Note**: This is the same template you used in the previous task. You will use it to deploy a pair of Azure VMs to the second region. 
 
@@ -130,7 +130,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ101\\Mod03\\az-101-03_01_2_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ-101.3\\az-101-03_01_2_azuredeploy.parameters.json**. 
 
 1. Save the parameters and return to the **Custom deployment** blade. 
 
@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
 
     - Image SKU: **2016-Datacenter**
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_D2s_v3**
 
     - Virtual Network Name: **az1010302-vnet**
 
@@ -174,7 +174,7 @@ The main tasks for this exercise are as follows:
 
     - Modules Url: **https://github.com/Azure/azure-quickstart-templates/raw/master/dsc-extension-iis-server-windows-vm/ContosoWebsite.ps1.zip**
 
-    - Configuration Function: **ContosoWebsite.ps1\\\\ContosoWebsite**
+    - Configuration Function: **ContosoWebsite.ps1\\ContosoWebsite**
 
    > **Note**: Do not wait for the deployment to complete but proceed to the next exercise.
 

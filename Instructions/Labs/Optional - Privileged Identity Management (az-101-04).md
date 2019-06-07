@@ -15,11 +15,11 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Labfiles\\AZ101\\Mod04\\az-101-04_01_azuredeploy.json**
+-  **Labfiles\\AZ-101.4\\az-101-04_01_azuredeploy.json**
 
--  **Labfiles\\AZ101\\Mod04\\az-101-04_01_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-101.4\\az-101-04_01_azuredeploy.parameters.json**
 
--  **Labfiles\\AZ101\\Mod04\\az-101-04_01_customRoleDefinition.json**
+-  **Labfiles\\AZ-101.4\\az-101-04_01_customRoleDefinition.json**
 
 ### Scenario
   
@@ -60,7 +60,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\AZ101\\Mod04\\az-101-04_01_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\AZ-101.4\\az-101-04_01_azuredeploy.json**. 
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Linux Ubuntu.
 
@@ -68,7 +68,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ101\\Mod04\\az-101-04_01_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ-101.4\\az-101-04_01_azuredeploy.parameters.json**. 
 
 1. Save the parameters and return to the **Custom deployment** blade. 
 
@@ -197,7 +197,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create a custom RBAC role in the Azure AD tenant
 
-1. On the lab virtual machine, open the file **Labfiles\\AZ101\\Mod04\\az-101-04_01_custom.role.definition.json** and review its content:
+1. On the lab virtual machine, open the file **Labfiles\\AZ-101.4\\az-101-04_01_custom.role.definition.json** and review its content:
 
    ```
    {
@@ -220,7 +220,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
 
-1. From the Cloud Shell pane, upload the file **Labfiles\\AZ101\\Mod04\\az-101-04_01_custom.role.definition.json** into the home directory.
+1. From the Cloud Shell pane, upload the file **Labfiles\\AZ-101.4\\az-101-04_01_custom.role.definition.json** into the home directory.
 
 1. In the Cloud Shell pane, run the following commands:
 

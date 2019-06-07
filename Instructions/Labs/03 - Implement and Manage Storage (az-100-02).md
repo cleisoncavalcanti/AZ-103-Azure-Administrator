@@ -12,9 +12,9 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Labfiles\\AZ100\\Mod02\\az-100-02_azuredeploy.json**
+-  **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.json**
 
--  **Labfiles\\AZ100\\Mod02\\az-100-02_azuredeploy.parameters.json**
+-  **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.parameters.json**
 
 ### Scenario
   
@@ -63,7 +63,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\AZ100\\Mod02\\az-100-02_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.json**. 
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter.
 
@@ -71,7 +71,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ100\\Mod02\\az-100-02_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.parameters.json**. 
 
 1. Save the parameters and return to the **Custom deployment** blade. 
 
@@ -213,7 +213,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Blobs** blade of the first storage account, create a new container named **az1000202-container** with the **Public access level** set to **Private (no anonymous access)**. 
 
-1. From the **az1000202-container** blade, upload **Labfiles\\AZ100\\Mod02\\az-100-02_azuredeploy.json** and **Labfiles\\AZ100\\Mod02\\az-100-02_azuredeploy.parameters.json** into the container.
+1. From the **az1000202-container** blade, upload **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.json** and **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.parameters.json** into the container.
 
 
 #### Task 4: Copy a container and blobs between Azure Storage accounts
