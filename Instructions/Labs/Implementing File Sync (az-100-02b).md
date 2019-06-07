@@ -8,13 +8,13 @@ lab:
 
 All tasks in this lab are performed from the Azure portal, except for steps in Exercise 1 and Exercise 2 performed within a Remote Desktop session to an Azure VM.
 
-Lab files: 
+Lab files:
 
--  **Allfiles/Labfiles/AZ-100.2/az-100-02b_azuredeploy.json**
+- **Allfiles/Labfiles/AZ-100.2/az-100-02b_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.2/az-100-02b_azuredeploy.parameters.json**
+- **Allfiles/Labfiles/AZ-100.2/az-100-02b_azuredeploy.parameters.json**
 
-### Scenario
+## Scenario
   
 Adatum Corporation hosts its file shares in on-premises file servers. Considering its plans to migrate majority of its workloads to Azure, Adatum is looking for the most efficient method to replicate its data to file shares that will be available in Azure. To implement it, Adatum will use Azure File Sync.
 
@@ -22,19 +22,17 @@ Adatum Corporation hosts its file shares in on-premises file servers. Considerin
   
 After completing this lab, you will be able to:
 
--  Deploy an Azure VM by using an Azure Resource Manager template
+- Deploy an Azure VM by using an Azure Resource Manager template
 
--  Prepare Azure File Sync infrastructure
+- Prepare Azure File Sync infrastructure
 
--  Implement and validate Azure File Sync
-
+- Implement and validate Azure File Sync
 
 ### Exercise 0: Prepare the lab environment
   
 The main tasks for this exercise are as follows:
 
 1. Deploy an Azure VM by using an Azure Resource Manager template
-
 
 #### Task 1: Deploy an Azure VM by using an Azure Resource Manager template
 
@@ -48,17 +46,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **az-100-02b_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **az-100-02b_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter with a single data disk.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **az-100-02b_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **az-100-02b_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -86,7 +84,6 @@ The main tasks for this exercise are as follows:
 
 > **Result**: After you completed this exercise, you have initiated a template deployment of an Azure VM **az1000201b-vm1** that you will use in the next exercise of this lab.
 
-
 ### Exercise 1: Prepare Azure File Sync infrastructure
 
 The main tasks for this exercise are as follows:
@@ -97,7 +94,6 @@ The main tasks for this exercise are as follows:
 
 1. Run Azure File Sync evaluation tool
 
-
 #### Task 1: Create an Azure Storage account and a file share
 
 1. In the Azure portal, navigate to the **New** blade.
@@ -106,7 +102,7 @@ The main tasks for this exercise are as follows:
 
 1. Use the list of search results to navigate to the **Create storage account** blade.
 
-1. From the **Create storage account** blade, create a new storage account with the following settings: 
+1. From the **Create storage account** blade, create a new storage account with the following settings:
 
     - Subscription: the same subscription you selected in the previous task
 
@@ -140,10 +136,9 @@ The main tasks for this exercise are as follows:
 
     - Quota: none
 
-
 #### Task 2: Prepare Windows Server 2016 for use with Azure File Sync
 
-   > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 0 has completed. 
+   > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 0 has completed.
 
 1. In the Azure portal, navigate to the **az1000201b-vm1** blade.
 
@@ -163,34 +158,33 @@ The main tasks for this exercise are as follows:
 
     - Volume label: **Data**
 
-1. Within the RDP session, start a Windows PowerShell session as administrator. 
+1. Within the RDP session, start a Windows PowerShell session as administrator.
 
 1. From the Windows PowerShell console, set up a file share by running the following:
 
-   ```
+   ```powershell
    $directory = New-Item -Type Directory -Path 'S:\az10002bShare'
 
-   New-SmbShare -Name $directory.Name -Path $directory.FullName -FullAccess 'Administrators' -ReadAccess Everyone   
+   New-SmbShare -Name $directory.Name -Path $directory.FullName -FullAccess 'Administrators' -ReadAccess Everyone
 
    Copy-Item -Path 'C:\WindowsAzure\*' -Destination $directory.FullName –Recurse
    ```
 
-   > **Note**: To populate the file share with sample data, we use content of the C:\\WindowsAzure folder, which should contain about 100 MB worth of files
+   > **Note**: To populate the file share with sample data, we use content of the *C:\\WindowsAzure* folder, which should contain about 100 MB worth of files
 
 1. From the Windows PowerShell console, install the latest AzureRM module by running the following:
 
-   ```
-   Install-Module -Name AzureRM
+   ```powershell
+   Install-Module -Name AZ
    ```
 
    > **Note**: When prompted, confirm that you want to proceed with the installation from PSGallery repository.
-
 
 #### Task 3: Run Azure File Sync evaluation tool
 
 1. Within the RDP session to the Azure VM, from the Windows PowerShell console, install the latest version of Package Management and PowerShellGet by running the following:
 
-   ```
+   ```powershell
    Install-Module -Name PackageManagement -Repository PSGallery -Force
 
    Install-Module -Name PowerShellGet -Repository PSGallery -Force
@@ -202,20 +196,19 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
-   ```
+   ```powershell
    Install-Module -Name Az.StorageSync -AllowPrerelease -AllowClobber -Force
    ```
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
-   ```
+   ```powershell
    Invoke-AzStorageSyncCompatibilityCheck -Path 'S:\az10002bShare'
    ```
 
 1. Review the results and verify that no compatibility issues have been found.
 
 > **Result**: After you completed this exercise, you have created an Azure Storage account and a file share, prepare Windows Server 2016 for use with Azure File Sync, and run Azure File Sync evaluation tool
-
 
 ### Exercise 2: Prepare Azure File Sync infrastructure
 
@@ -232,7 +225,6 @@ The main tasks for this exercise are as follows:
 1. Create a server endpoint
 
 1. Validate Azure File Sync operations
-
 
 #### Task 1: Deploy the Storage Sync Service
 
@@ -256,15 +248,13 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region in which you created the storage account earlier in this exercise
 
+#### Task 2: Install the Azure File Sync Agent
 
-#### Task 2: Install the Azure File Sync Agent.
-
-1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V5_WS2016.msi**.
+1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V6_WS2016.msi**.
 
 1. Once the download completes, run the Storage Sync Agent Setup wizard with the default settings to install Azure File Sync Agent.
 
 1. After the Azure File Sync agent installation completes, the **Azure File Sync - Server Registration** wizard will automatically start.
-
 
 #### Task 3: Register the Windows Server with Storage Sync Service
 
@@ -280,7 +270,6 @@ The main tasks for this exercise are as follows:
 
 1. When prompted, sign in again by using the same Microsoft account you used previously in this lab.
 
-
 #### Task 4: Create a sync group and a cloud endpoint
 
 1. Within the RDP session to the Azure VM, in the Azure portal, navigate to the **az1000202b-ss** Storage Sync Service blade.
@@ -294,7 +283,6 @@ The main tasks for this exercise are as follows:
     - Storage account: the resource id of the storage account you created in the previous exercise
 
     - Azure File Share: **az10002bshare1**
-
 
 #### Task 5: Create a server endpoint
 
@@ -314,18 +302,17 @@ The main tasks for this exercise are as follows:
 
     - Offline Data Transfer: **Disabled**
 
-
 #### Task 6: Validate Azure File Sync operations
 
 1. Within the RDP session to the Azure VM, in the Azure portal, monitor the health status of the server endpoint **az100021b-vm1** on the **az1000202b-syncgroup1** blade, as it changes from **Provisioning** to **Pending** and, eventually, to a green checkmark.
 
-   > **Note**: You should be able to proceed to the next step after a few minutes. 
+   > **Note**: You should be able to proceed to the next step after a few minutes.
 
 1. In the Azure portal, navigate to the **az10002bshare1** blade and display the **Connect** blade.
 
 1. From the **Connect** blade, copy into Clipboard the PowerShell commands that connect to the file share from a Windows computer.
 
-1. Within the RDP session, start a Windows PowerShell ISE session. 
+1. Within the RDP session, start a Windows PowerShell ISE session.
 
 1. From the Windows PowerShell ISE session, open the script pane and paste into it the content of your local Clipboard.
 
@@ -334,6 +321,5 @@ The main tasks for this exercise are as follows:
 1. Within the RDP session, start File Explorer, navigate to the Z: drive, and verify that it contains the same content as S:\\az10002bShare
 
 1. Display the Properties window of individual folders on the Z: drive, review the Security tab, and note that the entries represent NTFS permissions assigned to the corresponding folders on the S: drive.
-
 
 > **Result**: After you completed this exercise, you have deployed the Storage Sync Service, installed the Azure File Sync Agent, registered the Windows Server with Storage Sync Service, created a sync group and a cloud endpoint, created a server endpoint, and validated Azure File Sync operations.
