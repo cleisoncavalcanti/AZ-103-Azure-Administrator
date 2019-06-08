@@ -60,7 +60,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Deploy an Azure VM hosting an Active Directory domain controller by using an Azure Resource Manager template
 
-1. From the lab virtual machine, start another instance of Microsoft Edge, browse to the GitHub Azure QuickStart Templates page at  [**https://github.com/Azure/azure-quickstart-templates**]https://github.com/Azure/azure-quickstart-templates). 
+1. From the lab virtual machine, start another instance of Microsoft Edge, browse to the GitHub Azure QuickStart Templates page at  [**https://github.com/Azure/azure-quickstart-templates**](https://github.com/Azure/azure-quickstart-templates).
 
 1. On the Azure Quickstart Templates page, click **active-directory-new-domain**.
 
