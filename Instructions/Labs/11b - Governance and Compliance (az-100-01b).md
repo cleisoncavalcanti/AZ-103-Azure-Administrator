@@ -119,7 +119,7 @@ The main tasks for this exercise are as follows:
 
     - Category: the name of a new category **Lab**
 
-    - Policy rule: the existing policy rule with the **effect** set to **audit**, such that the policy definition has the following content:
+    - Policy rule: in the existing policy rule, change the **effect** from **deny** to **audit**, such that the policy definition has the following content:
 
    ```
    {
