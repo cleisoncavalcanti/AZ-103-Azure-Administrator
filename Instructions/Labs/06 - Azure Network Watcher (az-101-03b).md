@@ -58,7 +58,7 @@ The main tasks for this exercise are as follows:
 
 1. Use the list of search results to navigate to the **Custom deployment** blade.
 
-1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
+1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
 1. From the **Edit template** blade, load the template file **az-101-03b_01_azuredeploy.json**. 
 
@@ -120,7 +120,7 @@ The main tasks for this exercise are as follows:
 
 1. Use the list of search results to navigate to the **Custom deployment** blade.
 
-1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
+1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
 1. From the **Edit template** blade, load the template file **az-101-03b_02_azuredeploy.json**. 
 
