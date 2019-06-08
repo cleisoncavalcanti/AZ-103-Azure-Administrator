@@ -64,7 +64,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
-1. Use the list of search results to navigate to the **Deploy a custom template** blade.
+1. Use the list of search results to navigate to the **Custom deployment** blade.
 
 1. On the **Custom deployment** blade, in the **Load a GitHub quickstart template** drop-down list and select the **active-directory-new-domain** entry.
 
