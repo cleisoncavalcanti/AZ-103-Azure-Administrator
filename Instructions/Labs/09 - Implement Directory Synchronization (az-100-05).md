@@ -60,13 +60,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Deploy an Azure VM hosting an Active Directory domain controller by using an Azure Resource Manager template
 
-1. In the Azure portal, navigate to the **Create a resource** blade.
+1. From the lab virtual machine, start another instance of Microsoft Edge, browse to the GitHub Azure QuickStart Templates page at  [**https://github.com/Azure/azure-quickstart-templates**]https://github.com/Azure/azure-quickstart-templates). 
 
-1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
+1. On the Azure Quickstart Templates page, click **active-directory-new-domain**.
 
-1. Use the list of search results to navigate to the **Custom deployment** blade.
-
-1. On the **Custom deployment** blade, click **Edit templatein the **Load a GitHub quickstart template** drop-down list and select the **active-directory-new-domain** entry.
+1. On the **Create a new Windows VM and create a new AD Forest, Domain and DC** page, right-click **Deploy to Azure**, and click **Open in new tab**.
 
 1. On the **Create an Azure VM with a new AD Forest** blade, initiate a template deployment with the following settings:
 
@@ -83,6 +81,8 @@ The main tasks for this exercise are as follows:
     - Domain Name: **adatum.com**
 
     - Dns Prefix: the &lt;custom-label&gt; you identified in the previous task
+    
+    - VM Size: **Standard_D2s_v3**
 
     - _artifacts Location: accept the default value
 
