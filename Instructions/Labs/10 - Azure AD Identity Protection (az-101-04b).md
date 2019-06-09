@@ -8,7 +8,11 @@ lab:
 
 All tasks in this lab are performed from the Azure portal, except for steps in Exercise 2 performed within a Remote Desktop session to an Azure VM.
 
-Lab files: none
+Lab files:
+
+-  **Labfiles\\AZ-101.4\\az-101-04b_azuredeploy.json**
+
+-  **Labfiles\\AZ-101.4\\az-101-04b_azuredeploy.parameters.json**
 
 ### Scenario
   
