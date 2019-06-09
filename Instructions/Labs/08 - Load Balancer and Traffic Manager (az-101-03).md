@@ -605,15 +605,15 @@ The main tasks for this exercise are as follows:
 
     - Location: either of the Azure regions you used earlier in this lab
 
-1. In the Azure portal, navigate to the blade of the newly provisioned Traffic Manager profile **az1010303-tm**.
+1. In the Azure portal, navigate to the blade of the newly provisioned Traffic Manager profile.
 
-1. From the **az1010303-tm** blade, display the **az1010303-tm - Configuration** blade and review the configuration settings.
+1. From the Traffic Manager profile blade, display its **Configuration** blade and review the configuration settings.
 
    > **Note**: The default TTL of the Traffic Manager profile DNS records is 60 seconds
 
-1. From the **az1010303-tm** blade, display the **az1010303-tm - Endpoints** blade.
+1. From the Traffic Manager profile blade, display its **Endpoints** blade.
 
-1. From the **az1010303-tm - Endpoints** blade, add the first endpoint with the following settings:
+1. From the **Endpoints** blade, add the first endpoint with the following settings:
 
     - Type: **Azure endpoint**
 
@@ -629,7 +629,7 @@ The main tasks for this exercise are as follows:
 
     - Add as disabled: leave blank
 
-1. From the **az1010303-tm - Endpoints** blade, add the second endpoint with the following settings:
+1. From the **Endpoints** blade, add the second endpoint with the following settings:
 
     - Type: **Azure endpoint**
 
@@ -645,12 +645,12 @@ The main tasks for this exercise are as follows:
 
     - Add as disabled: leave blank
 
-1. On the **az1010303-tm - Endpoints** blade, examine the entries in the **MONITORING STATUS** column for both endpoints. Wait until both are listed as **Online** before you proceed to the next task.
+1. On the **Endpoints** blade, examine the entries in the **MONITORING STATUS** column for both endpoints. Wait until both are listed as **Online** before you proceed to the next task.
 
 
 #### Task 3: Verify Azure Traffic Manager load balancing
 
-1. From the **az1010303-tm - Endpoints** blade, switch to the **az1010303-tm** blade to display the **Overview** section.
+1. From the **Endpoints** blade, switch to the **Overview** section of the Traffic Manager profile blade.
 
 1. Note the DNS name assigned to the Traffic Manager profile (the string following the **http://** prefix). 
 
