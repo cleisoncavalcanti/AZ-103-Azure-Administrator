@@ -12,8 +12,6 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Labfiles\\AZ-100.3\\az-100-03_deploy_azure_vm.ps1**
-
 -  **Labfiles\\AZ-100.3\\az-100-03_azuredeploy.json**
 
 -  **Labfiles\\AZ-100.3\\az-100-03_azuredeploy.parameters.json**
