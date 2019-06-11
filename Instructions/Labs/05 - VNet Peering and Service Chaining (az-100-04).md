@@ -243,7 +243,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the same Azure region in which you created the virtual networks
   
-    - BGP route propagation: **Disabled**
+    - Virtual network gateway route propagation: **Disabled**
 
 1. In the Azure portal, navigate to the **az1000402-rt1** blade.
 
