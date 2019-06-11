@@ -185,7 +185,7 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following command:
 
    ```
-   $osDiskType = (Get-AzResource -ResourceGroupName $resourceGroup.ResourceGroupName -ResourceType Microsoft.Compute/disks)[0].Sku.name
+   $osDiskType = (Get-AzDisk -ResourceGroupName $resourceGroup.ResourceGroupName)[0].Sku.Name
    ```
 
    > **Note**: This command sets the values of a variable designating the operating system disk type of the new Azure VM
@@ -298,9 +298,9 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000302-vm0 - Networking** blade, navigate to the blade displaying the properties of its network interface.
 
-1. From the blade displaying the properties of the network interface of **az1000302-vm0**, navigate to its **ipconfig1** blade.
+1. From the blade displaying the properties of the network interface of **az1000302-vm0**, navigate to its **IP configurations** blade.
 
-1. On the **ipconfig1** blade, configure the private IP address to be static and set it to **10.103.0.100**.
+1. On the **IP configurations** blade, configure the **ipconfig1** private IP address to be static and set it to **10.103.0.100**.
 
    > **Note**: Changing the private IP address assignment requires restarting the Azure VM.
 
