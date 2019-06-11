@@ -323,7 +323,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell ISE session, open the script pane and paste into it the content of your local Clipboard.
 
-1. Execute the script and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
+1. Paste the script into the PowerShell ISE session, add `` -Persist `` at the end of the script, execute the script, and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
 
 1. Start File Explorer, navigate to the Z: drive and create a folder named **Folder1**.
 
