@@ -8,7 +8,7 @@ lab:
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Excercise 2 Task 2 and Exercise 2 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
-   > **Note**: When not using Cloud Shell, the lab virtual machine must have Azure PowerShell module installed [**https://docs.microsoft.com/en-us/powershell/azure/azurerm/install-azurerm-ps**](https://docs.microsoft.com/en-us/powershell/azure/azurerm/install-azurerm-ps)
+   > **Note**: When not using Cloud Shell, the lab virtual machine must have Azure PowerShell module installed [**https://docs.microsoft.com/en-us/powershell/azure/install-Az-ps**](https://docs.microsoft.com/en-us/powershell/azure/install-Az-ps)
 
 Lab files: 
 
