@@ -8,7 +8,7 @@ lab:
 
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) 
 
-   > **Note**: When not using Cloud Shell, the lab virtual machine must have Azure AD PowerShell module installed [**https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0**](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2?view=azureadps-2.0)
+   > **Note**: When not using Cloud Shell, the lab virtual machine must have Azure AD PowerShell module installed [**https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2**](https://docs.microsoft.com/en-us/powershell/azure/active-directory/install-adv2)
 
    > **Note**: Exercise 3 and Exercise 4 of this lab require the use of a mobile phone
 
