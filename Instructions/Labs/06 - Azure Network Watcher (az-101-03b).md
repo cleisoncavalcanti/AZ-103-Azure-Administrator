@@ -229,7 +229,7 @@ The main tasks for this exercise are as follows:
 
     - Subnets: **subnet0**
 
-1. In the Azure portal, navigate to the **az1000301b-RG** resource group blade.
+1. In the Azure portal, navigate to the **az1010301b-RG** resource group blade.
 
 1. From the **az1010301b-RG** resource group blade, navigate to the blade of the storage account included in the resource group. 
 
