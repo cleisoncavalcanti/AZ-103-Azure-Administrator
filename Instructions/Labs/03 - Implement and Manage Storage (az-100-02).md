@@ -236,14 +236,14 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following command:
 
    ```
-   azcopy --source https://$storageAccount1Name.blob.core.windows.net/az1000202-container/ --destination https://$storageAccount2Name.blob.core.windows.net/az1000302-container/ --source-key $storageAccount1Key1 --dest-key $storageAccount2Key1 --include "az" --sync-copy --recursive
+   azcopy --source https://$storageAccount1Name.blob.core.windows.net/az1000202-container/ --destination https://$storageAccount2Name.blob.core.windows.net/az1000203-container/ --source-key $storageAccount1Key1 --dest-key $storageAccount2Key1 --include "az" --sync-copy --recursive
    ```
 
    > **Note**: This command uses the AzCopy utility to copy the content of the container between the two storage accounts. 
 
 1. Verify that the command returned the results confirming that the two files were transferred. 
 
-1. Navigate to the **Blobs** blade of the second storage account and verify that it includes the entry representing the newly created **az1000202-container** and that the container includes two copied blobs.
+1. Navigate to the **Blobs** blade of the second storage account and verify that it includes the entry representing the newly created **az1000203-container** and that the container includes two copied blobs.
 
 
 #### Task 5: Use a Shared Access Signature (SAS) key to access a blob
