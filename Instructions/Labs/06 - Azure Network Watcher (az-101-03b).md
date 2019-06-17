@@ -315,7 +315,7 @@ The main tasks for this exercise are as follows:
 
         - URI, FQDN or IPv4: **10.203.16.4**
 
-      > **Note**: **10.203.16.4** is the private IP address of the second Azure VM az1010301b-vm1 which you deployed to another Azure region
+      > **Note**: **10.203.16.4** is the private IP address of the second Azure VM az1010302b-vm1 which you deployed to another Azure region
 
     - Probe Settings:
 
