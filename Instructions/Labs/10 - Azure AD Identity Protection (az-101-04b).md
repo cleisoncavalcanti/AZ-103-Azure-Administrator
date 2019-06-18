@@ -301,7 +301,7 @@ The main tasks for this exercise are as follows:
 
     - Assignments: 
 
-        - Users: **All users**
+        - Users: **All users** (be sure to exclude the current admin account to avoid getting locked out of the tenant)
 
         - Conditions:
 
