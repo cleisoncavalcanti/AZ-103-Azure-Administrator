@@ -134,7 +134,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    Set-Location -Path $HOME/php-docs-hello-world/
    ```
 
@@ -282,7 +282,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $resourceGroup = Get-AzResourceGroup -Name 'az1010201-RG'
    $webapp = Get-AzWebApp -ResourceGroupName $resourceGroup.ResourceGroupName
    while ($true) { Invoke-WebRequest -Uri $webapp.DefaultHostName }

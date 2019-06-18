@@ -102,13 +102,13 @@ The main tasks for this exercise are as follows:
 
    > **Note**: To identify VM sizes available in your subscription in a given region, run the following from Cloud Shell and review the values in the **Restriction** column (where &lt;location&gt; represents the target Azure region):
    
-   ```
+   ```pwsh
    Get-AzComputeResourceSku | where {$_.Locations -icontains "<location>"} | Where-Object {($_.ResourceType -ilike "virtualMachines")}
    ```
    
    > **Note**: To identify whether you can provision Azure SQL Database in a given region, run the following from Cloud Shell and ensure that the resulting **Status** is set to **Available** (where &lt;location&gt; represents the target Azure region):
 
-   ```
+   ```pwsh
    Get-AzSqlCapability -LocationName <location>
    ```
    
@@ -340,7 +340,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command to identify the IP address of the blob service endpoint of the Azure Storage account you provisioned in the previous exercise:
 
-   ```
+   ```pwsh
    [System.Net.Dns]::GetHostAddresses($(Get-AzStorageAccount -ResourceGroupName 'az1010301b-RG')[0].StorageAccountName + '.blob.core.windows.net').IPAddressToString
    ```
 
@@ -443,7 +443,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command to identify the IP address of the Azure SQL Database server you provisioned in the previous exercise:
 
-   ```
+   ```pwsh
    [System.Net.Dns]::GetHostAddresses($(Get-AzSqlServer -ResourceGroupName 'az1010301b-RG')[0].FullyQualifiedDomainName).IPAddressToString
    ```
 

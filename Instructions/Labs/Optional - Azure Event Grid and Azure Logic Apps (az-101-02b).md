@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands to create a new Azure AD application that you will associate with the service principal you create in the subsequent steps of this task:
 
-   ```
+   ```pwsh
    $password = 'Pa55w.rd1234'
 
    $securePassword = ConvertTo-SecureString -Force -AsPlainText -String $password
@@ -123,7 +123,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Cloud Shell pane, run the following command to create a new Azure AD service principal associated with the application you created in the previous step:
 
-   ```
+   ```pwsh
    New-AzADServicePrincipal -ApplicationId $aadApp1010201b.ApplicationId.Guid
    ```
 
@@ -131,7 +131,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Cloud Shell pane, run the following cmdlet to identify the value of the **Id** property of the current Azure subscription and the value of the **TenantId** property of the Azure AD tenant associated with that subscription (you will also need them in the next exercise of this lab):
 
-   ```
+   ```pwsh
    Get-AzSubscription
    ```
 
@@ -155,7 +155,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Cloud Shell pane, run the following command to register the Microsoft.EventGrid resource provider:
 
-   ```
+   ```pwsh
    Register-AzResourceProvider -ProviderNamespace Microsoft.EventGrid
    ```
 
