@@ -49,7 +49,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
-   ```
+   ```pwsh
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location>'
    ```
 
@@ -283,7 +283,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell prompt, start Azure AD Connect delta synchronization by running the following:
 
-   ```
+   ```pwsh
    Import-Module -Name 'C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1'
    
    Start-ADSyncSyncCycle -PolicyType Delta

@@ -108,7 +108,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $domainName = ((Get-AzureAdTenantDetail).VerifiedDomains)[0].Name
    $domainName
    ```
@@ -117,7 +117,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $passwordProfile = New-Object -TypeName Microsoft.Open.AzureAD.Model.PasswordProfile
    $passwordProfile.Password = 'Pa55w.rd1234'
    $passwordProfile.ForceChangePasswordNextLogin = $false
@@ -128,7 +128,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    (Get-AzureADUser -Filter "MailNickName eq 'aaduser101041'").UserPrincipalName
    ```
 
@@ -139,7 +139,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    $aadGroup = New-AzureADGroup -Description "VM Operators" -DisplayName "VM Operators" -MailEnabled $false -SecurityEnabled $true -MailNickName "VM-Operators"
    ```
 
@@ -147,7 +147,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    Add-AzureADGroupMember -ObjectId $aadGroup.ObjectId -RefObjectId $aadUser.ObjectId
    ```
 
@@ -155,7 +155,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    Get-AzureADGroupMember -ObjectId $aadGroup.ObjectId
    ```
 
@@ -199,7 +199,7 @@ The main tasks for this exercise are as follows:
 
 1. On the lab virtual machine, open the file **Labfiles\\AZ-101.4\\az-101-04_01_custom.role.definition.json** and review its content:
 
-   ```
+   ```json
    {
       "Name": "Virtual Machine Operator (Custom)",
       "Id": null,
@@ -224,7 +224,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following commands:
 
-   ```
+   ```pwsh
    $subscription_id = (Get-AzureRmSubscription).Id
    (Get-Content -Path $HOME/az-101-04_01_custom.role.definition.json) -Replace 'SUBSCRIPTION_ID', "$subscription_id" | Set-Content -Path $HOME/az-101-04_01_custom.role.definition.json
    ```
@@ -233,7 +233,7 @@ The main tasks for this exercise are as follows:
  
 1. From the Cloud Shell pane, run the following command: 
 
-   ```
+   ```pwsh
    New-AzureRmRoleDefinition -InputFile $HOME/az-101-04_01_custom.role.definition.json
    ```
 
@@ -241,7 +241,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Cloud Shell pane, run the following command:
 
-   ```
+   ```pwsh
    Get-AzureRmRoleDefinition -Name 'Virtual Machine Operator (Custom)'
    ```
 

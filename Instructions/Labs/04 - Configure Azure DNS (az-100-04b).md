@@ -73,7 +73,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to identify the public IP address of your lab computer:
 
-   ```
+   ```pwsh
    Invoke-RestMethod http://ipinfo.io/json | Select-Object -ExpandProperty IP
    ```
 
@@ -81,7 +81,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to create a public IP address resource:
 
-   ```
+   ```pwsh
    $rg = Get-AzResourceGroup -Name az1000401b-RG
 
    New-AzPublicIpAddress -ResourceGroupName $rg.ResourceGroupName -Sku Basic -AllocationMethod Static -Name az1000401b-pip -Location $rg.Location
@@ -160,7 +160,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to create a resource group:
 
-   ```
+   ```pwsh
    $rg1 = Get-AzResourceGroup -Name 'az1000401b-RG'
 
    $rg2 = New-AzResourceGroup -Name 'az1000402b-RG' -Location $rg1.Location
@@ -168,7 +168,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to create two Azure virtual networks:
 
-   ```
+   ```pwsh
    $subnet1 = New-AzVirtualNetworkSubnetConfig -Name subnet1 -AddressPrefix '10.104.0.0/24'
 
    $vnet1 = New-AzVirtualNetwork -ResourceGroupName $rg2.ResourceGroupName -Location $rg2.Location -Name az1000402b-vnet1 -AddressPrefix 10.104.0.0/16 -Subnet $subnet1
@@ -182,7 +182,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to create a private DNS zone with the first virtual network supporting registration and the second virtual network supporting resolution:
 
-   ```
+   ```pwsh
    New-AzDnsZone -Name adatum.local -ResourceGroupName $rg2.ResourceGroupName -ZoneType Private -RegistrationVirtualNetworkId @($vnet1.Id) -ResolutionVirtualNetworkId @($vnet2.Id)
    ```
 
@@ -190,7 +190,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to verify that the private DNS zone was successfully created:
 
-   ```
+   ```pwsh
    Get-AzDnsZone -ResourceGroupName $rg2.ResourceGroupName
    ```
 
@@ -201,13 +201,13 @@ The main tasks for this exercise are as follows:
 
 1. In the Cloud Shell pane, run the following in order to deploy an Azure VM into the first virtual network:
 
-   ```
+   ```pwsh
    New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "$home/az-100-04b_01_azuredeploy.json" -TemplateParameterFile "$home/az-100-04_azuredeploy.parameters.json" -AsJob
    ```
 
 1. In the Cloud Shell pane, run the following in order to deploy an Azure VM into the second virtual network:
 
-   ```
+   ```pwsh
    New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "$home/az-100-04b_02_azuredeploy.json" -TemplateParameterFile "$home/az-100-04_azuredeploy.parameters.json" -AsJob
    ```
 
@@ -236,7 +236,7 @@ The main tasks for this exercise are as follows:
 
 1. Switch back to the lab virtual machine and, in the Cloud Shell pane of the Azure portal window, run the following in order to create an additional DNS record in the private DNS zone:
 
-   ```
+   ```pwsh
    New-AzDnsRecordSet -ResourceGroupName $rg2.ResourceGroupName -Name www -RecordType A -ZoneName adatum.local -Ttl 3600 -DnsRecords (New-AzDnsRecordConfig -IPv4Address "10.104.0.4")
    ```
 
