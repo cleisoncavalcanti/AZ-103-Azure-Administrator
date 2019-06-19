@@ -36,7 +36,6 @@ Note that the following labs will not be part of the AZ-103 course:
 -  Azure Event Grid and Azure Logic Apps (az-101-02b)
 -  Implement and Manage Azure Web Apps (az-101-02)
 -  Migrate On-premises Hyper-V VMs to Azure (az-101-01b)
--  Privileged Identity Management (az-101-04)
 
 **What are we doing?**
 
