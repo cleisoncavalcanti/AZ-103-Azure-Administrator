@@ -353,6 +353,10 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
+1. Within the Remote Desktop session, in Server Manager, click **Local Server** and then click **IE Enhanced Security Configuration**. 
+
+1. In the **Internet Explorer Enhanced Security Configuration** dialog box, set both options to **Off** and click **OK**.
+
 1. Within the Remote Desktop session, open an InPrivate Internet Explorer window.
 
 1. In the new browser window, navigate to the ToR Browser Project at [**https://www.torproject.org/projects/torbrowser.html.en**](https://www.torproject.org/projects/torbrowser.html.en), download the ToR Browser, and install it with the default options.
