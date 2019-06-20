@@ -273,7 +273,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az10001b - Tagging initiative** blade, navigate to its **Edit initiative definition** blade.
 
-1. Add the built-in policy definition named **Apply tag and its default value** to the initiative and set its parameters to the following values:
+1. Add the built-in policy definition named **Append tag and its default value** to the initiative and set its parameters to the following values:
 
     - Tag Name: **environment**
 
