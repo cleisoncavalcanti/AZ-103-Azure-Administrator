@@ -321,7 +321,9 @@ The main tasks for this exercise are as follows:
 
    > **Note**: You should be able to proceed to the next step after a few minutes. 
 
-1. In the Azure portal, navigate to the **az10002bshare1** blade and display the **Connect** blade.
+1. In the Azure portal, navigate to the blade for the storage account you created earlier in the lab, switch to the **Files** tab and then click **az10002bshare1**.
+
+1. On the **az10002bshare1** blade, click **Connect**.
 
 1. From the **Connect** blade, copy into Clipboard the PowerShell commands that connect to the file share from a Windows computer.
 
