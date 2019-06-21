@@ -203,7 +203,7 @@ The main tasks for this exercise are as follows:
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
 
    ```powershell
-   Install-Module -Name Az.StorageSync -AllowPrerelease -AllowClobber -Force
+   Install-Module -Name Az.StorageSync -AllowClobber -Force
    ```
 
 1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
