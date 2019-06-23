@@ -51,9 +51,9 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **Create a resource** blade, search Azure Marketplace for **Windows Server 2016 Datacenter**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Windows Server**. Select **Windows Server** from the search results list.
 
-1. Use the list of search results to navigate to the **Create a virtual machine** blade for a deployment of the Windows Server 2016 Datacenter Azure Marketplace image.
+1. On the Windows Server page, use the drop-down menu to select **Windows Server 2016 Datacenter**, and then click **Create**.
 
 1. Use the **Create a virtual machine** blade to deploy a virtual machine with the following settings:
 
@@ -63,15 +63,17 @@ The main tasks for this exercise are as follows:
 
     - Virtual machine name: **az1000301-vm0**
 
-    - Region: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
+    - Region: **(US) East US** (or a region closer to you)
+
+      > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
     - Availability options: **Availability set**
 
-    - Availability set: the name of a new availability set **az1000301-avset0** with **2** fault domains and **5** update domains.
+    - Availability set: Click **Create New**, and name the new availability set **az1000301-avset0** with **2** fault domains and **5** update domains. Click **OK**.
 
-    - Image: **Windows Server 2016 Datacenter**
+    - Image: **[smalldisk] Windows Server 2016 Datacenter**
 
-    - Size: **Standard DS1 v2**
+    - Size: **Standard DS2_v2**
 
     - Username: **Student**
 
@@ -81,35 +83,23 @@ The main tasks for this exercise are as follows:
 
     - Already have a Windows license?: **No**
 
+1. Click **Next: Disks >**.    
     - OS disk type: **Standard HDD**
 
-    - Virtual network: the name of a new virtual network **az1000301-vnet0** with the following settings:
+1. Click **Next: Networking >**.
 
-        - Address space: **10.103.0.0/16**
+1. On the Networking tab, click **Create new** under Virtual Network. Leave the existing default range and subnet, and add the following:
+    - Address range: **10.103.0.0/16**
 
-        - Subnet name: **subnet0**
+    - Subnet name: **subnet0**
 
-        - Subnet address range: **10.103.0.0/24**
+    - Subnet address range: **10.103.0.0/24**
 
-    - Public IP: the name of a new public IP address **az1000301-vm0-ip**
+1. Click **OK**.
 
-    - Network security group: **Basic**
+1. Leave all other default values, and click **Review + create**.
 
-    - Public inbound ports: **None**
-
-    - Accelerated networking: **Off**
-
-    - Boot diagnostics: **Off**
-
-    - OS guest diagnostics: **Off**
-
-    - System assigned managed identity: **Off**
-
-    - Enable auto-shutdown: **Off**
-
-    - Enable backup: **Off**
-
-   > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
+1. Click **Create**.
 
    > **Note**: You will configure the network security group you create in this task in the second exercise of this lab
 
@@ -126,7 +116,7 @@ The main tasks for this exercise are as follows:
 
    ```pwsh
    $vmName = 'az1000301-vm1'
-   $vmSize = 'Standard_DS1_v2'
+   $vmSize = 'Standard_DS2_v2'
    ```
 
    > **Note**: This sets the values of variables designating the Azure VM name and its size
@@ -144,7 +134,7 @@ The main tasks for this exercise are as follows:
 
    ```pswh
    $availabilitySet = Get-AzAvailabilitySet -ResourceGroupName $resourceGroup.ResourceGroupName -Name 'az1000301-avset0'
-   $vnet = Get-AzVirtualNetwork -Name 'az1000301-vnet0' -ResourceGroupName $resourceGroup.ResourceGroupName
+   $vnet = Get-AzVirtualNetwork -Name 'az1000301-RG-vnet' -ResourceGroupName $resourceGroup.ResourceGroupName
    $subnetid = (Get-AzVirtualNetworkSubnetConfig -Name 'subnet0' -VirtualNetwork $vnet).Id
    ```
 
@@ -218,9 +208,9 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**, and select **Template deployment (deploy using custom templates)**.
 
-1. Use the list of search results to navigate to the **Deploy a custom template** blade.
+1. Click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -254,7 +244,7 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
-    - Virtual Network Name: **az1000301-vnet0**
+    - Virtual Network Name: **az1000301-RG-vnet**
 
     - Image Publisher: **Canonical**
 
@@ -262,7 +252,7 @@ The main tasks for this exercise are as follows:
 
     - Image SKU: **16.04.0-LTS**
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_DS2_v2**
 
    > **Note**: Wait for the deployment to complete before you proceed to the next task. This should take about 5 minutes.
 
@@ -286,21 +276,25 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1000301-vm0** blade.
 
-1. From the **az1000301-vm0** blade, navigate to the **az1000301-vm0-ip - Configuration** blade, displaying the configuration of the public IP address **az1000301-vm0-ip**, assigned to its network interface.
+1. From the **az1000301-vm0** blade, navigate to the **Networking** blade, displaying the configuration of the public IP address **az1000301-vm0-ip**, assigned to its network interface.
 
-1. From the **az1000301-vm0-ip - Configuration** blade, change the assignment of the public IP address to **Static**.
+1. From the **Networking** blade, click the link representing the public IP address.
+
+1. On the az1000301-vm0-ip blade, click **Configuration**.
+
+1. Change the assignment of the public IP address to **Static**, and then click **Save**.
 
    > **Note**: Take a note of the public IP address assigned to the network interface of **az1000301-vm0**. You will need it later in this exercise.
 
 1. In the Azure portal, navigate to the **az1000302-vm0** blade.
 
-1. From the **az1000302-vm0** blade, display the **az1000302-vm0 - Networking** blade.
+1. From the **az1000302-vm0** blade, display the **Networking** blade.
 
-1. From the **az1000302-vm0 - Networking** blade, navigate to the blade displaying the properties of its network interface.
+1. From the **az1000302-vm0 - Networking** blade, click the link representing the network interface.
 
 1. From the blade displaying the properties of the network interface of **az1000302-vm0**, navigate to its **IP configurations** blade.
 
-1. On the **IP configurations** blade, configure the **ipconfig1** private IP address to be static and set it to **10.103.0.100**.
+1. On the **IP configurations** blade, configure the **ipconfig1** private IP address to be static and set it to **10.103.0.100**, and then click **Save**.
 
    > **Note**: Changing the private IP address assignment requires restarting the Azure VM.
 
@@ -311,7 +305,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1000301-vm0** blade.
 
-1. From the **az1000301-vm0** blade, navigate to the **az1000301-vm0 - Networking** blade.
+1. From the **az1000301-vm0** blade, navigate to the **Networking** blade.
 
 1. On the **az1000301-vm0 - Networking** blade, review the inbound port rules of the network security group assigned to the network interface of **az1000301-vm0**.
 
@@ -337,7 +331,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, display the **Overview** pane of the **az1000301-vm0** blade. 
 
-1. From the **Overview** pane of the **az1000301-vm0** blade, generate an RDP file and use it to connect to **az1000301-vm0**.
+1. From the **Overview** pane of the **az1000301-vm0** blade, click **Connect** and generate an RDP file and use it to connect to **az1000301-vm0**.
 
 1. When prompted, authenticate by specifying the following credentials:
 
@@ -360,7 +354,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: This is expected. Azure provides built-in DNS name resolution within a virtual network. 
 
-1. Within the RDP session to **az1000301-vm0**, from Server Manager, disable temporarily **IE Enhanced Security Configuration**.
+1. Within the RDP session to **az1000301-vm0**, from Server Manager, click **Local Server**, then disable **IE Enhanced Security Configuration**.
 
 1. Within the RDP session to **az1000301-vm0**, start Internet Explorer and download **putty.exe** from [**https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
 
@@ -372,11 +366,13 @@ The main tasks for this exercise are as follows:
 
     - Password: **Pa55w.rd1234**
 
+    > **Note**: Both the username and password are case sensitive.
+ 
 1. Once you successfully authenticated, terminate the RDP session to **az1000301-vm0**.
 
 1. On the lab virtual machine, in the Azure portal, navigate to the **az1000302-vm0** blade.
 
-1. From the **az1000302-vm0** blade, navigate to the **az1000302-vm0 - Networking** blade.
+1. From the **az1000302-vm0** blade, navigate to the **Networking** blade.
 
 1. On the **az1000302-vm0 - Networking** blade, review the inbound port rules of the network security group assigned to the network interface of **az1000301-vm0** to determine why your SSH connection via the private IP address was successsful.
 
@@ -403,7 +399,8 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique and the placeholder &lt;location-of-az1000301-RG&gt; with the name of the Azure region in which you created the **az1000301-RG** resource group.
 
    ```pwsh
-   Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location-of-az1000301-RG>'
+   $rg = Get-AzResourceGroup -Name az1000301-RG
+   Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location $rg.Location
    ```
 
 1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**. 
@@ -439,7 +436,7 @@ The main tasks for this exercise are as follows:
 
     - Instance count: **1**
 
-    - Instance size: **DS1 v2**
+    - Instance size: **DS2 v2**
 
     - Deploy as low priority: **No**
 
@@ -455,7 +452,7 @@ The main tasks for this exercise are as follows:
 
     - Virtual network: the name of a new virtual network **az1000303-vnet0** with the following settings:
 
-        - Address space: **10.203.0.0/16**
+        - Address range: **10.203.0.0/16**
 
         - Subnet name: **subnet0**
 
@@ -496,7 +493,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The update will trigger application of the DSC configuration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000303vmss0 - Instances** blade.
 
-1. Once the upgrade completes, navigate to the **az1000303vmss0-ip** blade. 
+1. Once the upgrade completes, navigate to the **Overview** blade. 
 
 1. On the **az1000303vmss0-ip** blade, note the public IP address assigned to **az1000303vmss0**.
 
@@ -505,3 +502,31 @@ The main tasks for this exercise are as follows:
 1. Verify that the browser displays the default IIS home page. 
 
 > **Result**: After you completed this exercise, you have identified an available DNS name for an Azure VM scale set deployment, deployed an Azure VM scale set, and installed IIS on a scale set VM by using the DSC extension.
+
+## Exercise 4: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.
