@@ -52,11 +52,11 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the target Azure subscription.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
-1. Use the list of search results to navigate to the **Custom deployment** blade.
+1. In the list of results, click **Template deployment (deploy using custom templates)**, and then click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -80,7 +80,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs and Azure SQL Database
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_DS2_v2**
 
     - Vm Name: **az1010301b-vm1**
 
@@ -109,16 +109,16 @@ The main tasks for this exercise are as follows:
    > **Note**: To identify whether you can provision Azure SQL Database in a given region, run the following from Cloud Shell and ensure that the resulting **Status** is set to **Available** (where &lt;location&gt; represents the target Azure region):
 
    ```pwsh
-   Get-AzSqlCapability -LocationName <location>
+   Get-AzSqlCapability -LocationName <regionname>
    ```
    
    > **Note**: Do not wait for the deployment to complete but proceed to the next step. 
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
-1. Use the list of search results to navigate to the **Custom deployment** blade.
+1. In the results, click **Template deployment (deploy using custom templates)**, and then click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -140,9 +140,9 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1010302b-RG**
 
-    - Location: the name of an Azure region where you can provision Azure VMs, but which is different from the one you selected during previous deployment, 
+    - Location: the name of an Azure region where you can provision Azure VMs, but which is **different** from the one you selected during previous deployment, 
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_DS2_v2**
 
     - Vm Name: **az1010302b-vm2**
 
@@ -182,48 +182,29 @@ The main tasks for this exercise are as follows:
 
     - Virtual network: **az1010302b-vnet2**
 
-    - Allow virtual network access: **Enabled**
-
-    - Allow forwarded traffic: disabled
-
-    - Allow gateway transit: disabled
-
-    - Use remote gateways: disabled
-
-1. In the Azure portal, navigate to the **az1010302b-vnet2** virtual network blade.
-
-1. From the **az1010302b-vnet2** virtual network blade, display the **az1010302b-vnet2 - Peerings** blade.
-
-1. From the **az1010302b-vnet2 - Peerings** blade, create a VNet peering with the following settings:
-
-    - Name: **az1010302b-vnet2-to-az1010301b-vnet1**
-
-    - Virtual network deployment model: **Resource manager**
-
-    - Subscription: the name of the Azure subscription you are using in this lab
-
-    - Virtual network: **az1010301b-vnet1**
+    - Name of peering from az1010302b-vnet2 to az1010301b-vnet1: **az1010302b-vnet2-to-az1010301b-vnet1**
 
     - Allow virtual network access: **Enabled**
 
-    - Allow forwarded traffic: disabled
+    - Allow forwarded traffic: **disabled**
 
     - Allow gateway transit: disabled
 
-    - Use remote gateways: disabled
-
+    > **Note**: The Azure portal allows you to configure both directions of the peering simultaneously. When using other management tools, each direction must be configured independently. 
 
 #### Task 4: Establish service endpoints to an Azure Storage account and Azure SQL Database instance
 
 1. In the Azure portal, navigate to the **az1010301b-vnet1** virtual network blade.
 
-1. From the **az1010301b-vnet1** virtual network blade, display the **az1010301b-vnet1 - Service endpoints** blade.
+1. From the **az1010301b-vnet1** virtual network blade, display the **Service endpoints** blade.
 
-1. From the **az1010301b-vnet1 - Service endpoints** blade, add service endpoints with the following settings:
+1. From the **az1010301b-vnet1 - Service endpoints** blade, add a service endpoint with the following settings:
 
     - Service: **Microsoft.Storage**
 
     - Subnets: **subnet0**
+
+1. Repeat the step to create a second service endpoint:
 
     - Service: **Microsoft.Sql**
 
@@ -259,11 +240,11 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1010301b-RG** resource group blade.
 
-1. From the **az1010301b-RG** resource group blade, navigate to the **az1010301b-db1** Azure SQL Database blade. 
+1. From the **az1010301b-RG** resource group blade, navigate to the **az1010301b** Azure SQL Server blade. 
 
-1. From the **az1010301b-db1** Azure SQL Database blade, navigate to its server's **Firewall settings** blade.
+1. From the Azure SQL Server blade, navigate to its server's **Firewalls and virtual networks** blade.
 
-1. From the **Firewall settings** blade of the Azure SQL Database server, configure the following settings:
+1. From the **Firewalls and virtual networks** blade of the Azure SQL Database server, configure the following settings:
 
     - Allow access to Azure services: **ON**
 
@@ -297,7 +278,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Network Watcher** blade.
 
-1. From the **Network Watcher** blade, navigate to the **Network Watcher - Connection troubleshoot**.
+1. From the **Network Watcher** blade, navigate to the **Connection troubleshoot**.
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings:
 
@@ -541,3 +522,31 @@ The main tasks for this exercise are as follows:
 
 
 > **Result**: After you completed this exercise, you have used Azure Network Watcher to test network connectivity to an Azure VM via virtual network peering, network connectivity to Azure Storage, and network connectivity to Azure SQL Database.
+
+## Exercise 3: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.
