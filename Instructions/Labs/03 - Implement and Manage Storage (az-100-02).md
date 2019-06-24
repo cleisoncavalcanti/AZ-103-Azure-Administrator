@@ -57,9 +57,9 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**, and select **Template deployment (deploy using custom templates)**
 
-1. Use the list of search results to navigate to the **Deploy a custom template** blade.
+1. Click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_DS2_v2**
 
     - Vm Name: **az1000201-vm1**
 
@@ -139,11 +139,7 @@ The main tasks for this exercise are as follows:
 
     - Replication: **Locally-redundant storage (LRS)**
 
-    - Secure transfer required: **Disabled**
-
-    - Allow access from: **All networks**
-
-    - **Data Lake Storage Gen2** Hierarchical namespace: **Disabled**
+1. Click **Review + create**, and then click **Create**.
 
 1. Do not wait for the storage account to be provisioned but proceed to the next step.
 
@@ -165,17 +161,13 @@ The main tasks for this exercise are as follows:
 
     - Performance: **Standard**
 
-    - Account kind: **Storage (general purpose v2)**
+    - Account kind: **StorageV2 (general purpose v2)**
 
     - Access tier: **Hot**
 
     - Replication: **Geo-redundant storage (GRS)**
 
-    - Secure transfer required: **Disabled**
-
-    - Allow access from: **All networks**
-    
-    - **Data Lake Storage Gen2** Hierarchical namespace: **Disabled**
+1. Click **Review + create**, then click **Create**.
 
 1. Wait for the storage account to be provisioned. This should take less than a minute.
 
@@ -331,4 +323,38 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Make sure that you take into account the default configuration of File Explorer that does not display known file extensions in order to avoid creating a file named **File1.txt.txt**.
 
+1. From the PowerShell prompt, enter **Z:** to change the directory context to the mapped drive. 
+
+1. From the PowerShell prompt, enter **dir** to list the contents of the drive. You should see the directory that you created from File Explorer.
+
+1. From the PowerShell prompt, enter **cd Folder1** to change directories to the folder. Run the **dir** command again to list the file contents.
+
 > **Result**: After you completed this exercise, you have created an Azure File Service share, mapped a drive to the file share from an Azure VM, and used File Explorer from the Azure VM to create a folder and a file in the file share.
+
+## Exercise 3: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.

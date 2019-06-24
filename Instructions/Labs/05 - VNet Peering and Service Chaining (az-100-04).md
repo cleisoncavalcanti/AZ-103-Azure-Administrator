@@ -50,7 +50,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
-1. Use the list of search results to navigate to the **Deploy a custom template** blade.
+1. Use the list of search results to navigate to the **Template deployment (deploy using custom templates)** blade, and then click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -74,7 +74,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_DS2_v2**
 
     - Vm1Name: **az1000401-vm1**
 
@@ -97,7 +97,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
-1. Use the list of search results to navigate to the **Deploy a custom template** blade.
+1. Use the list of search results and select the **Template deployment (deploy using custom templates)** result, and then click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which you selected in the previous task
 
-    - Vm Size: **Standard_DS1_v2**
+    - Vm Size: **Standard_DS2_v2**
 
     - VmName: **az1000402-vm3**
 
@@ -151,7 +151,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000401-vnet1** virtual network blade, display its **Peerings** blade.
 
-1. From the **az1000401-vnet1 - Peerings** blade, create a VNet peering with the following settings:
+1. From the **az1000401-vnet1 - Peerings** blade, click **+ Add** to create a VNet peering with the following settings:
 
     - Name: **az1000401-vnet1-to-az1000402-vnet2**
 
@@ -161,40 +161,15 @@ The main tasks for this exercise are as follows:
 
     - Virtual network: **az1000402-vnet2**
 
-    - Allow virtual network access: **Enabled**
-
-    - Allow forwarded traffic: disabled
-
-    - Allow gateway transit: disabled
-
-    - Use remote gateways: disabled
-
-
-#### Task 2: Configure VNet peering for the second virtual network
-  
-1. In the Azure portal, navigate to the **az1000402-vnet2** virtual network blade.
-
-1. From the **az1000402-vnet2** virtual network blade, display its **Peerings** blade.
-
-1. From the **az1000402-vnet2 - Peerings** blade, create a VNet peering with the following settings:
-
-    - Name: **az1000402-vnet2-to-az1000401-vnet1**
-
-    - Virtual network deployment model: **Resource manager**
-
-    - Subscription: the name of the Azure subscription you are using in this lab
-
-    - Virtual network: **az1000401-vnet1**
+    - Name of peering from az1000402-vnet2 to az1000401-vnet1: **az1000402-vnet2-to-az1000401-vnet1**
 
     - Allow virtual network access: **Enabled**
 
-    - Allow forwarded traffic: disabled
+    - Allow forwarded traffic: **disabled**
 
-    - Allow gateway transit: disabled
+    - Allow gateway transit: **disabled**
 
-    - Use remote gateways: disabled
-
-> **Result**: After you completed this exercise, you have configured virtual network peering between the two virtual networks.
+> **Note**: Because you have administrative access to both virtual networks, the portal is configuring both directions (from vnet1 to vnet2, AND vnet2 to vnet1) in a single action. From the CLI, PowerShell, or REST API, these tasks must be performed independently. 
 
 
 ### Exercise 2: Implement custom routing
@@ -220,7 +195,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000401-nic2** blade, display its **IP configurations** blade.
 
-1. From the **az1000401-nic2 - IP configurations** blade, enable **IP forwarding**.
+1. From the **az1000401-nic2 - IP configurations** set IP forwarding to **Enabled**, and then click **Save**.
 
    > **Note**: The Azure VM **az1000401-vm2**, which network interface you configured in this task, will function as a router, facilitating service chaining between the two virtual networks.
 
@@ -231,7 +206,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Route table**.
 
-1. Use the list of search results to navigate to the **Create route table** blade.
+1. Select **Route table**, and then click **Create**.
 
 1. From the **Create route table** blade, create a new route table with the following settings:
 
@@ -341,3 +316,31 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Without custom routing in place, the traffic would flow directly between the two Azure VMs. 
 > **Result**: After you completed this exercise, you have validated service chaining between peered Azure virtual networks.
+
+## Exercise 4: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.
