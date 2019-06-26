@@ -256,11 +256,11 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The deployment will fail. This is expected.
 
-1. You will be presented with the message indicating validation erors. Review the error details, indicating that deployment of resource **az1000102b-vnet1** was disallowed by the policy **Enforce tag and its value** which is included in the **az10001b - Tagging initiative assignment**.
+1. You will be presented with the message indicating validation erors. Review the error details, indicating that deployment of resource **az1000102b-vnet1** was disallowed by the policy **Require tag and its value** which is included in the **az10001b - Tagging initiative assignment**.
 
 1. Navigate to the **Policy - Compliance** blade. Identify the entry in the **COMPLIANCE STATE** column.
 
-1. Navigate to the **az10001b - Tagging initiative assignment** blade and reviwew the summary of the compliance status.
+1. Navigate to the **az10001b - Tagging initiative assignment** blade and review the summary of the compliance status.
 
 1. Display the listing of resource compliance and note which resources have been identified as non-compliant. 
 
@@ -281,7 +281,7 @@ The main tasks for this exercise are as follows:
 
 1. Delete the custom policy definition named **az10001b - Audit tag and its value** from the initiative.
 
-1. Delete the built-in policy definition named **Enforce tag and its value** from the initiative and save the changes.
+1. Delete the built-in policy definition named **Require tag and its value** from the initiative and save the changes.
 
    > **Note**: At this point, your initiative contains a single policy that automatically remediates tagging non-compliance during deployment of new resources and provides evaluation of compliance status.
 
