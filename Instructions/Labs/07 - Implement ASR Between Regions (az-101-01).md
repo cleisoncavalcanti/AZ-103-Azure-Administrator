@@ -211,7 +211,7 @@ The main tasks for this exercise are as follows:
    > lockedresource=$(az resource list --resource-group az1010101-RG-asr --resource-type Microsoft.Compute/disks --query "[?starts_with(name,'az10101')]".name --output tsv)
    > az disk revoke-access -n $lockedresource --resource-group az1010101-RG-asr
    > lockid=$(az lock show --name ASR-Lock --resource-group az1010101-RG-asr --resource-type Microsoft.Compute/disks --resource-name $lockedresource --output tsv --query id)
-   az lock delete --ids $lockid
+   > az lock delete --ids $lockid
    > az group list --query "[?starts_with(name,'az10101')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    >```
 
