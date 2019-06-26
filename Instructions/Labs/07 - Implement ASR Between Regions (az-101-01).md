@@ -209,8 +209,10 @@ The main tasks for this exercise are as follows:
    > **Note**: If you encounter an error similar to "...cannot perform delete operation because following scope(s) are locked..." then you need to run the following steps to remove the lock on the resource that prevents its deletion:
    > ```sh
    > lockedresource=$(az resource list --resource-group az1010101-RG-asr --resource-type Microsoft.Compute/disks --query "[?starts_with(name,'az10101')]".name --output tsv)
+   > az disk revoke-access -n $lockedresource --resource-group az1010101-RG-asr
    > lockid=$(az lock show --name ASR-Lock --resource-group az1010101-RG-asr --resource-type Microsoft.Compute/disks --resource-name $lockedresource --output tsv --query id)
    az lock delete --ids $lockid
+   > az group list --query "[?starts_with(name,'az10101')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    >```
 
 1. Close the **Cloud Shell** prompt at the bottom of the portal.
