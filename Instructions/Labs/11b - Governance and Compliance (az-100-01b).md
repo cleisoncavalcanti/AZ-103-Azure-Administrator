@@ -52,7 +52,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
 1. Use the list of search results to navigate to the **Custom deployment** blade.
 
@@ -214,7 +214,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Evaluate tagging enforcement and tagging compliance.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
@@ -306,7 +306,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 6: Evaluate effects of the remediation task on compliance.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
