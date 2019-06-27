@@ -186,7 +186,7 @@ The main tasks for this exercise are as follows:
    ```
 Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Microsoft.Compute resource providers. This is a one-time operation (per subscription) required when using Azure Resource Manager templates to deploy resources managed by these resource providers (if these resource providers have not been yet registered).
 
-
+Also Note: If you encounter an error after running these commands that mentions a token expiry set to a time that is before the current time, click the power button icon on our Cloud Shell UI and reboot your Cloud Shell instance.  Once restarted, retry these commands.
 
 #### Task 2: Attempt an automated deployment of a policy non-compliant Azure VM as a delegated admin
 
