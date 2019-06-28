@@ -182,3 +182,39 @@ The main tasks for this exercise are as follows:
 1. Perform a test failover to the **az1010101-vnet-asr** virtual network.
 
 > **Result**: After you completed this exercise, you have configured replication of an Azure VM and reviewed Azure VM replication settings.
+
+## Exercise 3: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az10101')]".name --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az10101')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+   > **Note**: If you encounter an error similar to "...cannot perform delete operation because following scope(s) are locked..." then you need to run the following steps to remove the lock on the resource that prevents its deletion:
+   > ```sh
+   > lockedresource=$(az resource list --resource-group az1010101-RG-asr --resource-type Microsoft.Compute/disks --query "[?starts_with(name,'az10101')]".name --output tsv)
+   > az disk revoke-access -n $lockedresource --resource-group az1010101-RG-asr
+   > lockid=$(az lock show --name ASR-Lock --resource-group az1010101-RG-asr --resource-type Microsoft.Compute/disks --resource-name $lockedresource --output tsv --query id)
+   > az lock delete --ids $lockid
+   > az group list --query "[?starts_with(name,'az10101')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   >```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.

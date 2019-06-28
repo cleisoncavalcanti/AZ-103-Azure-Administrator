@@ -186,7 +186,7 @@ The main tasks for this exercise are as follows:
    ```
 Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Microsoft.Compute resource providers. This is a one-time operation (per subscription) required when using Azure Resource Manager templates to deploy resources managed by these resource providers (if these resource providers have not been yet registered).
 
-
+Also Note: If you encounter an error after running these commands that mentions a token expiry set to a time that is before the current time, click the power button icon on our Cloud Shell UI and reboot your Cloud Shell instance.  Once restarted, retry these commands.
 
 #### Task 2: Attempt an automated deployment of a policy non-compliant Azure VM as a delegated admin
 
@@ -257,3 +257,31 @@ Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Mi
 1. Refresh the view of the blade and observe events corresponding to the Azure VM provisioning, including the final one representing the successful deployment.
 
 > **Result**: After you completed this exercise, you have identified an available DNS name for an Azure VM deployment, attempted an automated deployment of a policy non-compliant Azure VM as a delegated admin, performed an automated deployment of a policy compliant Azure VM as the same delegated admin, and reviewed Azure Activity Log entries corresponding to both Azure VM deployments.
+
+## Exercise 3: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.
