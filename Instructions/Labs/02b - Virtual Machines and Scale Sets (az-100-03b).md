@@ -12,13 +12,13 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Allfiles/Labfiles/AZ-100.3/az-100-03b_01_azuredeploy.json**
+-  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03b_01_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.3/az-100-03b_01_azuredeploy.parameters.json**
+-  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03b_01_azuredeploy.parameters.json**
 
--  **Allfiles/Labfiles/AZ-100.3/az-100-03b_02_azuredeploy.json**
+-  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03b_02_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.3/az-100-03b_02_azuredeploy.parameters.json**
+-  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03b_02_azuredeploy.parameters.json**
 
 ### Scenario
   
