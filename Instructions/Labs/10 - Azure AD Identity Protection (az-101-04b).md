@@ -10,9 +10,9 @@ All tasks in this lab are performed from the Azure portal, except for steps in E
 
 Lab files:
 
--  **Labfiles\\AZ-101.4\\az-101-04b_azuredeploy.json**
+-  **Labfiles\\Module_10\\Azure_AD_Identity_Protection\\az-101-04b_azuredeploy.json**
 
--  **Labfiles\\AZ-101.4\\az-101-04b_azuredeploy.parameters.json**
+-  **Labfiles\\Module_10\\Azure_AD_Identity_Protection\\az-101-04b_azuredeploy.parameters.json**
 
 ### Scenario
   
