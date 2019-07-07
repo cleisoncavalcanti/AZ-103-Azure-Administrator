@@ -12,11 +12,11 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Allfiles/Labfiles/AZ-100.4/az-100-04b_01_azuredeploy.json**
+-  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04b_01_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.4/az-100-04b_02_azuredeploy.json**
+-  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04b_02_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.4/az-100-04_azuredeploy.parameters.json**
+-  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04_azuredeploy.parameters.json**
 
 
 ### Scenario
