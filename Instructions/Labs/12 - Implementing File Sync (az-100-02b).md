@@ -10,9 +10,9 @@ All tasks in this lab are performed from the Azure portal, except for steps in E
 
 Lab files: 
 
--  **Allfiles/Labfiles/AZ-100.2/az-100-02b_azuredeploy.json**
+-  **Labfiles\\Module_12\\Implementing_File_Sync\\az-100-02b_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.2/az-100-02b_azuredeploy.parameters.json**
+-  **Labfiles\\Module_12\\Implementing_File_Sync\\az-100-02b_azuredeploy.parameters.json**
 
 ### Scenario
   
