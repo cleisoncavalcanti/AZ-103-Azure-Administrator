@@ -205,7 +205,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Blobs** blade of the first storage account, create a new container named **az1000202-container** with the **Public access level** set to **Private (no anonymous access)**. 
 
-1. From the **az1000202-container** blade, upload **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json** and **Labfiles\\AZ-100.2\\az-100-02_azuredeploy.parameters.json** into the container.
+1. From the **az1000202-container** blade, upload **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json** and **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json** into the container.
 
 
 #### Task 4: Copy a container and blobs between Azure Storage accounts
