@@ -12,9 +12,9 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files: 
 
--  **Allfiles/Labfiles/AZ-100.1/az-100-01b_azuredeploy.json**
+-  **Labfiles\\Module_11\\Governance_and_Compliance\\AZ-100.1/az-100-01b_azuredeploy.json**
 
--  **Allfiles/Labfiles/AZ-100.1/az-100-01b_azuredeploy.parameters.json**
+-  **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.parameters.json**
 
 ### Scenario
   
