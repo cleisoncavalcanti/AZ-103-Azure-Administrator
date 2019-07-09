@@ -396,7 +396,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Azure Portal, start a PowerShell session in the Cloud Shell pane. 
 
-1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique and the placeholder &lt;location-of-az1000301-RG&gt; with the name of the Azure region in which you created the **az1000301-RG** resource group.
+1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique.
 
    ```pwsh
    $rg = Get-AzResourceGroup -Name az1000301-RG
