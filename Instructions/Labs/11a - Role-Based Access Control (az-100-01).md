@@ -269,7 +269,7 @@ Also Note: If you encounter an error after running these commands that mentions 
 1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
 
    ```sh
-   az group list --query "[?starts_with(name,'az1000')]".name --output tsv
+   az group list --query "[?starts_with(name,'az1000')].name" --output tsv
    ```
 
 1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
@@ -279,7 +279,7 @@ Also Note: If you encounter an error after running these commands that mentions 
 1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
 
    ```sh
-   az group list --query "[?starts_with(name,'az1000')]".name --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   az group list --query "[?starts_with(name,'az1000')].name" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
 
 1. Close the **Cloud Shell** prompt at the bottom of the portal.
