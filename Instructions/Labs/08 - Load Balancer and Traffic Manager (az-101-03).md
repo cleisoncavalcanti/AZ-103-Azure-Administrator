@@ -319,8 +319,6 @@ The main tasks for this exercise are as follows:
 
     - Resource group: **az1010302-RG**
 
-    - Location: the name of the Azure region in which you deployed Azure VMs in the second task of the previous exercise
-
 1. In the Azure portal, navigate to the blade of the newly deployed Azure load balancer **az1010302w-lb**.
 
 1. From the **az1010302w-lb** blade, display the **az1010302w-lb - Backend pools** blade.
