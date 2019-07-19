@@ -219,8 +219,6 @@ The main tasks for this exercise are as follows:
    ```pwsh
    $storageAccount1Name = (Get-AzStorageAccount -ResourceGroupName 'az1000202-RG')[0].StorageAccountName
    $storageAccount2Name = (Get-AzStorageAccount -ResourceGroupName 'az1000203-RG')[0].StorageAccountName
-   $storageAccount1Key1 = (Get-AzStorageAccountKey -ResourceGroupName 'az1000202-RG' -StorageAccountName $storageAccount1Name)[0].Value
-   $storageAccount2Key1 = (Get-AzStorageAccountKey -ResourceGroupName 'az1000203-RG' -StorageAccountName $storageAccount2Name)[0].Value
    ```
 
    > **Note**: These commands set the values of variables representing the names of each storage account and their corresponding keys. You will use these values to copy blobs between storage accounts by using the AZCopy command line utility in the next step.
@@ -228,7 +226,7 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following command:
 
    ```pwsh
-   azcopy --source https://$storageAccount1Name.blob.core.windows.net/az1000202-container/ --destination https://$storageAccount2Name.blob.core.windows.net/az1000203-container/ --source-key $storageAccount1Key1 --dest-key $storageAccount2Key1 --include "az" --sync-copy --recursive
+   azcopy copy https://$storageAccount1Name.blob.core.windows.net/az1000202-container/ https://$storageAccount2Name.blob.core.windows.net/az1000203-container/ --recursive=true
    ```
 
    > **Note**: This command uses the AzCopy utility to copy the content of the container between the two storage accounts. 
