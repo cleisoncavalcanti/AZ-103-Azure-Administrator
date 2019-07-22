@@ -216,7 +216,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Edit template** blade, load the template file **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_azuredeploy.json**. 
 
-   > **Note**: Review the content of the template and note that it defines deployment of two Azure VMs hosting Linux Ubuntu into an availability set and into the existing virtual network **az1000301-vnet0**.
+   > **Note**: Review the content of the template and note that it defines deployment of two Azure VMs hosting Linux Ubuntu into an availability set and into the existing virtual network **az1000301-vnet0**. This virtual network does not exist in your deployment. You will be changing the virtual network name in the parameters below.
 
 1. Save the template and return to the **Custom deployment** blade. 
 
@@ -244,7 +244,7 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
-    - Virtual Network Name: **az1000301-RG-vnet**
+    - Virtual Network Name: **az1000301-RG-vnet** _(change this value from the template default)_
 
     - Image Publisher: **Canonical**
 
