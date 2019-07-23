@@ -252,12 +252,12 @@ The main tasks for this exercise are as follows:
 
 1. Verify that the command returned the results confirming that the two files were transferred. 
 
-1. Navigate to the **Blobs** blade of the second storage account and verify that it includes the entry representing the newly created **az1000203-container** and that the container includes two copied blobs.
+1. Navigate to the **Blobs** blade of the second storage account and verify that it includes the entry representing the newly created **az1000202-container** and that the container includes two copied blobs.
 
 
 #### Task 5: Use a Shared Access Signature (SAS) key to access a blob
 
-1. From the **Blobs** blade of the second storage account, navigate to the container **az1000203-container**, and then open the **az-100-02_azuredeploy.json** blade.
+1. From the **Blobs** blade of the second storage account, navigate to the container **az1000202-container**, and then open the **az-100-02_azuredeploy.json** blade.
 
 1. On the **az-100-02_azuredeploy.json** blade, copy the value of the **URL** property.
 
