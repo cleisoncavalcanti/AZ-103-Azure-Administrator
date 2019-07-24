@@ -25,7 +25,6 @@ This repository will include the following labs:
 -  Implement and Manage Storage (az-100-02)
 -  Load Balancer and Traffic Manager (az-101-03)
 -  Migrate On-premises Hyper-V VMs to Azure (az-101-01b)
--  Privileged Identity Management (az-101-04)
 -  Role-Based Access Control (az-100-01)
 -  Self-Service Password Reset (az-100-05b)
 -  Virtual Machines and Scale Sets (az-100-03b)
@@ -36,6 +35,7 @@ Note that the following labs will not be part of the AZ-103 course:
 -  Azure Event Grid and Azure Logic Apps (az-101-02b)
 -  Implement and Manage Azure Web Apps (az-101-02)
 -  Migrate On-premises Hyper-V VMs to Azure (az-101-01b)
+-  Privileged Identity Management (az-101-04)
 
 **What are we doing?**
 
