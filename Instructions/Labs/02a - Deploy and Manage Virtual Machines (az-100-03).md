@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Windows Server**. Select **Windows Server** from the search results list.
 
-1. On the Windows Server page, use the drop-down menu to select **Windows Server 2016 Datacenter**, and then click **Create**.
+1. On the Windows Server page, use the drop-down menu to select **[smalldisk] Windows Server 2016 Datacenter**, and then click **Create**.
 
 1. Use the **Create a virtual machine** blade to deploy a virtual machine with the following settings:
 
