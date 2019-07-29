@@ -205,7 +205,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000301b-vm1** virtual machine blade, navigate to the **Disks** blade.
 
-1. From the **az1000301b-vm1 - Disks** blade, use the **+ Add data disk** then click **Create  disk**.
+1. From the **az1000301b-vm1 - Disks** blade, use the **+ Add data disk** then, in the dropdown list under **Name**, click **Create  disk**.
 
 1. From the **Create managed disk** blade, create a new data disk with the following settings:
 
@@ -225,7 +225,7 @@ The main tasks for this exercise are as follows:
 
     - HOST CACHING: **None**
 
-1. From the **az1000301b-vm1 - Disks** blade, use the **+ Add data disk** option then click **Create disk**.
+1. From the **az1000301b-vm1 - Disks** blade, use the **+ Add data disk** option then, in the dropdown list under **Name**, click **Create disk**.
 
 1. From the **Create managed disk** blade, create a new data disk with the following settings:
 
@@ -245,6 +245,7 @@ The main tasks for this exercise are as follows:
 
     - HOST CACHING: **None**
 
+1. Click **Save**
 
 #### Task 4: Configure data volumes within an Azure VM
 
@@ -406,6 +407,8 @@ The main tasks for this exercise are as follows:
 1. From the **az1000302bvmss1** VM scale set blade, navigate to the **Scaling** blade.
 
 1. On the **az1000302bvmss1 - Scaling** blade, use the **Override condition** setting to increase the instance count to 2.
+
+1. Click **Save**
 
 1. Navigate to the **az1000302bvmss1 - Instances** blade and verify that the number of instances has increased to 2.
 
