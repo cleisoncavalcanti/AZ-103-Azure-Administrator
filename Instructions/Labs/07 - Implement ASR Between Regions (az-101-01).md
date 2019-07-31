@@ -92,7 +92,7 @@ The main tasks for this exercise are as follows:
  
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **Create a resource** blade, search Azure Marketplace for **Backup and Site Recovery (OMS)**.
+1. From the **Create a resource** blade, search Azure Marketplace for **Backup and Site Recovery**.
 
 1. Use the list of search results to navigate to the **Recovery Services vault** blade.
 
