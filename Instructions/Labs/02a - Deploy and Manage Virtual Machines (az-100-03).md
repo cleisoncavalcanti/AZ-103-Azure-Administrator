@@ -84,12 +84,14 @@ The main tasks for this exercise are as follows:
     - Already have a Windows license?: **No**
 
 1. Click **Next: Disks >**.    
+
     - OS disk type: **Standard HDD**
 
 1. Click **Next: Networking >**.
 
-1. On the Networking tab, click **Create new** under Virtual Network. Leave the existing default range and subnet, and add the following:
-    - Address range: **10.103.0.0/16**
+1. On the Networking tab, click **Create new** under Virtual Network. Use the virtual network name already assigned by default and specify the following:
+
+    - Virtual network address range: **10.103.0.0/16**
 
     - Subnet name: **subnet0**
 
