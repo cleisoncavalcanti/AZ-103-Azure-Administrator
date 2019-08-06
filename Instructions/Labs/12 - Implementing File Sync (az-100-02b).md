@@ -102,7 +102,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **New** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Storage account - blob, file, table, queue**.
+1. From the **New** blade, search Azure Marketplace for **Storage account**.
 
 1. Use the list of search results to navigate to the **Create storage account** blade.
 
@@ -128,7 +128,7 @@ The main tasks for this exercise are as follows:
 
     - Hierarchical namespace: **Disabled**
 
-   > **Note**: Wait for the storage account to be provisioned but proceed to the next step.
+   > **Note**: Wait for the storage account to be provisioned then proceed to the next step.
 
 1. In the Azure portal, navigate to the blade representing the newly provisioned storage account.
 
