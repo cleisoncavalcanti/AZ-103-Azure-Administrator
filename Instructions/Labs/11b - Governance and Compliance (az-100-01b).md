@@ -166,7 +166,7 @@ The main tasks for this exercise are as follows:
 
     - Category: **Lab**
 
-    - POLICIES AND PARAMETERS: **az10001b - Audit tag and its value**
+    - AVAILABLE DEFINITIONS: search for and select **az10001b - Audit tag and its value**
 
         - Tag Name: **environment**
 
