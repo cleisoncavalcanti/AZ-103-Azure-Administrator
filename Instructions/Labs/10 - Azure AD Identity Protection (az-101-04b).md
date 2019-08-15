@@ -157,7 +157,7 @@ The main tasks for this exercise are as follows:
 
     - Groups: **0 groups selected**
 
-    - Directory role: **User**
+    - Directory role: **Global administrator**
 
     - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this lab.
 
