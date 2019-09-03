@@ -71,7 +71,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
-1. In the Cloud Shell pane, run the following in order to identify the public IP address of your lab computer:
+1. From your lab computer open a Powershell session, run the following in order to identify the public IP address of your lab computer:
 
    ```pwsh
    Invoke-RestMethod http://ipinfo.io/json | Select-Object -ExpandProperty IP
