@@ -152,19 +152,15 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade, create a new user with the following settings:
 
+     - User name: **syncadmin@***<DNS-domain-name>* where *<DNS-domain-name>* represents the default primary DNS domain name you identified in the previous task. Take a note of this user name. You will need it later in this lab.
+    
     - Name: **syncadmin**
-
-    - User name: **syncadmin@***<DNS-domain-name>* where *<DNS-domain-name>* represents the default primary DNS domain name you identified in the previous task. Take a note of this user name. You will need it later in this lab.
-
-    - Profile: **Not configured**
-
-    - Properties: **Default**
-
+    
+    - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this task.
+    
     - Groups: **0 groups selected**
 
-    - Directory role: **Global administrator**
-
-    - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this task.
+    - Directory role: click "User" and select **Global administrator**
 
    > **Note**: An Azure AD user with the Global Administrator role is required in order to implement Azure AD Connect.
 
