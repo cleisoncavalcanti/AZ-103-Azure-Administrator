@@ -461,6 +461,16 @@ The main tasks for this exercise are as follows:
         - Subnet address range: **10.203.0.0/24**
 
     - Public IP address per instance: **Off**
+    
+    - Accelerated networking: **Off**
+    
+    - NIC network security group: **Basic**
+    
+    - Select inbound ports: **HTTP**
+    
+    - Boot diagnostics: **Off**
+    
+    - System assigned managed identity: **Off**
 
    > **Note**: Wait for the deployment to complete before you proceed to the next task. This should take about 5 minutes.
 
