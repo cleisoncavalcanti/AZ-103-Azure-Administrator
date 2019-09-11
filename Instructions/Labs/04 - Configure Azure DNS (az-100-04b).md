@@ -67,10 +67,6 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create a DNS record in the public DNS zone
   
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
-
-   > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
-
 1. From your lab computer open a Powershell session, run the following in order to identify the public IP address of your lab computer:
 
    ```pwsh
@@ -78,6 +74,10 @@ The main tasks for this exercise are as follows:
    ```
 
    > **Note**: Take a note of this IP address. You will use it later in this task.
+
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+
+   > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
 1. In the Cloud Shell pane, run the following in order to create a public IP address resource:
 
