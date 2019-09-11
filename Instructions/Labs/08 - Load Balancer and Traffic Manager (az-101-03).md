@@ -548,7 +548,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Repeat the same tests for the second region.
 
-> **Result**: After you completed this exercise, you have implemented and verified load balancing rules and NAT rules of Azure load balancers in both regions.
+> **Result**: After you completed this exercise, you have implemented load balancing rules and NAT rules of Azure in two Azure regions and verified load balancing rules and NAT rules of Azure load balancers in the first region.
 
 
 ### Exercise 2: Implement Azure Traffic Manager load balancing
