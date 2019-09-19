@@ -190,14 +190,18 @@ The main tasks for this exercise are as follows:
    $vnet2 = Get-AzVirtualNetwork -name az1000402b-vnet2
 
    New-AzDnsZone -Name adatum.local -ResourceGroupName $rg2.ResourceGroupName -ZoneType Private -RegistrationVirtualNetworkId @($vnet1.Id) -ResolutionVirtualNetworkId @($vnet2.Id)
-   ```
+   
+   $zone = New-AzPrivateDnsZone -Name adatum.local -ResourceGroupName $rg2.ResourceGroupName
 
-   > **Note**: Virtual networks that you assign to an Azure DNS zone cannot contain any resources.
+   $vnet1link = New-AzPrivateDnsVirtualNetworkLink -ZoneName $zone.Name -ResourceGroupName $rg2.ResourceGroupName -Name "vnet1Link" -VirtualNetworkId $vnet1.id -EnableRegistration
+
+   $vnet2link = New-AzPrivateDnsVirtualNetworkLink -ZoneName $zone.Name -ResourceGroupName $rg2.ResourceGroupName -Name "vnet2Link" -VirtualNetworkId $vnet2.id
+   ```
 
 1. In the Cloud Shell pane, run the following in order to verify that the private DNS zone was successfully created:
 
    ```pwsh
-   Get-AzDnsZone -ResourceGroupName $rg2.ResourceGroupName
+   Get-AzPrivateDnsZone -ResourceGroupName $rg2.ResourceGroupName
    ```
 
 
