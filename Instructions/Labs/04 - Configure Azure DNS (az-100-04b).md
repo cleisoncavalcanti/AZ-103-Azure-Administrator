@@ -185,11 +185,12 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following in order to create a private DNS zone with the first virtual network supporting registration and the second virtual network supporting resolution:
 
    ```pwsh
+   
+   Install-Module -Name Az.PrivateDns -force
+   
    $vnet1 = Get-AzVirtualNetwork -Name az1000402b-vnet1
 
    $vnet2 = Get-AzVirtualNetwork -name az1000402b-vnet2
-
-   New-AzDnsZone -Name adatum.local -ResourceGroupName $rg2.ResourceGroupName -ZoneType Private -RegistrationVirtualNetworkId @($vnet1.Id) -ResolutionVirtualNetworkId @($vnet2.Id)
    
    $zone = New-AzPrivateDnsZone -Name adatum.local -ResourceGroupName $rg2.ResourceGroupName
 
