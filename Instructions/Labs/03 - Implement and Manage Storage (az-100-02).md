@@ -303,7 +303,7 @@ The main tasks for this exercise are as follows:
   
 1. In the Azure portal, navigate to the blade displaying the properties of the second storage account you created in the previous exercise.
 
-1. From the storage account blade, display the properties of its File Service.
+1. From the storage account blade select Files under File Service.
 
 1. From the storage account **Files** blade, create a new file share with the following settings:
 
