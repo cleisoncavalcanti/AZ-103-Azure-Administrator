@@ -297,61 +297,37 @@ The main tasks for this exercise are as follows:
 
 ## Exercise 4: Remove lab resources
 
-#### Task 1: Open Cloud Shell
+#### Task 1: Delete the Azure AD tenant.
 
-1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+1. Within the RDP session to **adVM**, start Windows PowerShell as Administrator. 
 
-1. At the Cloud Shell interface, select **Bash**.
-
-1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
-
-   ```sh
-   az group list --query "[?starts_with(name,'az1000')].name" --output tsv
-   ```
-
-1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
-
-#### Task 2: Delete resource groups
-
-1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
-
-   ```sh
-   az group list --query "[?starts_with(name,'az1000')].name" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
-   ```
-
-1. Close the **Cloud Shell** prompt at the bottom of the portal.
-
-#### Task 3: Delete the Azure AD tenant.
-
-1. Start Windows PowerShell as Administrator on the lab VM. 
-
-1. From the Windows PowerShell console on the lab VM, install the MsOnline PowerShell module by running the following (when prompted, in the NuGet provider is required to continue dialog box, click **Yes**):
+1. From the Windows PowerShell console, install the MsOnline PowerShell module by running the following (when prompted, in the NuGet provider is required to continue dialog box, click **Yes**):
 
    ```pwsh
    Install-Module MsOnline -Force
    ```
    
-1. From the Windows PowerShell console on the lab VM, connect to the AdatumSync Azure AD tenant by running the following (when prompted, sign in with the SyncAdmin credentials):
+1. From the Windows PowerShell console, connect to the AdatumSync Azure AD tenant by running the following (when prompted, sign in with the SyncAdmin credentials):
 
    ```pwsh
    Connect-MsolService
    ```
 
-1. From the Windows PowerShell console on the lab VM, disable the Azure AD Connect synchronization by running the following:
+1. From the Windows PowerShell console, disable the Azure AD Connect synchronization by running the following:
 
    ```pwsh
    Set-MsolDirSyncEnabled -EnableDirSync $false -Force
    ```
 
-1. From the Windows PowerShell console on the lab VM, verify that the operation was successful by running the following:
+1. From the Windows PowerShell console, verify that the operation was successful by running the following:
 
    ```pwsh
    (Get-MSOLCompanyInformation).DirectorySynchronizationEnabled 
    ```   
 
-1. On the lab VM, sign out from the Azure portal and close the Microsoft Edge window. 
+1. Sign out from the Azure portal and close the Internet Explorer window. 
 
-1. From the lab VM, start Microsoft Edge, navigate to the Azure portal, and sign in by using the SyncAdmin credentials. 
+1. Start Internet Explorer, navigate to the Azure portal, and sign in by using the SyncAdmin credentials. 
 
 1. In the Azure portal, navigate to the **Users - All users** blade of the AdatumSync Azure AD tenant and delete all users with the exception of the AdatumSync account.
 
@@ -368,5 +344,29 @@ The main tasks for this exercise are as follows:
 1. On the **Delete directory 'AdatumSync'?** blade, click **Delete**.
 
 > **Note**: For any additional  information regarding this task, refer to https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto  
+
+#### Task 2: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')].name" --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 3: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')].name" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
 
 > **Result**: In this exercise, you removed the resources used in this lab.
