@@ -292,7 +292,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000302-vm0** blade, display the **Networking** blade.
 
-1. From the **az1000302-vm0 - Networking** blade, click the link representing the network interface.
+1. On the **az1000302-vm0 - Networking** blade, click the entry representing network interface (with name starting with az1000302-vm0).
 
 1. From the blade displaying the properties of the network interface of **az1000302-vm0**, navigate to its **IP configurations** blade.
 
