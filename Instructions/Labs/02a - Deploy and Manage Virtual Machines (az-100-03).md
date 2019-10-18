@@ -99,7 +99,15 @@ The main tasks for this exercise are as follows:
 
 1. Click **OK**.
 
-1. Leave all other default values, and click **Review + create**.
+1. Click **Next: Management >**.
+
+1. On the Management tab, review the default settings and note that boot diagnostics are turned on with a new diagnostics storage account automatically preconfigured.
+
+1. Click **Next: Advanced >**.
+
+1. On the Advanced tab, review the available settings.
+
+1. Leave all settings with their default values, and click **Review + create**.
 
 1. Click **Create**.
 
