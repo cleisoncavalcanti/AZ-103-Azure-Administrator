@@ -418,7 +418,7 @@ The main tasks for this exercise are as follows:
 
 ## Exercise 3: Remove lab resources
 
-#### Task 1: Create resource group-level locks to prevent accidental changes
+#### Task 1: Delete the resource group-level lock.
 
 1. In the Azure portal, navigate to the **az1000101b-RG** resource group blade.
 
@@ -428,7 +428,19 @@ The main tasks for this exercise are as follows:
 
 1. On the **az1000101b-RG - Locks** blade, delete the **az1000101b-roLock**.
 
-#### Task 2: Open Cloud Shell
+#### Task 2: Delete the policy assignment and definition.
+
+1. In the Azure portal, navigate to the **Policy** blade.
+
+1. From the **Policy**, blade navigate to the **Policy - Assignments** blade. 
+
+1. From the **Policy - assignments** blade, remove the assignment you created earlier in this lab. 
+
+1. From the **Policy**, blade navigate to the **Policy - Definitions** blade. 
+
+1. From the **Policy - Definitions** blade, delete all definitions you created earlier in this lab. 
+
+#### Task 3: Open Cloud Shell
 
 1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
 
@@ -442,7 +454,7 @@ The main tasks for this exercise are as follows:
 
 1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
 
-#### Task 3: Delete resource groups
+#### Task 4: Delete resource groups
 
 1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
 
