@@ -495,7 +495,7 @@ The main tasks for this exercise are as follows:
 
     - Configuration Modules or Script: **"az-100-03_install_iis_vmss.zip"**
 
-    - Module-qualified Name of Configuration: **az-100-03_install_iis_vmss.ps1\IISInstall**
+    - Module-qualified Name of Configuration: **az-100-03_install_iis_vmss.ps1\\IISInstall**
 
     - Configuration Arguments: leave blank
 
