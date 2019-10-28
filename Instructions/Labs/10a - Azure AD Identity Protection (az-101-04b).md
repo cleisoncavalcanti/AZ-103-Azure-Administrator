@@ -227,9 +227,11 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant, navigate to the **AdatumLab101-4b - Overview** blade.
 
-1. From the **AdatumLab101-4b - Overview** blade, navigate to the **AdatumLab101-4b - MFA** blade.
+1. From the **AdatumLab101-4b - Overview** blade, navigate to the Multi-Factor Authentication blade.
 
-1. From the **AdatumLab101-4b - MFA** blade, navigate to the **Multi-Factor Authentication - Fraud alert** blade and configure the following settings:
+   > **Note**: You might need to first click the **Security** entry in the vertical menu of the Azure Active Directory tenant blade.
+
+1. From the Multi-Factor Authentication blade, navigate to the **Multi-Factor Authentication - Fraud alert** blade and configure the following settings:
 
     - Allow users to submit fraud alerts: **On**
 
