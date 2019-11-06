@@ -368,7 +368,7 @@ The main tasks for this exercise are as follows:
 
 1. Within the RDP session to **az1000301-vm0**, start Internet Explorer and download **putty.exe** from [**https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html) 
 
-1. Use **putty.exe** to verify that you can successfully connect to **az1000302-vm0** on its private IP address via the **SSH** protocol (TCP 22).
+1. Use **putty.exe** to verify that you can successfully connect to **az1000302-vm0** on its private IP address(**10.103.0.100**) via the **SSH** protocol (TCP 22).
 
 1. When prompted, authenticate by specifying the following values:
 
@@ -509,7 +509,7 @@ The main tasks for this exercise are as follows:
 
     - Auto Upgrade Minor Version: **Yes**
 
-1. Navigate to the **az1000303vmss0 - Instances** blade and initiate the upgrade of the **az1000303vmss0_0** instance.
+1. Navigate to the **az1000303vmss0 - Instances** blade and click on **Upgrade** to initiate the upgrade of the **az1000303vmss0_0** instance.
 
    > **Note**: The update will trigger application of the DSC configuration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000303vmss0 - Instances** blade.
 
