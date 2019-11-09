@@ -254,8 +254,6 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
-    - Virtual Network Name: **az1000301-RG-vnet** _(change this value from the template default)_
-
     - Image Publisher: **Canonical**
 
     - Image Offer: **UbuntuServer**
@@ -263,6 +261,12 @@ The main tasks for this exercise are as follows:
     - Image SKU: **16.04.0-LTS**
 
     - Vm Size: use **Standard_DS1_v2** or **Standard_DS2_v2**, based on the instructor's recommendations 
+   
+    - Virtual Network Name: **az1000301-RG-vnet** _(change this value from the template default)_
+    
+    - Virtual Netowrk Resource Group: the name of a new resource group **az1000301-RG**
+    
+    - Subnet Name: **subnet0**
 
    > **Note**: Wait for the deployment to complete before you proceed to the next task. This should take about 5 minutes.
 
