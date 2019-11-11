@@ -196,7 +196,9 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **adVM** blade, displaying the properties of the Azure VM hosting an Active Directory domain controller that you deployed in the first exercise of this lab.
 
-1. From the **Overview** pane of the **adVM** blade, generate an RDP file and use it to connect to **adVM**.
+1. On the **Overview** pane of the **adVM** blade, click **Connect**. 
+
+1. On the **Connect to virtual machine** blade, select the load balancer public IP address in the **IP address** drop-down list, download the corresponding RDP file, and use it to connect to **adVM**.
 
 1. When prompted, authenticate by specifying the following credentials:
 
