@@ -307,7 +307,7 @@ The main tasks for this exercise are as follows:
 
         - Conditions:
 
-            - User risk: **Medium and above**
+            - User risk: **Low and above**
 
     - Controls:
 
