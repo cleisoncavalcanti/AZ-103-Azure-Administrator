@@ -156,6 +156,8 @@ The main tasks for this exercise are as follows:
     - Name: **az1000401-vnet1-to-az1000402-vnet2**
 
     - Virtual network deployment model: **Resource manager**
+    
+    - I know my resource ID: leave unchecked
 
     - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -166,11 +168,11 @@ The main tasks for this exercise are as follows:
     - Allow virtual network access from az1000401-vnet1 to az1000402-vnet2: **Enabled**
 
     - Allow virtual network access from az1000402-vnet2 to az1000401-vnet1: **Enabled**
-    
-     - Allow forwarded traffic from az1000401-vnet1 to az1000402-vnet2: **disabled**
 
-    - Allow gateway transit from az1000402-vnet2 to az1000401-vnet1: **disabled**
+    - Allow forwarded traffic from az1000402-vnet2 to az1000401-vnet1: **Disabled**
     
+    - Allow forwarded traffic from az1000401-vnet1 to az1000402-vnet2: **Disabled**
+  
     - Allow gateway transit: unchecked
 
 > **Note**: Because you have administrative access to both virtual networks, the portal is configuring both directions (from vnet1 to vnet2, AND vnet2 to vnet1) in a single action. From the CLI, PowerShell, or REST API, these tasks must be performed independently. 
