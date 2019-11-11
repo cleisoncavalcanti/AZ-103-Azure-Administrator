@@ -50,19 +50,29 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade, create a new user with the following settings:
 
-    - Name: **aaduser100011**
-
     - User name: **aaduser100011@&lt;DNS-domain-name&gt;** where &lt;DNS-domain-name&gt; represents the primary DNS domain name you identified earlier in this task.
 
-    - Profile: **Not configured**
+    - Name: **aaduser100011**
+    
+    - First name: not set
+    
+    - Last name: not set
 
-    - Properties: **Default**
-
+    - Auto-generate password 
+    
+    - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this lab.
+   
     - Groups: **0 groups selected**
 
-    - Directory role: **User**
-
-    - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this lab.
+    - Roles: **User**
+    
+    - Block sign in: **No**
+    
+    - Usage location: **United States**
+    
+    - Job title: not set
+    
+    - Department: not set
 
 1. From the **Users - All users** blade, navigate to the **Groups - All groups** blade. 
 
