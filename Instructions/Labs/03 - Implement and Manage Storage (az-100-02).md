@@ -334,7 +334,9 @@ The main tasks for this exercise are as follows:
 
 1. Paste the script into the PowerShell ISE session, add `` -Persist `` at the end of the script, execute the script, and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
 
-1. Start File Explorer, navigate to the Z: drive and create a folder named **Folder1**.
+1. Right click the Start menu, click **Run**, in the **Open** dialog box type **Z:** and press the **Enter** key. This will open a File Explorer window displaying the content of the **Z:** drive.
+
+1. In the File Explorer window, create a folder named **Folder1** on the Z: drive.
 
 1. In the File Explorer window, navigate to **Folder1** and create a text document named **File1.txt**. 
 
