@@ -89,7 +89,7 @@ The main tasks for this exercise are as follows:
 
 1. Click **Next: Networking >**.
 
-1. On the Networking tab, click **Create new** under Virtual Network. Use the virtual network name already assigned by default and specify the following:
+1. On the Networking tab, click **Create new** under Virtual Network. Use the virtual network name already assigned by default, delete the default address range and specify the following:
 
     - Virtual network address range: **10.103.0.0/16**
 
