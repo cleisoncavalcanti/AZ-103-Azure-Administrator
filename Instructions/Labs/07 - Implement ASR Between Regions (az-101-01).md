@@ -124,7 +124,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
 
-1. From the **vaultaz1010102** blade, configure the following replication settings:
+1. From the **vaultaz1010102** blade, click on **Replicate** and configure the following replication settings:
 
     - Source: **Azure**
 
