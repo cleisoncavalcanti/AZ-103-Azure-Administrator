@@ -69,5 +69,5 @@ Note that the following labs will not be part of the AZ-103 course:
 
 We hope using this GitHub repository brings a sense of collaboration to the labs and improves the overall quality of the lab experience. 
 
-Regards,
+Regards, 
 *Azure Administrator Courseware Team*
