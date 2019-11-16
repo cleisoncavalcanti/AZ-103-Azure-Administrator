@@ -192,7 +192,7 @@ The main tasks for this exercise are as follows:
 
    $vnet2 = Get-AzVirtualNetwork -name az1000402b-vnet2
    
-   $zone = New-AzPrivateDnsZone -Name adatum.local -ResourceGroupName $rg2.ResourceGroupName
+   $zone = New-AzPrivateDnsZone -Name adatum.corp -ResourceGroupName $rg2.ResourceGroupName
 
    $vnet1link = New-AzPrivateDnsVirtualNetworkLink -ZoneName $zone.Name -ResourceGroupName $rg2.ResourceGroupName -Name "vnet1Link" -VirtualNetworkId $vnet1.id -EnableRegistration
 
@@ -242,7 +242,7 @@ The main tasks for this exercise are as follows:
 1. Within the Remote Desktop session to **az1000402b-vm2**, start a Command Prompt window and run the following: 
 
    ```
-   nslookup az1000402b-vm1.adatum.local
+   nslookup az1000402b-vm1.adatum.corp
    ```
 
 1. Verify that the name is successfully resolved.
@@ -250,13 +250,13 @@ The main tasks for this exercise are as follows:
 1. Switch back to the lab virtual machine and, in the Cloud Shell pane of the Azure portal window, run the following in order to create an additional DNS record in the private DNS zone:
 
    ```pwsh
-   New-AzPrivateDnsRecordSet -ResourceGroupName $rg2.ResourceGroupName -Name www -RecordType A -ZoneName adatum.local -Ttl 3600 -PrivateDnsRecords (New-AzPrivateDnsRecordConfig -IPv4Address "10.104.0.4")
+   New-AzPrivateDnsRecordSet -ResourceGroupName $rg2.ResourceGroupName -Name www -RecordType A -ZoneName adatum.corp -Ttl 3600 -PrivateDnsRecords (New-AzPrivateDnsRecordConfig -IPv4Address "10.104.0.4")
    ```
 
 1. Switch again to the Remote Desktop session to **az1000402b-vm2** and run the following from the Command Prompt window: 
 
    ```
-   nslookup www.adatum.local
+   nslookup www.adatum.corp
    ```
 
 1. Verify that the name is successfully resolved.
