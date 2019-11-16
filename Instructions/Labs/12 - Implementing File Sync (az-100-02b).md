@@ -248,22 +248,22 @@ The main tasks for this exercise are as follows:
 
 1. From the **New** blade, search Azure Marketplace for **Azure File Sync**.
 
-1. Use the list of search results to navigate to the **Deploy Storage Sync** blade.
+1. Use the search result to navigate to the **Deploy Storage Sync** blade.
 
-1. From the **Deploy Storage Sync** blade, create a Storage Sync Service with the following settings:
-
-    - Name: **az1000202b-ss**
+1. From the **Deploy Azure File Sync** blade, create a Storage Sync Service with the following settings:
 
     - Subscription: the same subscription you selected in the previous task
 
     - Resource group: the name of a new resource group **az1000203b-RG**
 
-    - Location: the name of the Azure region in which you created the storage account earlier in this exercise
+    - Storage sync service name: **az1000202b-ss**
+    
+    - Region: the name of the Azure region in which you created the storage account earlier in this exercise
 
 
 #### Task 2: Install the Azure File Sync Agent.
 
-1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V6_WS2016.msi**.
+1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_WS2016.msi**.
 
 1. Once the download completes, run the Storage Sync Agent Setup wizard with the default settings to install Azure File Sync Agent.
 
