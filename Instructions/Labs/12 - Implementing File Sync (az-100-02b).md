@@ -122,19 +122,23 @@ The main tasks for this exercise are as follows:
 
     - Replication: **Locally-redundant storage (LRS)**
 
+    - Connectivity method: **Public endpoint (all networks)**
+    
     - Secure transfer required: **Disabled**
-
-    - Allow access from: **All networks**
-
+    
+    - Large file shares: **Disabled**
+    
+    - Blob soft delete: **Disabled**
+    
     - Hierarchical namespace: **Disabled**
 
    > **Note**: Wait for the storage account to be provisioned then proceed to the next step.
 
 1. In the Azure portal, navigate to the blade representing the newly provisioned storage account.
 
-1. From the storage account blade, display the properties of its File Service.
+1. From the storage account blade, display its File Shares blade.
 
-1. From the storage account **Files** blade, create a new file share with the following settings:
+1. From the storage account **File shares** blade, create a new file share with the following settings:
 
     - Name: **az10002bshare1**
 
@@ -206,7 +210,7 @@ The main tasks for this exercise are as follows:
    Install-Module -Name Az.StorageSync -AllowClobber -Force
    ```
 
-1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
+1. From the Windows PowerShell console, check whether the S:\az10002bShare file share does not have any compatibility issues with the Azure File Sync :
 
    ```powershell
    Invoke-AzStorageSyncCompatibilityCheck -Path 'S:\az10002bShare'
