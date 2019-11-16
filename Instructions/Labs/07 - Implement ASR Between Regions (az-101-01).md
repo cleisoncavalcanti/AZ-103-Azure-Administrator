@@ -124,7 +124,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
 
-1. From the **vaultaz1010102** blade, click on **Replicate** and configure the following replication settings:
+1. From the **vaultaz1010102** blade, click **Replicate** and configure the following replication settings:
 
     - Source: **Azure**
 
@@ -169,6 +169,8 @@ The main tasks for this exercise are as follows:
 
 1. On the **vaultaz1010102 - Replicated items** blade, ensure that there is an entry representing the **az1010101-vm** Azure VM and verify that its **REPLICATION HEALTH** is **Healthy** and that its **STATUS** is **Enabling protection**.
 
+   > **Note**: You might need to wait a few minutes until the **az1010101-vm** entry appears on the **vaultaz1010102 - Replicated items** blade.
+   
 1. From the **vaultaz1010102 - Replicated items** blade, display the replicated item blade of the **az1010101-vm** Azure VM.
 
 1. On the **az1010101-vm** replicated item blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Failover** and **Test Failover** toolbar icons.
