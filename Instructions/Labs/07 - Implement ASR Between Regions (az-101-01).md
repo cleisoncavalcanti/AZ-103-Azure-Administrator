@@ -98,13 +98,13 @@ The main tasks for this exercise are as follows:
 
 1. Use the **Recovery Services vault** blade, to create a Site Recovery vault with the following settings:
 
-    - Name: **vaultaz1010102**
-
     - Subscription: the same Azure subscription you used in the previous task of this exercise
 
     - Resource group: the name of a new resource group **az1010102-RG**
 
-    - Location: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise
+    - Vault name: **vaultaz1010102**
+    
+    - Region: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise
 
 > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM by using an Azure Resource Manager template and created an Azure Site Recovery vault that will be used to replicate content of the Azure VM disk files. 
 
