@@ -104,7 +104,15 @@ The main tasks for this exercise are as follows:
 
     - Vault name: **vaultaz1010102**
     
-    - Region: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise
+    - Region: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise.
+
+   > **Note**: Wait for the provisioning to complete. This should take about a minute.
+
+1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
+
+1. From the **vaultaz1010102** blade, navigate to its **Properties** blade and then to the **Security Settings** blade.
+
+1. On the **Security Settings** blade, disable **Soft Delete** and save the change.
 
 > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM by using an Azure Resource Manager template and created an Azure Site Recovery vault that will be used to replicate content of the Azure VM disk files. 
 
