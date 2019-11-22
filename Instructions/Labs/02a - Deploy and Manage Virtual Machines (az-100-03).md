@@ -262,7 +262,7 @@ The main tasks for this exercise are as follows:
 
     - Vm Size: use **Standard_DS1_v2** or **Standard_DS2_v2**, based on the instructor's recommendations 
    
-    - Virtual Network Name: **az1000301-RG-vnet** _(change this value from the template default)_
+    - Virtual Network Name: **az1000301-RG-vnet**
     
     - Virtual Netowrk Resource Group: the name of a new resource group **az1000301-RG**
     

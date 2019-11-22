@@ -403,7 +403,7 @@ The main tasks for this exercise are as follows:
 
 1. Try setting the value of the **environment** tag to **dev**. Note that this time the operation fails. The resulting error message indicates that the resource refused tag assignment, with resource lock being the likely reason.
 
-1. Navigate to the blade of the storage account created in the **az1000101b-RG - Locks** resource group. 
+1. Navigate to the blade of the storage account created in the **az1000101b-RG** resource group. 
 
 1. From the storage account blade, navigate to its **Access keys** blade. Note the resulting error message stating that you cannot access the data plane because a read lock on the resource or its parent.
 

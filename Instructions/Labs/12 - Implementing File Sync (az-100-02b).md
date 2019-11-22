@@ -122,19 +122,23 @@ The main tasks for this exercise are as follows:
 
     - Replication: **Locally-redundant storage (LRS)**
 
+    - Connectivity method: **Public endpoint (all networks)**
+    
     - Secure transfer required: **Disabled**
-
-    - Allow access from: **All networks**
-
+    
+    - Large file shares: **Disabled**
+    
+    - Blob soft delete: **Disabled**
+    
     - Hierarchical namespace: **Disabled**
 
    > **Note**: Wait for the storage account to be provisioned then proceed to the next step.
 
 1. In the Azure portal, navigate to the blade representing the newly provisioned storage account.
 
-1. From the storage account blade, display the properties of its File Service.
+1. From the storage account blade, display its File Shares blade.
 
-1. From the storage account **Files** blade, create a new file share with the following settings:
+1. From the storage account **File shares** blade, create a new file share with the following settings:
 
     - Name: **az10002bshare1**
 
@@ -206,7 +210,7 @@ The main tasks for this exercise are as follows:
    Install-Module -Name Az.StorageSync -AllowClobber -Force
    ```
 
-1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
+1. From the Windows PowerShell console, check whether the S:\az10002bShare file share does not have any compatibility issues with the Azure File Sync :
 
    ```powershell
    Invoke-AzStorageSyncCompatibilityCheck -Path 'S:\az10002bShare'
@@ -248,18 +252,18 @@ The main tasks for this exercise are as follows:
 
 1. From the **Deploy Azure File Sync** blade, create a Storage Sync Service with the following settings:
 
-    - Name: **az1000202b-ss**
-
     - Subscription: the same subscription you selected in the previous task
 
     - Resource group: the name of a new resource group **az1000203b-RG**
 
-    - Location: the name of the Azure region in which you created the storage account earlier in this exercise
+    - Name: **az1000202b-ss**
+    
+    - Region: the name of the Azure region in which you created the storage account earlier in this exercise
 
 
 #### Task 2: Install the Azure File Sync Agent.
 
-1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_V6_WS2016.msi**.
+1. Within the RDP session, start another instance of Internet Explorer, browse to Microsoft Download Center at [**https://go.microsoft.com/fwlink/?linkid=858257**](https://go.microsoft.com/fwlink/?linkid=858257) and download the Azure File Sync Agent Windows Installer file **StorageSyncAgent_WS2016.msi**.
 
 1. Once the download completes, run the Storage Sync Agent Setup wizard with the default settings to install Azure File Sync Agent.
 
@@ -341,3 +345,32 @@ The main tasks for this exercise are as follows:
 
 
 > **Result**: After you completed this exercise, you have deployed the Storage Sync Service, installed the Azure File Sync Agent, registered the Windows Server with Storage Sync Service, created a sync group and a cloud endpoint, created a server endpoint, and validated Azure File Sync operations.
+
+
+## Exercise 3: Remove lab resources
+
+#### Task 1: Open Cloud Shell
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az100020')].name" --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab. These groups will be deleted in the next task.
+
+#### Task 2: Delete resource groups
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az100020')].name" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+> **Result**: In this exercise, you removed the resources used in this lab.

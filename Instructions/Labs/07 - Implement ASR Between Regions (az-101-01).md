@@ -98,13 +98,21 @@ The main tasks for this exercise are as follows:
 
 1. Use the **Recovery Services vault** blade, to create a Site Recovery vault with the following settings:
 
-    - Name: **vaultaz1010102**
-
     - Subscription: the same Azure subscription you used in the previous task of this exercise
 
     - Resource group: the name of a new resource group **az1010102-RG**
 
-    - Location: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise
+    - Vault name: **vaultaz1010102**
+    
+    - Region: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise.
+
+   > **Note**: Wait for the provisioning to complete. This should take about a minute.
+
+1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
+
+1. From the **vaultaz1010102** blade, navigate to its **Properties** blade and then to the **Security Settings** blade.
+
+1. On the **Security Settings** blade, disable **Soft Delete** and save the change.
 
 > **Result**: After you completed this exercise, you have initiated deployment of an Azure VM by using an Azure Resource Manager template and created an Azure Site Recovery vault that will be used to replicate content of the Azure VM disk files. 
 
@@ -124,7 +132,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
 
-1. From the **vaultaz1010102** blade, configure the following replication settings:
+1. From the **vaultaz1010102** blade, click **Replicate** and configure the following replication settings:
 
     - Source: **Azure**
 
@@ -169,6 +177,8 @@ The main tasks for this exercise are as follows:
 
 1. On the **vaultaz1010102 - Replicated items** blade, ensure that there is an entry representing the **az1010101-vm** Azure VM and verify that its **REPLICATION HEALTH** is **Healthy** and that its **STATUS** is **Enabling protection**.
 
+   > **Note**: You might need to wait a few minutes until the **az1010101-vm** entry appears on the **vaultaz1010102 - Replicated items** blade.
+   
 1. From the **vaultaz1010102 - Replicated items** blade, display the replicated item blade of the **az1010101-vm** Azure VM.
 
 1. On the **az1010101-vm** replicated item blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Failover** and **Test Failover** toolbar icons.
