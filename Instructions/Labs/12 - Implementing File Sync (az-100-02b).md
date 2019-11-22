@@ -244,9 +244,9 @@ The main tasks for this exercise are as follows:
 
 1. From the **New** blade, search Azure Marketplace for **Azure File Sync**.
 
-1. Use the list of search results to navigate to the **Deploy Storage Sync** blade.
+1. Use the list of search results to navigate to the **Deploy Azure File Sync** blade.
 
-1. From the **Deploy Storage Sync** blade, create a Storage Sync Service with the following settings:
+1. From the **Deploy Azure File Sync** blade, create a Storage Sync Service with the following settings:
 
     - Name: **az1000202b-ss**
 
