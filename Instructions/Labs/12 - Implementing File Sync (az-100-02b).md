@@ -248,7 +248,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **New** blade, search Azure Marketplace for **Azure File Sync**.
 
-1. Use the search result to navigate to the **Deploy Storage Sync** blade.
+1. Use the list of search results to navigate to the **Deploy Azure File Sync** blade.
 
 1. From the **Deploy Azure File Sync** blade, create a Storage Sync Service with the following settings:
 
@@ -256,7 +256,7 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1000203b-RG**
 
-    - Storage sync service name: **az1000202b-ss**
+    - Name: **az1000202b-ss**
     
     - Region: the name of the Azure region in which you created the storage account earlier in this exercise
 
