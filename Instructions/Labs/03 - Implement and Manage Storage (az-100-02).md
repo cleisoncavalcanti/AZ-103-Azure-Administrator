@@ -10,18 +10,18 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
-Lab files: 
+Lab files:
 
 -  **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json**
 
 -  **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json**
 
 ### Scenario
-  
+
 Adatum Corporation wants to leverage Azure Storage for hosting its data
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 -  Deploy an Azure VM by using an Azure Resource Manager template
@@ -32,7 +32,7 @@ After completing this lab, you will be able to:
 
 
 ### Exercise 0: Prepare the lab environment
-  
+
 The main tasks for this exercise are as follows:
 
 1. Deploy an Azure VM by using an Azure Resource Manager template
@@ -63,17 +63,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -123,7 +123,7 @@ The main tasks for this exercise are as follows:
 
 1. Use the list of search results to navigate to the **Create storage account** blade.
 
-1. From the **Create storage account** blade, create a new storage account with the following settings: 
+1. From the **Create storage account** blade, create a new storage account with the following settings:
 
     - Subscription: the same subscription you selected in the previous task
 
@@ -149,7 +149,7 @@ The main tasks for this exercise are as follows:
 
 1. Use the list of search results to navigate to the **Create storage account** blade.
 
-1. From the **Create storage account** blade, create a new storage account with the following settings: 
+1. From the **Create storage account** blade, create a new storage account with the following settings:
 
     - Subscription: the same subscription you selected in the previous task
 
@@ -173,8 +173,8 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 2: Review configuration settings of Azure Storage accounts
-  
-1. In Azure Portal, navigate to the blade of the first storage account you created. 
+
+1. In Azure Portal, navigate to the blade of the first storage account you created.
 
 1. With your storage account blade open, review the storage account configuration in the **Overview** section, including the performance, replication, and account kind settings.
 
@@ -186,9 +186,9 @@ The main tasks for this exercise are as follows:
 
 1. Display the **Encryption** blade of the storage account. Note that encryption is enabled by default and that you have the option of using your own key.
 
-   > **Note**: Do not change the configuration of the storage account. 
+   > **Note**: Do not change the configuration of the storage account.
 
-1. In Azure Portal, navigate to the blade of the second storage account you created. 
+1. In Azure Portal, navigate to the blade of the second storage account you created.
 
 1. With your storage account blade open, review the storage account configuration in the **Overview** section, including the performance, replication, and account kind settings.
 
@@ -201,16 +201,16 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Manage Azure Storage Blob Service
 
-1. In the Azure portal, navigate to the **Containers** blade of the first storage account you created. 
+1. In the Azure portal, navigate to the **Containers** blade of the first storage account you created.
 
-1. From the **Containers** blade of the first storage account, create a new container named **az1000202-container** with the **Public access level** set to **Private (no anonymous access)**. 
+1. From the **Containers** blade of the first storage account, create a new container named **az1000202-container** with the **Public access level** set to **Private (no anonymous access)**.
 
 1. From the **az1000202-container** blade, upload **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json** and **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json** into the container.
 
 
 #### Task 4: Copy a container and blobs between Azure Storage accounts
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell pane. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell pane.
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
@@ -233,7 +233,7 @@ The main tasks for this exercise are as follows:
    New-AzStorageContainer -Name $containerName -Context $context2 -Permission Off
    ```
    > **Note**: This command creates a new container with the matching name in the second storage account
-   
+
 1. In the Cloud Shell pane, run the following commands:
 
    ```pwsh
@@ -241,16 +241,16 @@ The main tasks for this exercise are as follows:
    $containerToken2 = New-AzStorageContainerSASToken -Context $context2 -ExpiryTime(get-date).AddHours(24) -FullUri -Name $containerName -Permission rwdl
    ```
    > **Note**: These commands generate SAS keys that you will use in the next step to copy blobs between two containers.
-   
+
 1. In the Cloud Shell pane, run the following command:
 
    ```pwsh
    azcopy cp $containerToken1 $containerToken2 --recursive=true
    ```
 
-   > **Note**: This command uses the AzCopy utility to copy the content of the container between the two storage accounts. 
+   > **Note**: This command uses the AzCopy utility to copy the content of the container between the two storage accounts.
 
-1. Verify that the command returned the results confirming that the two files were transferred. 
+1. Verify that the command returned the results confirming that the two files were transferred.
 
 1. Navigate to the **Blobs** blade of the second storage account and verify that it includes the entry representing the newly created **az1000202-container** and that the container includes two copied blobs.
 
@@ -261,7 +261,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **az-100-02_azuredeploy.json** blade, copy the value of the **URL** property.
 
-1. Open another Microsoft Edge window and navigate to the URL you copied in the previous step. 
+1. Open another Microsoft Edge window and navigate to the URL you copied in the previous step.
 
    > **Note**: The browser will display the **ResourceNotFound**. This is expected since the container has the **Public access level** set to **Private (no anonymous access)**.
 
@@ -281,13 +281,13 @@ The main tasks for this exercise are as follows:
 
 1. On the **az-100-02_azuredeploy.json** blade, copy **Blob SAS URL**.
 
-1. From the previously opened Microsoft Edge window, navigate to the URL you copied in the previous step. 
+1. From the previously opened Microsoft Edge window, navigate to the URL you copied in the previous step.
 
    > **Note**: This time, you will be prompted whether you want to open or save **az-100-02_azuredeploy.json**. This is expected as well, since this time you are no longer accessing the container anonymously, but instead you are using the newly generated SAS key, which is valid for the next 24 hours.
 
-1. Close the Microsoft Edge window displaying the prompt. 
+1. Close the Microsoft Edge window displaying the prompt.
 
-> **Result**: After you completed this exercise, you have created two Azure Storage accounts, reviewed their configuration settings, created a blob container, uploaded blobs into the container, copied the container and blobs between the storage accounts, and used a SAS key to access one of the blobs. 
+> **Result**: After you completed this exercise, you have created two Azure Storage accounts, reviewed their configuration settings, created a blob container, uploaded blobs into the container, copied the container and blobs between the storage accounts, and used a SAS key to access one of the blobs.
 
 
 ### Exercise 2: Implement and use Azure File Storage
@@ -300,7 +300,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create an Azure File Service share
-  
+
 1. In the Azure portal, navigate to the blade displaying the properties of the second storage account you created in the previous exercise.
 
 1. From the storage account blade select **File shares** under File Service.
@@ -314,7 +314,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Map a drive to the Azure File Service share from an Azure VM
 
-   > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 0 has completed. 
+   > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 0 has completed.
 
 1. Navigate to the **az10002share1** blade and display the **Connect** blade.
 
@@ -328,7 +328,7 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
-1. Within the RDP session, start a Windows PowerShell ISE session. 
+1. Within the RDP session, start a Windows PowerShell ISE session.
 
 1. From the Windows PowerShell ISE session, open the script pane and paste into it the content of your local Clipboard.
 
@@ -338,11 +338,11 @@ The main tasks for this exercise are as follows:
 
 1. In the File Explorer window, create a folder named **Folder1** on the Z: drive.
 
-1. In the File Explorer window, navigate to **Folder1** and create a text document named **File1.txt**. 
+1. In the File Explorer window, navigate to **Folder1** and create a text document named **File1.txt**.
 
    > **Note**: Make sure that you take into account the default configuration of File Explorer that does not display known file extensions in order to avoid creating a file named **File1.txt.txt**.
 
-1. From the PowerShell prompt, enter **Z:** to change the directory context to the mapped drive. 
+1. From the PowerShell prompt, enter **Z:** to change the directory context to the mapped drive.
 
 1. From the PowerShell prompt, enter **dir** to list the contents of the drive. You should see the directory that you created from File Explorer.
 

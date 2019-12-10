@@ -5,7 +5,7 @@ lab:
 ---
 
 # Lab: Implement Directory Synchronization
-  
+
 All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) except for Exercise 3 Task 1, Exercise 3 Task 2, and Exercise 3 Task 3, which include steps performed from a Remote Desktop session to an Azure VM
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
@@ -13,12 +13,12 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 Lab files: none
 
 ### Scenario
-  
+
 Adatum Corporation wants to integrate its Active Directory with Azure Active Directory
 
 
 ### Objectives
-  
+
  After completing this lab, you will be able to:
 
 - Deploy an Azure VM hosting an Active Directory domain controller
@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location>'
    ```
 
-1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**. 
+1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**.
 
 1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task
 
@@ -81,7 +81,7 @@ The main tasks for this exercise are as follows:
     - Domain Name: **adatum.com**
 
     - Dns Prefix: the &lt;custom-label&gt; you identified in the previous task
-    
+
     - VM Size: **Standard_D2s_v3**
 
     - _artifacts Location: accept the default value
@@ -108,34 +108,34 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Azure Active Directory (AD) tenant
 
-1. In the Azure portal, navigate to the **Create a resource** blade. 
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Azure Active Directory**.
 
 1. Use the list of search results to navigate to the **Create directory** blade.
 
-1. From the **Create directory** blade, create a new Azure AD tenant with the following settings: 
+1. From the **Create directory** blade, create a new Azure AD tenant with the following settings:
 
   - Organization name: **AdatumSync**
 
-  - Initial domain name: a unique name consisting of a combination of letters and digits. 
+  - Initial domain name: a unique name consisting of a combination of letters and digits.
 
   - Country or region: **United States**
 
-   > **Note**: The green check mark in the **Initial domain name** text box will indicate whether the domain name you typed in is valid and unique. 
+   > **Note**: The green check mark in the **Initial domain name** text box will indicate whether the domain name you typed in is valid and unique.
 
 
 #### Task 2: Add a custom DNS name to the new Azure AD tenant
-  
+
 1. In the Azure portal, set the **Directory + subscription** filter to the newly created Azure AD tenant.
 
-   > **Note**: The **Directory + subscription** filter appears to the left of the notification icon in the toolbar of the Azure portal 
+   > **Note**: The **Directory + subscription** filter appears to the left of the notification icon in the toolbar of the Azure portal
 
    > **Note**: You might need to refresh the browser window if the **AdatumSync** entry does not appear in the **Directory + subscription** filter list.
 
 1. In the Azure portal, navigate to the **AdatumSync - Overview** blade.
 
-1. From the **AdatumSync - Overview** blade, display the **AdatumSync - Custom domain names** blade. 
+1. From the **AdatumSync - Overview** blade, display the **AdatumSync - Custom domain names** blade.
 
 1. On the **AdatumSync - Custom domain names** blade, identify the primary, default DNS domain name associated with the Azure AD tenant. Note its value - you will need it in the next task.
 
@@ -153,11 +153,11 @@ The main tasks for this exercise are as follows:
 1. From the **Users - All users** blade, create a new user with the following settings:
 
      - User name: **syncadmin@***<DNS-domain-name>* where *<DNS-domain-name>* represents the default primary DNS domain name you identified in the previous task. Take a note of this user name. You will need it later in this lab.
-    
+
     - Name: **syncadmin**
-    
+
     - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this task.
-    
+
     - Groups: **0 groups selected**
 
     - Directory role: click "User" and select **Global administrator**
@@ -168,7 +168,7 @@ The main tasks for this exercise are as follows:
 
 1. In the new browser window, navigate to the Azure portal and sign in using the **syncadmin** user account. When prompted, change the password to a new value.
 
-   > **Note**: You will need to provide the fully qualified name of the **syncadmin** user account, including the Azure AD tenant DNS domain name. 
+   > **Note**: You will need to provide the fully qualified name of the **syncadmin** user account, including the Azure AD tenant DNS domain name.
 
 1. Sign out as **syncadmin** and close the InPrivate browser window.
 
@@ -189,14 +189,14 @@ The main tasks for this exercise are as follows:
 #### Task 1: Configure Active Directory in preparation for directory synchronization
 
    > **Note**: Before you start this task, ensure that the template deployment you started in Exercise 1 has completed.
-  
+
 1. In the Azure portal, set the **Directory + subscription** filter back to the Azure AD tenant associated with the Azure subscription you used in the first exercise of this lab.
 
-   > **Note**: The **Directory + subscription** filter appears to the left of the notification icon in the toolbar of the Azure portal 
+   > **Note**: The **Directory + subscription** filter appears to the left of the notification icon in the toolbar of the Azure portal
 
 1. In the Azure portal, navigate to the **adVM** blade, displaying the properties of the Azure VM hosting an Active Directory domain controller that you deployed in the first exercise of this lab.
 
-1. On the **Overview** pane of the **adVM** blade, click **Connect**. 
+1. On the **Overview** pane of the **adVM** blade, click **Connect**.
 
 1. On the **Connect to virtual machine** blade, select the load balancer public IP address in the **IP address** drop-down list, download the corresponding RDP file, and use it to connect to **adVM**.
 
@@ -256,7 +256,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Optional features** page, accept the default settings.
 
-1. On the **Ready to configure** page, ensure that the **Start the synchronization process when configuration completes** checkbox is selected and continue with the installation process. 
+1. On the **Ready to configure** page, ensure that the **Start the synchronization process when configuration completes** checkbox is selected and continue with the installation process.
 
    > **Note**: Installation should take about 2 minutes.
 
@@ -265,7 +265,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Verify directory synchronization
 
-1. Within the RDP session to **adVM**, start Internet Explorer, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the **syncadmin** account that you created in the previous exercise. 
+1. Within the RDP session to **adVM**, start Internet Explorer, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the **syncadmin** account that you created in the previous exercise.
 
 1. In the Azure portal, navigate to the **AdatumSync - Overview** blade.
 
@@ -283,13 +283,13 @@ The main tasks for this exercise are as follows:
 
    ```pwsh
    Import-Module -Name 'C:\Program Files\Microsoft Azure AD Sync\Bin\ADSync\ADSync.psd1'
-   
+
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
 
-1. Within the RDP session to **adVM**, switch to the Internet Explorer window displaying the Azure portal. 
+1. Within the RDP session to **adVM**, switch to the Internet Explorer window displaying the Azure portal.
 
-1. In the Azure portal, navigate back to the **Users - All users** blade and refresh the page. 
+1. In the Azure portal, navigate back to the **Users - All users** blade and refresh the page.
 
 1. From the **Users - All users** blade, display the **aduser1 - Profile** blade. Note that the **Department** attribute is now set to **Sales**.
 
@@ -301,14 +301,14 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Delete the Azure AD tenant.
 
-1. Within the RDP session to **adVM**, start Windows PowerShell as Administrator. 
+1. Within the RDP session to **adVM**, start Windows PowerShell as Administrator.
 
 1. From the Windows PowerShell console, install the MsOnline PowerShell module by running the following (when prompted, in the NuGet provider is required to continue dialog box, click **Yes**):
 
    ```pwsh
    Install-Module MsOnline -Force
    ```
-   
+
 1. From the Windows PowerShell console, connect to the AdatumSync Azure AD tenant by running the following (when prompted, sign in with the SyncAdmin credentials):
 
    ```pwsh
@@ -324,12 +324,12 @@ The main tasks for this exercise are as follows:
 1. From the Windows PowerShell console, verify that the operation was successful by running the following:
 
    ```pwsh
-   (Get-MSOLCompanyInformation).DirectorySynchronizationEnabled 
-   ```   
+   (Get-MSOLCompanyInformation).DirectorySynchronizationEnabled
+   ```
 
-1. Sign out from the Azure portal and close the Internet Explorer window. 
+1. Sign out from the Azure portal and close the Internet Explorer window.
 
-1. Start Internet Explorer, navigate to the Azure portal, and sign in by using the SyncAdmin credentials. 
+1. Start Internet Explorer, navigate to the Azure portal, and sign in by using the SyncAdmin credentials.
 
 1. In the Azure portal, navigate to the **Users - All users** blade of the AdatumSync Azure AD tenant and delete all users with the exception of the AdatumSync account.
 
@@ -339,13 +339,13 @@ The main tasks for this exercise are as follows:
 
 1. On the **Properties** blade of Azure Active Directory click **Yes** in the **Access management for Azure resource** section and then click **Save**.
 
-1. Sign out from the Azure portal and sign back in by using the SyncAdmin credentials. 
+1. Sign out from the Azure portal and sign back in by using the SyncAdmin credentials.
 
 1. Navigate to the **AdatumSync - Overview** blade and delete the Azure AD tenant by clicking **Delete directory**.
 
 1. On the **Delete directory 'AdatumSync'?** blade, click **Delete**.
 
-> **Note**: For any additional  information regarding this task, refer to https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto  
+> **Note**: For any additional  information regarding this task, refer to https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto
 
 #### Task 2: Open Cloud Shell
 

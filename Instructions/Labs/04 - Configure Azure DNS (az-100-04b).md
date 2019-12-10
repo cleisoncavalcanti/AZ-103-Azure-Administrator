@@ -5,12 +5,12 @@ lab:
 ---
 
 # Lab: Configure Azure DNS
-  
-All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session) 
+
+All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
-Lab files: 
+Lab files:
 
 -  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04b_01_azuredeploy.json**
 
@@ -20,12 +20,12 @@ Lab files:
 
 
 ### Scenario
-  
-Adatum Corporation wants to implement public and private DNS service in Azure without having to deploy its own DNS servers. 
+
+Adatum Corporation wants to implement public and private DNS service in Azure without having to deploy its own DNS servers.
 
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 - Configure Azure DNS for public domains
@@ -45,7 +45,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Create a public DNS zone
-  
+
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
@@ -54,7 +54,7 @@ The main tasks for this exercise are as follows:
 
 1. Select **DNS Zone**, and then click **Create**.
 
-1. From the to **Create DNS zone** blade, create a new DNS zone with the following settings: 
+1. From the to **Create DNS zone** blade, create a new DNS zone with the following settings:
 
     - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -66,7 +66,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 2: Create a DNS record in the public DNS zone
-  
+
 1. From your lab computer open a Powershell session, run the following in order to identify the public IP address of your lab computer:
 
    ```pwsh
@@ -75,7 +75,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Take a note of this IP address. You will use it later in this task.
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell.
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
@@ -130,11 +130,11 @@ The main tasks for this exercise are as follows:
 
 1. On the DNS zone blade, note the list of the name servers that host the zone you created. You will use the first of them named in the next step.
 
-1. From the lab virtual machine, start Command Prompt and run the following to validate the name resolution of the two newly created DNS records (where &lt;custom_DNS_domain&gt; represents the custom DNS domain you created in the first task of this exercise and &lt;name_server&gt; represents the name of the DNS name server you identified in the previous step): 
+1. From the lab virtual machine, start Command Prompt and run the following to validate the name resolution of the two newly created DNS records (where &lt;custom_DNS_domain&gt; represents the custom DNS domain you created in the first task of this exercise and &lt;name_server&gt; represents the name of the DNS name server you identified in the previous step):
 
    ```
    nslookup mylabvmpip.<custom_DNS_domain> <name_server>
-   
+
    nslookup myazurepip.<custom_DNS_domain> <name_server>
    ```
 
@@ -144,7 +144,7 @@ The main tasks for this exercise are as follows:
 
 
 ### Exercise 2: Configure Azure DNS for private domains
-  
+
 The main tasks for this exercise are as follows:
 
 1. Provision a multi-virtual network environment
@@ -157,8 +157,8 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Provision a multi-virtual network environment
-  
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell.
 
 1. In the Cloud Shell pane, run the following in order to create a resource group:
 
@@ -185,13 +185,13 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following in order to create a private DNS zone with the first virtual network supporting registration and the second virtual network supporting resolution:
 
    ```pwsh
-   
+
    Install-Module -Name Az.PrivateDns -force
-   
+
    $vnet1 = Get-AzVirtualNetwork -Name az1000402b-vnet1
 
    $vnet2 = Get-AzVirtualNetwork -name az1000402b-vnet2
-   
+
    $zone = New-AzPrivateDnsZone -Name adatum.corp -ResourceGroupName $rg2.ResourceGroupName
 
    $vnet1link = New-AzPrivateDnsVirtualNetworkLink -ZoneName $zone.Name -ResourceGroupName $rg2.ResourceGroupName -Name "vnet1Link" -VirtualNetworkId $vnet1.id -EnableRegistration
@@ -229,7 +229,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Validate Azure DNS-based name reservation and resolution for the private domain
 
-1. In the Azure portal, navigate to the blade of the **az1000402b-vm2** Azure VM. 
+1. In the Azure portal, navigate to the blade of the **az1000402b-vm2** Azure VM.
 
 1. From the **Overview** pane of the **az1000402b-vm2** blade, generate an RDP file and use it to connect to **az1000402b-vm2**.
 
@@ -239,7 +239,7 @@ The main tasks for this exercise are as follows:
 
     - Password: **Pa55w.rd1234**
 
-1. Within the Remote Desktop session to **az1000402b-vm2**, start a Command Prompt window and run the following: 
+1. Within the Remote Desktop session to **az1000402b-vm2**, start a Command Prompt window and run the following:
 
    ```
    nslookup az1000402b-vm1.adatum.corp
@@ -253,7 +253,7 @@ The main tasks for this exercise are as follows:
    New-AzPrivateDnsRecordSet -ResourceGroupName $rg2.ResourceGroupName -Name www -RecordType A -ZoneName adatum.corp -Ttl 3600 -PrivateDnsRecords (New-AzPrivateDnsRecordConfig -IPv4Address "10.104.0.4")
    ```
 
-1. Switch again to the Remote Desktop session to **az1000402b-vm2** and run the following from the Command Prompt window: 
+1. Switch again to the Remote Desktop session to **az1000402b-vm2** and run the following from the Command Prompt window:
 
    ```
    nslookup www.adatum.corp

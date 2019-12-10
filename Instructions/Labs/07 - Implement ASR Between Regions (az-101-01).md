@@ -8,19 +8,19 @@ lab:
 
 All tasks in this lab are performed from the Azure portal
 
-Lab files: 
+Lab files:
 
 -  **Labfiles\\Module_07\\Azure_Site_Recovery_Between_Regions\\az-101-01_azuredeploy.json**
 
 -  **Labfiles\\Module_07\\Azure_Site_Recovery_Between_Regions\\az-101-01_azuredeploy.parameters.json**
 
 ### Scenario
-  
+
 Adatum Corporation wants to implement Azure Site Recovery to facilitate migration and protection of Azure VMs between regions
 
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 -  Implement Azure Site Recovery Vault
@@ -28,14 +28,14 @@ After completing this lab, you will be able to:
 -  Configure replication of Azure VMs between Azure regions by using Azure Site Recovery
 
 
-### Exercise 1: Implement prerequisites for migration of Azure VMs by using Azure Site Recovery 
-  
+### Exercise 1: Implement prerequisites for migration of Azure VMs by using Azure Site Recovery
+
 The main tasks for this exercise are as follows:
 
 1. Deploy an Azure VM to be migrated by using an Azure Resource Manager template
 
 1. Create an Azure Recovery Services vault
-  
+
 
 #### Task 1: Deploy an Azure VM to be migrated by using an Azure Resource Manager template
 
@@ -49,17 +49,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_07\\Azure_Site_Recovery_Between_Regions\\az-101-01_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_07\\Azure_Site_Recovery_Between_Regions\\az-101-01_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_07\\Azure_Site_Recovery_Between_Regions\\az-101-01_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_07\\Azure_Site_Recovery_Between_Regions\\az-101-01_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -89,7 +89,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 2: Implement an Azure Site Recovery vault
- 
+
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Backup and Site Recovery**.
@@ -103,7 +103,7 @@ The main tasks for this exercise are as follows:
     - Resource group: the name of a new resource group **az1010102-RG**
 
     - Vault name: **vaultaz1010102**
-    
+
     - Region: the name of an Azure region that is available in your subscription and which is different from the region you deployed the Azure VM in the previous task of this exercise.
 
    > **Note**: Wait for the provisioning to complete. This should take about a minute.
@@ -114,21 +114,21 @@ The main tasks for this exercise are as follows:
 
 1. On the **Security Settings** blade, disable **Soft Delete** and save the change.
 
-> **Result**: After you completed this exercise, you have initiated deployment of an Azure VM by using an Azure Resource Manager template and created an Azure Site Recovery vault that will be used to replicate content of the Azure VM disk files. 
+> **Result**: After you completed this exercise, you have initiated deployment of an Azure VM by using an Azure Resource Manager template and created an Azure Site Recovery vault that will be used to replicate content of the Azure VM disk files.
 
 
-### Exercise 2: Migrate an Azure VM between Azure regions by using Azure Site Recovery 
+### Exercise 2: Migrate an Azure VM between Azure regions by using Azure Site Recovery
 
 The main tasks for this exercise are as follows:
 
 1. Configure Azure VM replication
 
-1. Review Azure VM replication settings 
+1. Review Azure VM replication settings
 
 
 #### Task 1: Configure Azure VM replication
 
-   > **Note**: Before you start this task, ensure that the template deployment you started in the first exercise has completed. 
+   > **Note**: Before you start this task, ensure that the template deployment you started in the first exercise has completed.
 
 1. In the Azure portal, navigate to the blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
 
@@ -178,16 +178,16 @@ The main tasks for this exercise are as follows:
 1. On the **vaultaz1010102 - Replicated items** blade, ensure that there is an entry representing the **az1010101-vm** Azure VM and verify that its **REPLICATION HEALTH** is **Healthy** and that its **STATUS** is **Enabling protection**.
 
    > **Note**: You might need to wait a few minutes until the **az1010101-vm** entry appears on the **vaultaz1010102 - Replicated items** blade.
-   
+
 1. From the **vaultaz1010102 - Replicated items** blade, display the replicated item blade of the **az1010101-vm** Azure VM.
 
 1. On the **az1010101-vm** replicated item blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Failover** and **Test Failover** toolbar icons.
 
-   > **Note**: The remaining steps of this task are optional and not graded. 
+   > **Note**: The remaining steps of this task are optional and not graded.
 
-1. If time permits, wait until the replication status changes to **100% synchronized**. This might take additional 90 minutes. 
+1. If time permits, wait until the replication status changes to **100% synchronized**. This might take additional 90 minutes.
 
-1. Examine the values of **RPO**, as well as **Crash-consistent** and **App-consistent** recovery points. 
+1. Examine the values of **RPO**, as well as **Crash-consistent** and **App-consistent** recovery points.
 
 1. Perform a test failover to the **az1010101-vnet-asr** virtual network.
 
