@@ -5,10 +5,10 @@ lab:
 ---
 
 # Lab: VNet Peering and Service Chaining
-  
+
 All tasks in this lab are performed from the Azure portal except for Exercise 2 Task 3, Exercise 3 Task 1, and Exercise 3 Task 2, which include steps performed from a Remote Desktop session to an Azure VM
 
-Lab files: 
+Lab files:
 
 -  **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_01_azuredeploy.json**
 
@@ -17,12 +17,12 @@ Lab files:
 -  **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_azuredeploy.parameters.json**
 
 ### Scenario
-  
-Adatum Corporation wants to implement service chaining between Azure virtual networks in its Azure subscription. 
+
+Adatum Corporation wants to implement service chaining between Azure virtual networks in its Azure subscription.
 
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 - Create Azure virtual networks and deploy Azure VM by using Azure Resource Manager templates.
@@ -35,7 +35,7 @@ After completing this lab, you will be able to:
 
 
 ### Exercise 0: Prepare the Azure environment
-  
+
 The main tasks for this exercise are as follows:
 
 1. Create the first virtual network hosting two Azure VMs by using an Azure Resource Manager template
@@ -58,13 +58,13 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
 1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_05\\VNet_Peering_and_Service_Chaining\\az-100-04_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -101,17 +101,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_02_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_02_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -136,7 +136,7 @@ The main tasks for this exercise are as follows:
 > **Result**: After you completed this exercise, you have created two Azure virtual networks and initiated deployments of three Azure VM by using Azure Resource Manager templates.
 
 
-### Exercise 1: Configure VNet peering 
+### Exercise 1: Configure VNet peering
 
 The main tasks for this exercise are as follows:
 
@@ -146,7 +146,7 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 1: Configure VNet peering for the first virtual network
-  
+
 1. In the Azure portal, navigate to the **az1000401-vnet1** virtual network blade.
 
 1. From the **az1000401-vnet1** virtual network blade, display its **Peerings** blade.
@@ -156,7 +156,7 @@ The main tasks for this exercise are as follows:
     - Name: **az1000401-vnet1-to-az1000402-vnet2**
 
     - Virtual network deployment model: **Resource manager**
-    
+
     - I know my resource ID: leave unchecked
 
     - Subscription: the name of the Azure subscription you are using in this lab
@@ -170,32 +170,32 @@ The main tasks for this exercise are as follows:
     - Allow virtual network access from az1000402-vnet2 to az1000401-vnet1: **Enabled**
 
     - Allow forwarded traffic from az1000402-vnet2 to az1000401-vnet1: **Disabled**
-    
+
     - Allow forwarded traffic from az1000401-vnet1 to az1000402-vnet2: **Disabled**
-  
+
     - Allow gateway transit: unchecked
 
-> **Note**: Because you have administrative access to both virtual networks, the portal is configuring both directions (from vnet1 to vnet2, AND vnet2 to vnet1) in a single action. From the CLI, PowerShell, or REST API, these tasks must be performed independently. 
+> **Note**: Because you have administrative access to both virtual networks, the portal is configuring both directions (from vnet1 to vnet2, AND vnet2 to vnet1) in a single action. From the CLI, PowerShell, or REST API, these tasks must be performed independently.
 
 
 ### Exercise 2: Implement custom routing
-  
+
 The main tasks for this exercise are as follows:
 
 1. Enable IP forwarding for a network interface of an Azure VM
 
-1. Configure user defined routing 
+1. Configure user defined routing
 
 1. Configure routing in an Azure VM running Windows Server 2016
 
 
 #### Task 1: Enable IP forwarding for a network interface of an Azure VM
-  
-   > **Note**: Before you start this task, ensure that the template deployments you started in Exercise 0 have completed. 
+
+   > **Note**: Before you start this task, ensure that the template deployments you started in Exercise 0 have completed.
 
 1. In the Azure portal, navigate to the blade of the second Azure VM **az1000401-vm2**.
 
-1. From the **az1000401-vm2** blade, display its **Networking** blade. 
+1. From the **az1000401-vm2** blade, display its **Networking** blade.
 
 1. From the **az1000401-vm2 - Networking** blade, display the blade of the network adapter (**az1000401-nic2**) of the Azure VM.
 
@@ -206,7 +206,7 @@ The main tasks for this exercise are as follows:
    > **Note**: The Azure VM **az1000401-vm2**, which network interface you configured in this task, will function as a router, facilitating service chaining between the two virtual networks.
 
 
-#### Task 2: Configure user defined routing 
+#### Task 2: Configure user defined routing
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
@@ -223,14 +223,14 @@ The main tasks for this exercise are as follows:
     - Resource group: **az1000402-RG**
 
     - Location: the same Azure region in which you created the virtual networks
-  
+
     - Virtual network gateway route propagation: **Disabled**
 
 1. In the Azure portal, navigate to the **az1000402-rt1** blade.
 
-1. From the **az1000402-rt1** blade, display its **Routes** blade. 
+1. From the **az1000402-rt1** blade, display its **Routes** blade.
 
-1. From the **az1000402-rt1 - Routes** blade, add to the route table a route with the following settings: 
+1. From the **az1000402-rt1 - Routes** blade, add to the route table a route with the following settings:
 
     - Route name: **custom-route-to-az1000401-vnet1**
 
@@ -242,14 +242,14 @@ The main tasks for this exercise are as follows:
 
    > **Note**: **10.104.1.4** is the IP address of the network interface of **az1000401-vm2**, which will provide service chaining between the two virtual networks.
 
-1. From the **az1000402-rt1** blade, display its **Subnets** blade. 
+1. From the **az1000402-rt1** blade, display its **Subnets** blade.
 
 1. From the **az1000402-rt1 - Subnets** blade, associate the route table **az1000402-rt1** with **subnet0** of **az1000402-vnet2**.
 
 
 #### Task 3: Configure routing in an Azure VM running Windows Server 2016
 
-1. In the Azure portal, navigate to the blade of the **az1000401-vm2** Azure VM. 
+1. In the Azure portal, navigate to the blade of the **az1000401-vm2** Azure VM.
 
 1. From the **Overview** pane of the **az1000401-vm2** blade, generate an RDP file and use it to connect to **az1000401-vm2**.
 
@@ -259,18 +259,18 @@ The main tasks for this exercise are as follows:
 
     - Password: **Pa55w.rd1234**
 
-1. Within the Remote Desktop session to **az1000401-vm2**, from **Server Manager**, select **Manage**  use the **Add Roles and Features Wizard** 
+1. Within the Remote Desktop session to **az1000401-vm2**, from **Server Manager**, select **Manage**  use the **Add Roles and Features Wizard**
 1. Click **Next** twice, ensure **az1000401-vm2** is selected and click **Next**,  select the **Remote Access** server role then click **Next** three times, Select the **Routing** role service, select **Add Features**  and all required features. Select **Next** three times, click **Install**. Click **Close** when the installation is complete.
 
    > **Note**: If you receive an error message **There may be a version mismatch between this computer and the destination server or VHD** once you select the **Remote Access**  checkbox on the **Server Roles** page of the **Add Roles and Features Wizard**, clear the checkbox, click **Next**, click **Previous** and select the **Remote Access**  checkbox again.
 
-1. Within the Remote Desktop session to **az1000401-vm2**, from Server Manager, select **Tools** start the **Routing and Remote Access** console. 
+1. Within the Remote Desktop session to **az1000401-vm2**, from Server Manager, select **Tools** start the **Routing and Remote Access** console.
 
 1. In the **Routing and Remote Access** console, right click on the server name and select **Configure and Enable Routing and Remote Access**, Select **Next** use the **Custom configuration** then **Next**, enable **LAN routing** then **Next**, click **Finish** and the click **Start Service**.
 
 1. Within the Remote Desktop session to **az1000401-vm2**, start the **Windows Firewall with Advanced Security** console and enable **File and Printer Sharing (Echo Request - ICMPv4-In)** inbound rule for all profiles.
 
-> **Result**: After completing this exercise, you have implemented custom routing between peered Azure virtual networks. 
+> **Result**: After completing this exercise, you have implemented custom routing between peered Azure virtual networks.
 
 
 ### Exercise 3: Validating service chaining
@@ -284,7 +284,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Configure Windows Firewall with Advanced Security on the target Azure VM
 
-1. In the Azure portal, navigate to the blade of the **az1000401-vm1** Azure VM. 
+1. In the Azure portal, navigate to the blade of the **az1000401-vm1** Azure VM.
 
 1. From the **Overview** pane of the **az1000401-vm1** blade, generate an RDP file and use it to connect to **az1000401-vm1**.
 
@@ -298,8 +298,8 @@ The main tasks for this exercise are as follows:
 
 
 #### Task 2: Test service chaining between peered virtual networks
-  
-1. In the Azure portal, navigate to the blade of the **az1000402-vm3** Azure VM. 
+
+1. In the Azure portal, navigate to the blade of the **az1000402-vm3** Azure VM.
 
 1. From the **Overview** pane of the **az1000402-vm3** blade, generate an RDP file and use it to connect to **az1000402-vm3**.
 
@@ -321,7 +321,7 @@ The main tasks for this exercise are as follows:
 
 1. Verify that test is successful and note that the connection was routed over **10.104.1.4**
 
-   > **Note**: Without custom routing in place, the traffic would flow directly between the two Azure VMs. 
+   > **Note**: Without custom routing in place, the traffic would flow directly between the two Azure VMs.
 > **Result**: After you completed this exercise, you have validated service chaining between peered Azure virtual networks.
 
 ## Exercise 4: Remove lab resources

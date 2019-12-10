@@ -6,11 +6,11 @@ lab:
 
 # Lab: Use Azure Network Watcher for monitoring and troubleshooting network connectivity
 
-All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
+All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed[https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
-Lab files: 
+Lab files:
 
 -  **Labfiles\\Module_06\\Network_Watcher\\az-101-03b_01_azuredeploy.json**
 
@@ -22,12 +22,12 @@ Lab files:
 
 
 ### Scenario
-  
+
 Adatum Corporation wants to monitor Azure virtual network connectivity by using Azure Network Watcher.
 
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 -  Deploy Azure VMs, Azure storage accounts, and Azure SQL Database instances by using Azure Resource Manager templates
@@ -36,7 +36,7 @@ After completing this lab, you will be able to:
 
 
 ### Exercise 1: Prepare infrastructure for Azure Network Watcher-based monitoring
-  
+
 The main tasks for this exercise are as follows:
 
 1. Deploy Azure VMs, an Azure Storage account, and an Azure SQL Database instance by using an Azure Resource Manager template
@@ -60,17 +60,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **az-101-03b_01_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **az-101-03b_01_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM, an Azure SQL Database, and an Azure Storage account.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **az-101-03b_01_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **az-101-03b_01_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -101,18 +101,18 @@ The main tasks for this exercise are as follows:
     - Sku Tier: **Basic**
 
    > **Note**: To identify VM sizes available in your subscription in a given region, run the following from Cloud Shell and review the values in the **Restriction** column (where &lt;location&gt; represents the target Azure region):
-   
+
    ```pwsh
    Get-AzComputeResourceSku | where {$_.Locations -icontains "<location>"} | Where-Object {($_.ResourceType -ilike "virtualMachines")}
    ```
-   
+
    > **Note**: To identify whether you can provision Azure SQL Database in a given region, run the following from Cloud Shell and ensure that the resulting **Status** is set to **Available** (where &lt;location&gt; represents the target Azure region):
 
    ```pwsh
    Get-AzSqlCapability -LocationName <regionname>
    ```
-   
-   > **Note**: Do not wait for the deployment to complete but proceed to the next step. 
+
+   > **Note**: Do not wait for the deployment to complete but proceed to the next step.
 
 1. In the Azure portal, navigate to the **Create a resource** blade.
 
@@ -122,17 +122,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **az-101-03b_02_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **az-101-03b_02_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **az-101-03b_02_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **az-101-03b_02_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -140,7 +140,7 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1010302b-RG**
 
-    - Location: the name of an Azure region where you can provision Azure VMs, but which is **different** from the one you selected during previous deployment, 
+    - Location: the name of an Azure region where you can provision Azure VMs, but which is **different** from the one you selected during previous deployment,
 
     - Vm Size: **Standard_DS2_v2**
 
@@ -154,7 +154,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: Make sure to choose a different Azure region for this deployment
 
-   > **Note**: Do not wait for the deployment to complete but proceed to the next step. 
+   > **Note**: Do not wait for the deployment to complete but proceed to the next step.
 
 
 #### Task 2: Enable Azure Network Watcher service
@@ -166,7 +166,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Establish peering between Azure virtual networks
 
-   > **Note**: Before you start this task, ensure that the template deployment you started in the first task of this exercise has completed. 
+   > **Note**: Before you start this task, ensure that the template deployment you started in the first task of this exercise has completed.
 
 1. In the Azure portal, navigate to the **az1010301b-vnet1** virtual network blade.
 
@@ -190,7 +190,7 @@ The main tasks for this exercise are as follows:
 
     - Allow gateway transit: disabled
 
-    > **Note**: The Azure portal allows you to configure both directions of the peering simultaneously. When using other management tools, each direction must be configured independently. 
+    > **Note**: The Azure portal allows you to configure both directions of the peering simultaneously. When using other management tools, each direction must be configured independently.
 
 #### Task 4: Establish service endpoints to an Azure Storage account and Azure SQL Database instance
 
@@ -212,7 +212,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1010301b-RG** resource group blade.
 
-1. From the **az1010301b-RG** resource group blade, navigate to the blade of the storage account included in the resource group. 
+1. From the **az1010301b-RG** resource group blade, navigate to the blade of the storage account included in the resource group.
 
 1. From the storage account blade, navigate to its **Firewalls and virtual networks** blade.
 
@@ -220,17 +220,17 @@ The main tasks for this exercise are as follows:
 
     - Allow access from: **Selected networks**
 
-    - Virtual networks: 
+    - Virtual networks:
 
         - VIRTUAL NETWORK: **az1010301b-vnet1**
 
             - SUBNET: **subnet0**
 
-    - Firewall: 
+    - Firewall:
 
         - ADDRESS RANGE: none
 
-    - Exceptions: 
+    - Exceptions:
 
         - Allow trusted Microsoft services to access this storage account: **Enabled**
 
@@ -240,7 +240,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1010301b-RG** resource group blade.
 
-1. From the **az1010301b-RG** resource group blade, navigate to the **az1010301b** Azure SQL Server blade. 
+1. From the **az1010301b-RG** resource group blade, navigate to the **az1010301b** Azure SQL Server blade.
 
 1. From the Azure SQL Server blade, navigate to its server's **Firewalls and virtual networks** blade.
 
@@ -248,7 +248,7 @@ The main tasks for this exercise are as follows:
 
     - Allow access to Azure services: **ON**
 
-    - No firewall rules configured 
+    - No firewall rules configured
 
     - Virtual networks:
 
@@ -264,7 +264,7 @@ The main tasks for this exercise are as follows:
 
 
 ### Exercise 2: Use Azure Network Watcher to monitor network connectivity
-  
+
 The main tasks for this exercise are as follows:
 
 1. Test network connectivity to an Azure VM via virtual network peering by using Network Watcher
@@ -282,7 +282,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings:
 
-    - Source: 
+    - Source:
 
         - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -315,7 +315,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Test network connectivity to an Azure Storage account by using Network Watcher
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell.
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
@@ -327,7 +327,7 @@ The main tasks for this exercise are as follows:
 
 1. Note the resulting string and, from the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings:
 
-    - Source: 
+    - Source:
 
         - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -351,7 +351,7 @@ The main tasks for this exercise are as follows:
 
         - Source port: blank
 
-1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs, with minimal latency. 
+1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs, with minimal latency.
 
     > **Note**: The connection takes place over the service endpoint you created in the previous exercise. To verify this, you will use the **Next hop** tool of Network Watcher.
 
@@ -373,7 +373,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings:
 
-    - Source: 
+    - Source:
 
         - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -397,7 +397,7 @@ The main tasks for this exercise are as follows:
 
         - Source port: blank
 
-1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**. 
+1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**.
 
     > **Note**: The connection is successful, however it is established over Internet. To verify this, you will use again the **Next hop** tool of Network Watcher.
 
@@ -420,7 +420,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Test network connectivity to an Azure SQL Database by using Network Watcher
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell.
 
 1. In the Cloud Shell pane, run the following command to identify the IP address of the Azure SQL Database server you provisioned in the previous exercise:
 
@@ -430,7 +430,7 @@ The main tasks for this exercise are as follows:
 
 1. Note the resulting string and, from the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings:
 
-    - Source: 
+    - Source:
 
         - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -454,7 +454,7 @@ The main tasks for this exercise are as follows:
 
         - Source port: blank
 
-1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs, with low latency. 
+1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**. Review the network path and note that the connection was direct, with no intermediate hops in between the VMs, with low latency.
 
     > **Note**: The connection takes place over the service endpoint you created in the previous exercise. To verify this, you will use the **Next hop** tool of Network Watcher.
 
@@ -476,7 +476,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Network Watcher - Connection troubleshoot** blade, initiate a check with the following settings:
 
-    - Source: 
+    - Source:
 
         - Subscription: the name of the Azure subscription you are using in this lab
 
@@ -500,7 +500,7 @@ The main tasks for this exercise are as follows:
 
         - Source port: blank
 
-1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**. 
+1. Wait until results of the connectivity check are returned and verify that the status is **Reachable**.
 
     > **Note**: The connection is successful, however it is established over Internet. To verify this, you will use again the **Next hop** tool of Network Watcher.
 

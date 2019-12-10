@@ -6,22 +6,22 @@ lab:
 
 # Lab: Implementing governance and compliance with Azure initiatives and resource locks
 
-All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
+All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
-Lab files: 
+Lab files:
 
 -  **Labfiles\\Module_11\\Governance_and_Compliance\\AZ-100.1\\az-100-01b_azuredeploy.json**
 
 -  **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.parameters.json**
 
 ### Scenario
-  
+
 Adatum Corporation wants to use Azure policies and initiatives in order to enforce resource tagging in its Azure subscription. Once the environment is compliant, Adatum wants to prevent unintended changes by implementing resource locks.
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 -  Implement Azure tags by using Azure policies and initiatives
@@ -58,17 +58,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **az-100-01b_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **az-100-01b_azuredeploy.json**.
 
    > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter, including tags on some of its resources.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **az-100-01b_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **az-100-01b_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -93,7 +93,7 @@ The main tasks for this exercise are as follows:
    > **Note**: To identify Azure regions where you can provision Azure VMs, refer to [**https://azure.microsoft.com/en-us/regions/offers/**](https://azure.microsoft.com/en-us/regions/offers/)
 
    > **Note**: Do not wait for the deployment to complete before you proceed to the next step.
-   
+
 1. In the Azure portal, navigate to the **Tags** blade.
 
 1. From the **Tags** blade, display all resources with the **environment** tag set to the value **lab**. Note that only some of the resources deployed in the previous task have this tag assigned.
@@ -178,7 +178,7 @@ The main tasks for this exercise are as follows:
 
     - Scope: the name of the subscription you are using in this lab
 
-    - Exclusions: none 
+    - Exclusions: none
 
     - Initiative definition: **az10001b - Tagging initiative**
 
@@ -209,7 +209,7 @@ The main tasks for this exercise are as follows:
 
     - Tag Value: **lab**
 
-   > **Note**: At this point, your initiative contains two policies. The first of them evaluates the compliance status and the second one enforces tagging during deployment. 
+   > **Note**: At this point, your initiative contains two policies. The first of them evaluates the compliance status and the second one enforces tagging during deployment.
 
 
 #### Task 4: Evaluate tagging enforcement and tagging compliance.
@@ -222,17 +222,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **az-100-01b_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **az-100-01b_azuredeploy.json**.
 
-   > **Note**: This is the same template that you used for deployment in the first task of this exercise. 
+   > **Note**: This is the same template that you used for deployment in the first task of this exercise.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **az-100-01b_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **az-100-01b_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -262,9 +262,9 @@ The main tasks for this exercise are as follows:
 
 1. Navigate to the **az10001b - Tagging initiative assignment** blade and review the summary of the compliance status.
 
-1. Display the listing of resource compliance and note which resources have been identified as non-compliant. 
+1. Display the listing of resource compliance and note which resources have been identified as non-compliant.
 
-   > **Note**: You might need to click **Refresh** button on the **Policy - Compliance** blade in order to see the update to the compliance status. 
+   > **Note**: You might need to click **Refresh** button on the **Policy - Compliance** blade in order to see the update to the compliance status.
 
 
 #### Task 5: Implement remediation of resource tagging non-compliance.
@@ -285,7 +285,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: At this point, your initiative contains a single policy that automatically remediates tagging non-compliance during deployment of new resources and provides evaluation of compliance status.
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell.
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
@@ -296,8 +296,8 @@ The main tasks for this exercise are as follows:
    ```
 
    > **Note**: These commands assign the **environment** tag with the value **lab** to each resource in the resource group **az1000101b-RG**, overwriting any already assigned tags.
-   
-   > **Note**: Wait until the commands successfully complete.   
+
+   > **Note**: Wait until the commands successfully complete.
 
 1. In the Azure portal, navigate to the **Tags** blade.
 
@@ -314,17 +314,17 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **az-100-01b_azuredeploy.json**. 
+1. From the **Edit template** blade, load the template file **az-100-01b_azuredeploy.json**.
 
-   > **Note**: This is the same template that you used for deployment in the first task of this exercise. 
+   > **Note**: This is the same template that you used for deployment in the first task of this exercise.
 
-1. Save the template and return to the **Custom deployment** blade. 
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **az-100-01b_azuredeploy.parameters.json**. 
+1. From the **Edit parameters** blade, load the parameters file **az-100-01b_azuredeploy.parameters.json**.
 
-1. Save the parameters and return to the **Custom deployment** blade. 
+1. Save the parameters and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, initiate a template deployment with the following settings:
 
@@ -348,7 +348,7 @@ The main tasks for this exercise are as follows:
 
    > **Note**: The deployment will succeed this time. This is expected.
 
-   > **Note**: Do not wait for the deployment to complete before you proceed to the next step. 
+   > **Note**: Do not wait for the deployment to complete before you proceed to the next step.
 
 1. In the Azure portal, navigate to the **Tags** blade.
 
@@ -358,17 +358,17 @@ The main tasks for this exercise are as follows:
 
 1. Navigate to the **Policy - Compliance** blade. Identify the entry in the **COMPLIANCE STATE** column.
 
-1. Navigate to the **az10001b - Tagging initiative assignment** blade. Identify the entry in the **COMPLIANCE STATE** column. If the column contains the **Not started** entry, wait until it the compliance scan runs. 
+1. Navigate to the **az10001b - Tagging initiative assignment** blade. Identify the entry in the **COMPLIANCE STATE** column. If the column contains the **Not started** entry, wait until it the compliance scan runs.
 
-   > **Note**: You might need to wait for up to 10 minutes and click **Refresh** button on the **Policy - Compliance** blade in order to see the update to the compliance status. 
+   > **Note**: You might need to wait for up to 10 minutes and click **Refresh** button on the **Policy - Compliance** blade in order to see the update to the compliance status.
 
-   > **Note**: Do not wait until the status is listed as compliant but instead proceed to the next exercise. 
+   > **Note**: Do not wait until the status is listed as compliant but instead proceed to the next exercise.
 
-> **Result**: After you completed this exercise, you have implemented an initiative and policies that evaluate, enforce, and remediate resource tagging compliance. You also evaluated the effects of policy assignment. 
+> **Result**: After you completed this exercise, you have implemented an initiative and policies that evaluate, enforce, and remediate resource tagging compliance. You also evaluated the effects of policy assignment.
 
 
 ### Exercise 2: Implement Azure resource locks
-  
+
 The main tasks for this exercise are as follows:
 
 1. Create resource group-level locks to prevent accidental changes
@@ -395,7 +395,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000102b-vm1** virtual machine blade, navigate to the **az1000102b-vm1 - Tags** blade.
 
-1. Try setting the value of the **environment** tag to **dev**. Note that the operation is successful. 
+1. Try setting the value of the **environment** tag to **dev**. Note that the operation is successful.
 
 1. In the Azure portal, navigate to the **az1000101b-vm1** virtual machine blade.
 
@@ -403,7 +403,7 @@ The main tasks for this exercise are as follows:
 
 1. Try setting the value of the **environment** tag to **dev**. Note that this time the operation fails. The resulting error message indicates that the resource refused tag assignment, with resource lock being the likely reason.
 
-1. Navigate to the blade of the storage account created in the **az1000101b-RG** resource group. 
+1. Navigate to the blade of the storage account created in the **az1000101b-RG** resource group.
 
 1. From the storage account blade, navigate to its **Access keys** blade. Note the resulting error message stating that you cannot access the data plane because a read lock on the resource or its parent.
 
@@ -414,7 +414,7 @@ The main tasks for this exercise are as follows:
 1. From the **Tags** blade, attempt assigning the **environment** tag with the value **lab** to the resource group and note the error message.
 
 
-> **Result**: After you completed this exercise, you have created a resource group-level lock to prevent accidental changes and validated its functionality. 
+> **Result**: After you completed this exercise, you have created a resource group-level lock to prevent accidental changes and validated its functionality.
 
 ## Exercise 3: Remove lab resources
 
@@ -432,13 +432,13 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Policy** blade.
 
-1. From the **Policy**, blade navigate to the **Policy - Assignments** blade. 
+1. From the **Policy**, blade navigate to the **Policy - Assignments** blade.
 
-1. From the **Policy - assignments** blade, remove the assignment you created earlier in this lab. 
+1. From the **Policy - assignments** blade, remove the assignment you created earlier in this lab.
 
-1. From the **Policy**, blade navigate to the **Policy - Definitions** blade. 
+1. From the **Policy**, blade navigate to the **Policy - Definitions** blade.
 
-1. From the **Policy - Definitions** blade, delete all definitions you created earlier in this lab. 
+1. From the **Policy - Definitions** blade, delete all definitions you created earlier in this lab.
 
 #### Task 3: Open Cloud Shell
 

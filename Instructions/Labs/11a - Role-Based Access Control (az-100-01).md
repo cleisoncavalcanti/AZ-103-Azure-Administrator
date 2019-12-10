@@ -4,20 +4,20 @@ lab:
     module: 'Module 11 - Governance and Compliance'
 ---
 
-# Lab: Role-Based Access Control 
+# Lab: Role-Based Access Control
 
-All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)  
+All tasks in this lab are performed from the Azure portal (including a PowerShell Cloud Shell session)
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
 Lab files: none
 
 ### Scenario
-  
+
 Adatum Corporation wants to use Azure Role Based Access Control and Azure Policy to control provisioning and management of their Azure resources. It also wants to be able to automate and track provisioning and management tasks.
 
 ### Objectives
-  
+
 After completing this lab, you will be able to:
 
 -  Configure delegation of provisioning and management of Azure resources by using built-in Role-Based Access Control (RBAC) roles and built-in Azure policies
@@ -42,39 +42,39 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab and is a Global Administrator of the Azure AD tenant associated with that subscription.
 
-1. In the Azure portal, navigate to the **Azure Active Directory** blade 
+1. In the Azure portal, navigate to the **Azure Active Directory** blade
 
 1. From the **Azure Active Directory** blade, navigate to the **Custom domain names** blade and identify the primary DNS domain name associated the Azure AD tenant. Note its value - you will need it later in this task.
 
-1. From the Azure AD **Custom domain names** blade, navigate to the **Users - All users** blade. 
+1. From the Azure AD **Custom domain names** blade, navigate to the **Users - All users** blade.
 
 1. From the **Users - All users** blade, create a new user with the following settings:
 
     - User name: **aaduser100011@&lt;DNS-domain-name&gt;** where &lt;DNS-domain-name&gt; represents the primary DNS domain name you identified earlier in this task.
 
     - Name: **aaduser100011**
-    
+
     - First name: not set
-    
+
     - Last name: not set
 
-    - Auto-generate password 
-    
+    - Auto-generate password
+
     - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this lab.
-   
+
     - Groups: **0 groups selected**
 
     - Roles: **User**
-    
+
     - Block sign in: **No**
-    
+
     - Usage location: **United States**
-    
+
     - Job title: not set
-    
+
     - Department: not set
 
-1. From the **Users - All users** blade, navigate to the **Groups - All groups** blade. 
+1. From the **Users - All users** blade, navigate to the **Groups - All groups** blade.
 
 1. From the **Groups - All groups** blade, create a new group with the following settings:
 
@@ -157,7 +157,7 @@ The main tasks for this exercise are as follows:
 
 
 ### Exercise 2: Verify delegation by provisioning Azure resources as a delegated admin and auditing provisioning events
-  
+
 The main tasks for this exercise are as follows:
 
 1. Identify an available DNS name for an Azure VM deployment
@@ -171,7 +171,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Identify an available DNS name for an Azure VM deployment
 
-1. From the Azure Portal, start a PowerShell session in the Cloud Shell. 
+1. From the Azure Portal, start a PowerShell session in the Cloud Shell.
 
    > **Note**: If this is the first time you are launching the Cloud Shell in the current Azure subscription, you will be asked to create an Azure file share to persist Cloud Shell files. If so, accept the defaults, which will result in creation of a storage account in an automatically generated resource group.
 
@@ -181,7 +181,7 @@ The main tasks for this exercise are as follows:
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location '<location-of-az1000101-RG>'
    ```
 
-1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**. 
+1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**.
 
 1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task
 
@@ -206,7 +206,7 @@ Also Note: If you encounter an error after running these commands that mentions 
 
 1. In the Azure portal, navigate to the **Resource groups** blade and note that you can view only the resource group **az1000101-RG**.
 
-1. In the Azure portal, navigate to the **Create a resource** blade. 
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **Create a resource** blade, search Azure Marketplace for **Template deployment**.
 
@@ -237,19 +237,19 @@ Also Note: If you encounter an error after running these commands that mentions 
     - Ubuntu OS Version: accept the default value
 
     - Location: accept the default value
-    
-1. Note that the initiation of the deployment fails. Navigate to the **Errors** blade and note that the deployment of the resource is not allowed by the policy **Allowed virtual machine SKUs**.   
+
+1. Note that the initiation of the deployment fails. Navigate to the **Errors** blade and note that the deployment of the resource is not allowed by the policy **Allowed virtual machine SKUs**.
 
 
 #### Task 3: Perform an automated deployment of a policy compliant Azure VM as a delegated admin
- 
+
 1. From the **Deploy a simple Ubuntu Linux VM** blade, navigate to the **Edit template** blade.
 
 1. On the **Edit template** blade, navigate back to the **Variables** section and locate the **vmSize** entry.
 
 1. Replace the value **Standard_A1** with **Standard_DS1_v2** and save the change.
 
-1. Initiate a deployment again. Note that this time validation is successful. 
+1. Initiate a deployment again. Note that this time validation is successful.
 
 1. Do not wait for the deployment to complete but proceed to the next task.
 
@@ -260,9 +260,9 @@ Also Note: If you encounter an error after running these commands that mentions 
 
 1. In the Azure portal, navigate to the **az1000101-RG** resource group blade.
 
-1. From the **az1000101-RG** resource group blade, display its **Activity log** blade. 
+1. From the **az1000101-RG** resource group blade, display its **Activity log** blade.
 
-1. In the list of operations, note the ones corresponding to the failed and successful validation events. 
+1. In the list of operations, note the ones corresponding to the failed and successful validation events.
 
 1. Refresh the view of the blade and observe events corresponding to the Azure VM provisioning, including the final one representing the successful deployment.
 
