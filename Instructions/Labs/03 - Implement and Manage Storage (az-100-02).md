@@ -332,7 +332,7 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell ISE session, open the script pane and paste into it the content of your local Clipboard.
 
-1. Paste the script into the PowerShell ISE session, add `` -Persist `` at the end of the script, execute the script, and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
+1. Paste the script into the PowerShell ISE session, execute the script, and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
 
 1. Right click the Start menu, click **Run**, in the **Open** dialog box type **Z:** and press the **Enter** key. This will open a File Explorer window displaying the content of the **Z:** drive.
 
