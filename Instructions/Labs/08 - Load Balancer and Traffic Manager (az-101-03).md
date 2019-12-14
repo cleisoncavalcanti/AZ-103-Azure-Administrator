@@ -236,11 +236,11 @@ The main tasks for this exercise are as follows:
 
     - Name: **az1010301w-bepool**
 
+    - Virtual network: **az1010301-vnet**
+
     - IP version: **IPv4**
 
-    - Associated to: **Availability set**
-
-    - Availability set: **az1010301w-avset**
+    - Associated to: **Virtual machine**
 
     - Virtual machine: **az1010301w-vm0**
 
@@ -337,9 +337,11 @@ The main tasks for this exercise are as follows:
 
     - Name: **az1010302w-bepool**
 
+    - Virtual network: **az1010302-vnet**
+
     - IP version: **IPv4**
 
-    - Associated to: **Availability set**
+    - Associated to: **Virtual machine**
 
     - Availability set: **az1010302w-avset**
 
