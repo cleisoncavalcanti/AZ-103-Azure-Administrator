@@ -101,7 +101,7 @@ The main tasks for this exercise are as follows:
 
 1. Click **Next: Management >**.
 
-1. On the Management tab, review the default settings and note that boot diagnostics are turned on with a new diagnostics storage account automatically preconfigured.
+1. On the Management tab, set **Boot diagnostics** to **Off** and leave all other settings with their default vaules. 
 
 1. Click **Next: Advanced >**.
 
@@ -264,7 +264,7 @@ The main tasks for this exercise are as follows:
 
     - Virtual Network Name: **az1000301-RG-vnet**
 
-    - Virtual Netowrk Resource Group: the name of a new resource group **az1000301-RG**
+    - Virtual Network Resource Group: the name of a new resource group **az1000301-RG**
 
     - Subnet Name: **subnet0**
 
