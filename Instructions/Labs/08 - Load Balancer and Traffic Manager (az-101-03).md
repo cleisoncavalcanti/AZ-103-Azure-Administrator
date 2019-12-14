@@ -208,21 +208,25 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create load balancer** blade, create a new Azure Load Balancer with the following settings:
 
-    - Name: **az1010301w-lb**
-
-    - Type: **Public**
-
-    - SKU: **Basic**
-
-    - Public IP address: a new public IP address named **az1010301w-lb-pip**
-
-    - Assignment: **Dynamic**
-
     - Subscription: the name of the subscription you are using in this lab
 
     - Resource group: **az1010301-RG**
+    
+    - Name: **az1010301w-lb**
 
-    - Location: the name of the Azure region in which you deployed Azure VMs in the first task of the previous exercise
+    - Region: the name of the Azure region in which you deployed Azure VMs in the first task of the previous exercise
+    
+    - Type: **Public**
+
+    - SKU: **Basic**
+    
+    - Public IP address: a new public IP address named **az1010301w-lb-pip**
+
+    - Public IP address SKU: **Basic**
+    
+    - Assignment: **Dynamic**
+    
+    - Add a public IPv6 address: **No**
 
 1. In the Azure portal, navigate to the blade of the newly deployed Azure load balancer **az1010301w-lb**.
 
@@ -305,7 +309,13 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create load balancer** blade, create a new Azure Load Balancer with the following settings:
 
+    - Subscription: the name of the subscription you are using in this lab
+
+    - Resource group: **az1010302-RG**
+
     - Name: **az1010302w-lb**
+
+    - Region: the name of the Azure region in which you deployed Azure VMs in the second task of the previous exercise
 
     - Type: **Public**
 
@@ -313,11 +323,11 @@ The main tasks for this exercise are as follows:
 
     - Public IP address: a new public IP address named **az1010302w-lb-pip**
 
+    - Public IP address SKU: **Basic**
+    
     - Assignment: **Dynamic**
-
-    - Subscription: the name of the subscription you are using in this lab
-
-    - Resource group: **az1010302-RG**
+    
+    - Add a public IPv6 address: **No**
 
 1. In the Azure portal, navigate to the blade of the newly deployed Azure load balancer **az1010302w-lb**.
 
