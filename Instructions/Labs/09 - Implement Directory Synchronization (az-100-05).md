@@ -152,7 +152,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade, create a new user with the following settings:
 
-     - User name: **syncadmin@***<DNS-domain-name>* where *<DNS-domain-name>* represents the default primary DNS domain name you identified in the previous task. Take a note of this user name. You will need it later in this lab.
+     - User name: **syncadmin@&lt;DNS-domain-name&gt;** where **&lt;DNS-domain-name&gt;** represents the default primary DNS domain name you identified in the previous task. Take a note of this user name. You will need it later in this lab.
 
     - Name: **syncadmin**
 
