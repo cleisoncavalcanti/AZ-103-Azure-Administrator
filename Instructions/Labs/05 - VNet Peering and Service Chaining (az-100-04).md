@@ -10,11 +10,11 @@ All tasks in this lab are performed from the Azure portal except for Exercise 2 
 
 Lab files:
 
-- **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_01_azuredeploy.json**
+- **Labfiles\\Module_05\\VNet_Peering_and_Service_Chaining\\az-100-04_01_azuredeploy.json**
 
-- **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_02_azuredeploy.json**
+- **Labfiles\\Module_05\\VNet_Peering_and_Service_Chaining\\az-100-04_02_azuredeploy.json**
 
-- **Labfiles\\Module_05\VNet_Peering_and_Service_Chaining\\az-100-04_azuredeploy.parameters.json**
+- **Labfiles\\Module_05\\VNet_Peering_and_Service_Chaining\\az-100-04_azuredeploy.parameters.json**
 
 ### Scenario
 
