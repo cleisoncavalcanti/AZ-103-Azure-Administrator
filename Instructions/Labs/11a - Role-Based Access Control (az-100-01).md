@@ -194,6 +194,7 @@ The main tasks for this exercise are as follows:
    ```pwsh
    Register-AzResourceProvider –ProviderNamespace Microsoft.Compute
    ```
+
 Note: These cmdlets register the Azure Resource Manager Microsoft.Network and Microsoft.Compute resource providers. This is a one-time operation (per subscription) required when using Azure Resource Manager templates to deploy resources managed by these resource providers (if these resource providers have not been yet registered).
 
 Also Note: If you encounter an error after running these commands that mentions a token expiry set to a time that is before the current time, click the power button icon on our Cloud Shell UI and reboot your Cloud Shell instance.  Once restarted, retry these commands.
@@ -216,7 +217,7 @@ Also Note: If you encounter an error after running these commands that mentions 
 
 1. On the **Edit template** blade, navigate to the **Variables** section and locate the **vmSize** entry.
 
-1. Note that the template is using hard-coded **Standard_A1** VM size.
+1. Note that the template is using hard-coded **Standard_B2s** VM size.
 
 1. Discard any changes you might have made to the template and navigate to the **Deploy a simple Ubuntu Linux VM** blade.
 
@@ -247,7 +248,7 @@ Also Note: If you encounter an error after running these commands that mentions 
 
 1. On the **Edit template** blade, navigate back to the **Variables** section and locate the **vmSize** entry.
 
-1. Replace the value **Standard_A1** with **Standard_DS1_v2** and save the change.
+1. Replace the value **Standard_B2s** with **Standard_DS1_v2** and save the change.
 
 1. Initiate a deployment again. Note that this time validation is successful.
 

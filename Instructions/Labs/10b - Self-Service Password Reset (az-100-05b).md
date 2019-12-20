@@ -210,7 +210,7 @@ The main tasks for this exercise are as follows:
 
         - **Security questions**
 
-        - Number of security questions required to register: **3**
+        - Number of security questions required to register: **5**
 
         - Number of security questions required to reset: **3**
 
@@ -257,7 +257,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Get back into your account** page, verify the **User ID**, enter the characters in the picture or the words in the audio, and proceed to the next page.
 
-1. On the next page, provide answers to thre security questions using answers you specified in the previous task.
+1. On the next page, provide answers to three security questions using answers you specified in the previous task.
 
 1. On the next page, enter twice a new password and complete the password reset process.
 
