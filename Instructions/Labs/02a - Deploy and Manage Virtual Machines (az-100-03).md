@@ -264,7 +264,7 @@ The main tasks for this exercise are as follows:
 
     - Virtual Network Name: **az1000301-RG-vnet**
 
-    - Virtual Network Resource Group: the name of a new resource group **az1000301-RG**
+    - Virtual Network Resource Group: **az1000301-RG**
 
     - Subnet Name: **subnet0**
 
