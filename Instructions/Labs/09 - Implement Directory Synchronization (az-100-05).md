@@ -156,11 +156,11 @@ The main tasks for this exercise are as follows:
 
     - Name: **syncadmin**
 
-    - Password: select the checkbox **Show Password** and note the string appearing in the **Password** text box. You will need it later in this task.
+    - Password: click **Let me create the password** and type **Pa55w.rd1234** in the **initial password** text box.
 
     - Groups: **0 groups selected**
 
-    - Directory role: click "User" and select **Global administrator**
+    - Roles: click **User** and select **Global administrator**
 
    > **Note**: An Azure AD user with the Global Administrator role is required in order to implement Azure AD Connect.
 
@@ -265,11 +265,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Verify directory synchronization
 
-1. Within the RDP session to **adVM**, start Internet Explorer, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the **syncadmin** account that you created in the previous exercise.
-
-1. In the Azure portal, navigate to the **AdatumSync - Overview** blade.
-
-1. From the **AdatumSync - Overview** blade, display the **Users - All users** blade of the AdatumSync Azure AD tenant.
+1. From the lab virtual machine, in Microsoft Edge, refresh the **Users - All users** blade of the AdatumSync Azure AD tenant.
 
 1. On the **Users - All users** blade, note that the list of user objects includes the **aduser1** account, with the **Windows Server AD** appearing in the **SOURCE** column.
 
@@ -287,9 +283,7 @@ The main tasks for this exercise are as follows:
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
 
-1. Within the RDP session to **adVM**, switch to the Internet Explorer window displaying the Azure portal.
-
-1. In the Azure portal, navigate back to the **Users - All users** blade and refresh the page.
+1. From the lab virtual machine, in Microsoft Edge, refresh the **Users - All users** blade of the AdatumSync Azure AD tenant.
 
 1. From the **Users - All users** blade, display the **aduser1 - Profile** blade. Note that the **Department** attribute is now set to **Sales**.
 
