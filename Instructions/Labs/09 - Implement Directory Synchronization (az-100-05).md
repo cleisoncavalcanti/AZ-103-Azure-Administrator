@@ -331,7 +331,7 @@ The main tasks for this exercise are as follows:
 
 1. Start Internet Explorer, navigate to the Azure portal, and sign in by using the SyncAdmin credentials.
 
-1. In the Azure portal, navigate to the **Users - All users** blade of the AdatumSync Azure AD tenant and delete all users with the exception of the AdatumSync account.
+1. In the Azure portal, navigate to the **Users - All users** blade of the AdatumSync Azure AD tenant and delete all users with the exception of the SyncAdmin account.
 
 > **Note**: You might need to wait a few hours before you can complete this step.
 
