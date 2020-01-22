@@ -304,7 +304,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000302-vm0** blade, display the **Networking** blade.
 
-1. On the **az1000302-vm0 - Networking** blade, click the entry representing network interface (with name starting with az1000302-vm0).
+1. On the **az1000302-vm0 - Networking** blade, click the entry representing network interface (with name az1000302-nic0).
 
 1. From the blade displaying the properties of the network interface of **az1000302-vm0**, navigate to its **IP configurations** blade.
 
@@ -388,7 +388,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000302-vm0** blade, navigate to the **Networking** blade.
 
-1. On the **az1000302-vm0 - Networking** blade, review the inbound port rules of the network security group assigned to the network interface of **az1000301-vm0** to determine why your SSH connection via the private IP address was successsful.
+1. On the **az1000302-vm0 - Networking** blade, review the inbound port rules of the network security group assigned to the network interface of **az1000302-vm0** to determine why your SSH connection via the private IP address was successsful.
 
    > **Note**: The default configuration consisting of built-in rules allows inbound connections within the Azure virtual network environment (including connections via the SSH port TCP 22).
 
