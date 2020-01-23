@@ -335,8 +335,6 @@ The main tasks for this exercise are as follows:
 
 1. From the Windows PowerShell ISE session, open the script pane and paste into it the content of your local Clipboard.
 
-1. Add the ` -Persist` switch to the end of the line containing the `New-PSDrive` cmdlet.
-
 1. Execute the script and verify that its output confirms successful mapping of the Z: drive to the Azure Storage File Service share.
 
 1. Within the RDP session, start File Explorer, navigate to the Z: drive, and verify that it contains the same content as S:\\az10002bShare
