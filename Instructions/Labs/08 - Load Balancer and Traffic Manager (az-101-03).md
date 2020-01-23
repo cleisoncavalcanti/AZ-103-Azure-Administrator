@@ -343,8 +343,6 @@ The main tasks for this exercise are as follows:
 
     - Associated to: **Virtual machine**
 
-    - Availability set: **az1010302w-avset**
-
     - Virtual machine: **az1010302w-vm0**
 
     - Network IP configuration: **az1010302w-nic0/ipconfig1 (10.101.32.4)**
