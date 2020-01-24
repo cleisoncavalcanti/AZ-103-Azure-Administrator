@@ -246,7 +246,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Firewalls and virtual networks** blade of the Azure SQL Database server, configure the following settings:
 
-    - Allow access to Azure services: **ON**
+    - Allow access to Azure services: **OFF**
 
     - No firewall rules configured
 
