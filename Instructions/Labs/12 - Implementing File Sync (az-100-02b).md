@@ -192,25 +192,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Run Azure File Sync evaluation tool
 
-1. Within the RDP session to the Azure VM, from the Windows PowerShell console, install the latest version of Package Management and PowerShellGet by running the following:
-
-   ```powershell
-   Install-Module -Name PackageManagement -Repository PSGallery -Force
-
-   Install-Module -Name PowerShellGet -Repository PSGallery -Force
-   ```
-
-   > **Note**: When prompted, confirm that you want to proceed with the installation of the NuGet provider.
-
-1. Restart the PowerShell session.
-
-1. From the Windows PowerShell console, install the Azure File Sync PowerShell module by running the following:
-
-   ```powershell
-   Install-Module -Name Az.StorageSync -AllowClobber -Force
-   ```
-
-1. From the Windows PowerShell console, check whether the S:\az10002bShare file share does not have any compatibility issues with the Azure File Sync :
+1. Within the RDP session to the Azure VM, from the Windows PowerShell console, check whether the S:\az10002bShare file share does not have any compatibility issues with the Azure File Sync :
 
    ```powershell
    Invoke-AzStorageSyncCompatibilityCheck -Path 'S:\az10002bShare'
