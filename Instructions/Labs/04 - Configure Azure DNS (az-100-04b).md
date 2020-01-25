@@ -186,8 +186,6 @@ The main tasks for this exercise are as follows:
 
    ```pwsh
 
-   Install-Module -Name Az.PrivateDns -force
-
    $vnet1 = Get-AzVirtualNetwork -Name az1000402b-vnet1
 
    $vnet2 = Get-AzVirtualNetwork -name az1000402b-vnet2
