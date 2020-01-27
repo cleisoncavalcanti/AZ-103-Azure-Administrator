@@ -1,5 +1,7 @@
 # AZ-103 Microsoft Azure Administrator
 
+** Please take time to read Liberty Munson's blog, [Updates to Several Azure and Data & AI Certifications are Coming Soon](https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&Id=375281). This article describes the changes coming to AZ-103 in March. Add any discussions to the MCT Courseware Forum.**
+
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
 - **Need to manually build the lab instructions?** - Instructions are available in the [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) repository
 - View list of labs by AZ-103 module - https://microsoftlearning.github.io/AZ-103-MicrosoftAzureAdministrator/
