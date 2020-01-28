@@ -246,7 +246,7 @@ Also Note: If you encounter an error after running these commands that mentions 
 
 1. From the **Deploy a simple Ubuntu Linux VM** blade, navigate to the **Edit template** blade.
 
-1. On the **Edit template** blade, navigate back to the **Variables** section and locate the **vmSize** entry.
+1. On the **Edit parameters** blade, locate the **vmSize** entry.
 
 1. Replace the value **Standard_B2s** with **Standard_DS1_v2** and save the change.
 
