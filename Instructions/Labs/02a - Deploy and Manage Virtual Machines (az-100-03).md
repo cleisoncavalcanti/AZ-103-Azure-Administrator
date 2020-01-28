@@ -550,6 +550,8 @@ The main tasks for this exercise are as follows:
    ```sh
    az group list --query "[?starts_with(name,'az1000')].name" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
    ```
+   
+   > **Note**: The command command executes asynchronously (as determined by the --nowait parameter), so it might take a few minutes before the resource groups are removed.
 
 1. Close the **Cloud Shell** prompt at the bottom of the portal.
 
