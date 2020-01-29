@@ -422,8 +422,6 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1000101b-RG** resource group blade.
 
-1. In the Azure portal, navigate to the **az1000101b-RG** resource group blade.
-
 1. From the **az1000101b-RG** resource group blade, display the **az1000101b-RG - Locks** blade.
 
 1. On the **az1000101b-RG - Locks** blade, delete the **az1000101b-roLock**.
